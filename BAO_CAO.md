@@ -5,8 +5,9 @@
 - Mã nguồn mô hình: https://github.com/Babelscape/CroCoAlign (submodule `CroCoAlign/`, ghim commit `2e93992`)
 - Bài báo: https://aclanthology.org/2024.eacl-long.135/
 - Dữ liệu: *Đại Việt Sử Ký Toàn Thư* — nomfoundation.org (bản fulltext)
-- Môi trường: WSL2 (Ubuntu) + GPU RTX 5050, conda env `crocoalign` (Python 3.10, torch 2.11+cu128) cho phần cần GPU;
-  mọi bước khác chạy thuần Python 3.9 không cần thư viện ngoài.
+- Môi trường: phần cần torch chạy được cả trên WSL2 + RTX 5050 (env `crocoalign`, torch 2.11+cu128) lẫn macOS arm64
+  CPU (`.venv`: torch 2.14, transformers 5.16, sentence-transformers 6.0, PL 2.6.5) — số liệu cuối chạy trên macOS;
+  mọi bước khác thuần Python 3.9 không cần thư viện ngoài.
 
 > Số liệu chi tiết và bảng tự cập nhật: `RESULTS.md`. Lộ trình & tiến độ: `PLAN.md`.
 
@@ -75,7 +76,9 @@ dựa trên LaBSE) và **tune trên chính tập báo cáo**. Phiên bản này 
 - **Gold gán tay** cho 3 mục TEST (185 nhóm; 190 câu Hán / 215 câu Việt), gán bằng cách đọc phiên âm Hán-Việt đối
   chiếu bản dịch; mọi quyết định không phải 1-1 đều có chú thích trong `data/annotation/*.align.txt`;
   `annot2gold.py` kiểm tra mỗi id xuất hiện đúng một lần. Hoàn toàn độc lập với LaBSE/CroCoAlign.
-- **Tách DEV/TEST**: mọi siêu tham số/cấu hình chọn trên DEV (mục 1–3, silver), báo cáo trên TEST.
+- **Không chọn cấu hình trên tập báo cáo**: CroCoAlign tuned chọn trên DEV (mục 1–3, silver). Với các hệ DP, DEV silver
+  **suy biến** (LaBSE+DP đạt 1.000 trên DEV vì silver được sinh từ chính nó) nên cấu hình được chọn bằng **CV
+  leave-one-section-out trên gold gán tay**: chọn trên 2 mục, chấm mục còn lại, xoay vòng (`pick_config.py --cv`).
 - **Baseline đối chứng** phi-neural (Gale–Church độ dài; từ vựng Hán-Việt) để biết CroCoAlign "tốt hơn cái gì".
 - **Scorer độc lập** `scripts/score.py` tái hiện đúng `evaluate.py` gốc (strict/lax P/R/F1, gốc Vecalign), kiểm chứng
   khớp 3 chữ số với số liệu cũ; chạy được không cần torch.
@@ -84,40 +87,44 @@ dựa trên LaBSE) và **tune trên chính tập báo cáo**. Phiên bản này 
 
 ## 6. Kết quả
 
-Bảng đầy đủ (tự sinh từ `data/results/*.json`): **`RESULTS.md` §3**. Tóm tắt trên **TEST — gold gán tay**, F1 trung bình 3 mục:
+Bảng đầy đủ (tự sinh từ `data/results/*.json`, gồm P/R từng mục): **`RESULTS.md` §3**. Tóm tắt trên **TEST — gold gán
+tay**, F1 trung bình 3 mục; cấu hình các hệ DP chọn bằng CV:
 
 | Hệ thống | F1 strict | F1 lax | Ghi chú |
 |---|---|---|---|
-| Gale–Church độ dài + DP | 0.813 | 0.925 | không dùng nội dung câu |
-| Hán-Việt lexical + DP (chọn trên DEV) | 0.859 | 0.980 | |
-| ↳ gộp văn bản ghép (ablation) | **0.934** | **1.000** | DEV silver chọn *sai* biến thể — xem §7 |
-| CroCoAlign (gốc) | *chạy `run_wsl_all.sh`* | | trên DEV silver: 0.609 / 0.669 |
-| CroCoAlign (tuned, chọn trên DEV) | *chạy `run_wsl_all.sh`* | | trên DEV silver: 0.646 / 0.717 |
-| LaBSE(ckpt)+DP — cải tiến 1 | *chạy `run_wsl_all.sh`* | | |
-| LaBSE(ckpt)+HánViệt+DP — cải tiến 2 | *chạy `run_wsl_all.sh`* | | |
+| CroCoAlign (gốc) | 0.529 | 0.645 | checkpoint LaBSE chính thức, zero-shot |
+| CroCoAlign (tuned: `min_dist` 0.15, ngưỡng 0.20) | 0.565 | 0.669 | +3.6, khớp xu hướng trên DEV (+3.7) |
+| Gale–Church độ dài + DP | 0.879 | 0.956 | không dùng nội dung câu |
+| Hán-Việt lexical + DP | **0.934** | **0.997** | phiên âm có sẵn ở nguồn, thuần Python |
+| **Cải tiến 1:** LaBSE của checkpoint CroCoAlign + DP đơn điệu | 0.918 | 0.995 | +39 điểm so với CroCoAlign gốc, *cùng encoder* |
+| **Cải tiến 2:** LaBSE + Hán-Việt (w=0.3) + DP | 0.927 | 0.993 | |
+| (đối chứng) cải tiến 1 nhưng chọn cấu hình trên DEV silver | 0.844 | 0.965 | minh hoạ DEV silver suy biến |
 
 ---
 
 ## 7. Phân tích & cải tiến
 
-1. **Dữ liệu gần đơn điệu tuyệt đối → giải mã đơn điệu là chìa khoá.** CroCoAlign gốc quyết định từng cặp độc lập nên
-   bỏ qua ràng buộc thứ tự; một DP đơn điệu với prior độ dài đã vượt xa nó (0.813 trên gold gán tay so với ~0.6 của
-   CroCoAlign trên silver). Cải tiến đề xuất do đó **giữ bộ mã hoá LaBSE của checkpoint CroCoAlign nhưng thay bộ giải
-   mã** bằng DP đơn điệu (cải tiến 1), và hợp nhất thêm tín hiệu Hán-Việt (cải tiến 2) — `scripts/run_improved.py`.
-2. **Tinh chỉnh CroCoAlign** (`min_dist` 0.05→0.15, ngưỡng 0.5→0.20, chọn trên DEV): cứu các cặp bị lọc vị trí khi
-   bản dịch chèn chú giải làm vị trí tương đối trôi; +3.7 F1 strict trên DEV.
-3. **Silver gold thiên vị cấu trúc — có bằng chứng.** Trên DEV silver, gộp-trung-bình > gộp-văn-bản-ghép (0.933 vs
-   0.882); trên gold gán tay thì ngược lại (0.859 vs 0.934), vì silver được sinh bởi chính DP gộp-trung-bình. Đây là
-   minh chứng trực tiếp rằng số liệu chỉ trên silver không được coi là chân trị.
-4. **Lỗi còn lại** của hệ tốt nhất (11/185) toàn bộ là nhóm 1-n (n≥3) hoặc 2-2 — ngoài tập bước của DP; lỗi của
-   CroCoAlign là tiêu đề/tên ngắn và trôi vị trí.
+1. **Nguồn lỗi của CroCoAlign là bộ giải mã, không phải encoder.** Giữ nguyên LaBSE của checkpoint, chỉ thay
+   "faiss top-k + lọc vị trí + ngưỡng từng cặp" bằng DP đơn điệu → 0.529 → 0.918. Bản dịch ĐVSKTT theo sát thứ tự
+   bản Hán; CroCoAlign quyết định từng cặp độc lập nên bỏ phí ràng buộc thứ tự (`scripts/run_improved.py`).
+2. **Tinh chỉnh CroCoAlign** (`min_dist` 0.05→0.15, ngưỡng 0.5→0.20, chọn trên DEV): cứu cặp bị lọc vị trí khi bản
+   dịch chèn chú giải; +3.6 trên TEST, đúng như +3.7 trên DEV.
+3. **Khi giải mã đúng, tín hiệu tương đồng ít quan trọng:** độ dài 0.879, Hán-Việt 0.934, LaBSE 0.918, hợp nhất 0.927 —
+   encoder neural không hơn phiên âm Hán-Việt miễn phí trên dữ liệu này.
+4. **Gộp trên văn bản ghép** (điểm 1-2/2-1 tính trên câu ghép thay vì trung bình 2 ô) được CV chọn ở mọi fold, mọi hệ;
+   riêng Hán-Việt lexical đi từ 0.859 lên 0.934.
+5. **Silver gold thiên vị cấu trúc, có bằng chứng:** LaBSE+DP = 1.000 trên DEV silver; chọn trên DEV cho 0.844, chọn
+   bằng CV cho 0.918. Trên DEV silver gộp-trung-bình thắng gộp-ghép (0.933 vs 0.882), trên gold gán tay ngược lại
+   (0.859 vs 0.934). Số liệu chỉ trên silver (phiên bản đầu của đề tài) không phải chân trị.
+6. **Lỗi còn lại** của hệ tốt nhất (11/185) toàn bộ là nhóm 1-n (n≥3) hoặc 2-2 — ngoài tập bước của DP.
 
 ---
 
 ## 8. Hạn chế & hướng phát triển
-- Gold gán tay 185 nhóm / 3 mục — đủ để phân xử nhưng còn nhỏ; nên mở rộng và có người gán thứ hai để đo đồng thuận.
-- DEV vẫn là silver nên việc chọn cấu hình có thể lệch (như §7.3); nên tách một phần gold gán tay làm DEV.
-- Mở rộng DP với bước 1-3/2-2; fine-tune LaBSE trên cặp Hán cổ–Việt; dùng phiên âm làm pivot cho encoder.
+- Gold gán tay 185 nhóm / 3 mục — đủ để phân xử nhưng còn nhỏ (3 nhóm ≈ 1.6 điểm F1); nên mở rộng và có người gán
+  thứ hai để đo đồng thuận. CV 3 fold trên 3 mục cũng còn thô.
+- CroCoAlign tuned vẫn chọn trên DEV silver (chạy lại lưới CroCoAlign trên CPU tốn thời gian); có thể chọn lại bằng CV.
+- Mở rộng DP với bước 1-3/2-2 (xử lý 11 lỗi còn lại); fine-tune LaBSE trên cặp Hán cổ–Việt.
 
 ---
 
@@ -131,10 +138,10 @@ CK_XLNNTN/
 │  ├─ scrape_dvsktt.py preprocess.py            # YC1
 │  ├─ run_align.py run_eval.py run_eval_tuned.py # YC2: wrapper vá loader, chạy CroCoAlign gốc/tuned
 │  ├─ score.py                                   # scorer độc lập (= evaluate.py)
-│  ├─ baseline_hanviet.py tune_baseline.py       # baseline phi-neural + chọn cấu hình trên DEV
+│  ├─ baseline_hanviet.py grid_baseline.py       # baseline phi-neural + lưới cấu hình
 │  ├─ make_annot_sheet.py annot2gold.py          # gán nhãn tay → gold
-│  ├─ run_improved.py pick_config.py             # cải tiến LaBSE+DP (WSL) + chọn cấu hình trên DEV
-│  ├─ make_results_table.py run_wsl_all.sh       # bảng kết quả; một lệnh cho toàn bộ phần GPU
+│  ├─ run_improved.py pick_config.py             # cải tiến LaBSE+DP + chọn cấu hình (CV / DEV)
+│  ├─ make_results_table.py run_wsl_all.sh       # bảng kết quả; một lệnh cho toàn bộ phần torch
 │  └─ build_silver.py build_silver_all.sh        # silver gold (DEV)
 ├─ data/
 │  ├─ raw/ processed/         # 14 mục
@@ -146,4 +153,4 @@ CK_XLNNTN/
 ```
 
 ### 9.2. Tái lập
-Xem `RESULTS.md` §5. Toàn bộ phần cần GPU: `bash scripts/run_wsl_all.sh` (WSL).
+Xem `RESULTS.md` §5. Toàn bộ phần cần torch: `PY=.venv/bin/python bash scripts/run_wsl_all.sh`.

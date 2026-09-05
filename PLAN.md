@@ -29,8 +29,9 @@ dùng mô hình **CroCoAlign** (EACL 2024, Babelscape).
   `data/gold_manual/` + `data/annotation/`; **tách DEV (1–3, silver) / TEST (gán tay)**; scorer độc lập
   `score.py` (khớp evaluate.py 3 chữ số); baseline phi-neural (`baseline_hanviet.py`) tune trên DEV.
   TEST: độ dài 0.813, Hán-Việt 0.859, Hán-Việt+gộp văn bản ghép **0.934** F1 strict.
-- ⏳ **Pha 6 — chạy ở WSL**: `bash scripts/run_wsl_all.sh` → CroCoAlign gốc/tuned trên TEST + cải tiến
-  LaBSE(ckpt)+DP (`run_improved.py`, chọn cấu hình trên DEV bằng `pick_config.py`) → bảng tự chèn vào `RESULTS.md`.
+- ✅ **Pha 6 — chạy toàn bộ phần torch** (2026-09-06, trên macOS CPU qua `.venv`, không cần WSL): CroCoAlign gốc
+  **0.529** / tuned **0.565** trên gold gán tay; cải tiến LaBSE(ckpt)+DP **0.918**, +Hán-Việt **0.927**; baseline
+  Hán-Việt **0.934**. Phát hiện DEV silver suy biến (LaBSE+DP = 1.000) → chọn cấu hình bằng CV leave-one-section-out.
 - ⏭️ Tuỳ chọn: mở rộng gold gán tay, thêm bước DP 1-3/2-2, fine-tune LaBSE.
 
 ## Ràng buộc kỹ thuật quan trọng

@@ -1,0 +1,41 @@
+{
+  "name": "CroCoAlign (gốc)",
+  "per_file": [
+    {
+      "precision_strict": 0.5208333333333334,
+      "recall_strict": 0.5,
+      "f1_strict": 0.5102040816326531,
+      "precision_lax": 0.6875,
+      "recall_lax": 0.6875,
+      "f1_lax": 0.6875,
+      "file": "10-Ky-Trieu-Viet-Vuong.jsonl"
+    },
+    {
+      "precision_strict": 0.5,
+      "recall_strict": 0.4788732394366197,
+      "f1_strict": 0.48920863309352514,
+      "precision_lax": 0.6388888888888888,
+      "recall_lax": 0.6197183098591549,
+      "f1_lax": 0.6291576002486788,
+      "file": "7-Ky-Si-Vuong.jsonl"
+    },
+    {
+      "precision_strict": 0.5873015873015873,
+      "recall_strict": 0.5873015873015873,
+      "f1_strict": 0.5873015873015873,
+      "precision_lax": 0.6190476190476191,
+      "recall_lax": 0.6190476190476191,
+      "f1_lax": 0.6190476190476191,
+      "file": "9-Ky-tien-Ly.jsonl"
+    }
+  ],
+  "average": {
+    "precision_strict": 0.5360449735449736,
+    "recall_strict": 0.5220582755794023,
+    "f1_strict": 0.5289047673425885,
+    "precision_lax": 0.6484788359788359,
+    "recall_lax": 0.6420886429689246,
+    "f1_lax": 0.645235073098766
+  },
+  "config": "min_dist=0.05 thr=0.5"
+}

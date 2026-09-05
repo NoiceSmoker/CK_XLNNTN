@@ -1,4 +1,7 @@
 __pycache__/
 *.pyc
-data/emb/
 .DS_Store
+.venv/
+# lưới cấu hình tái sinh được trong vài phút (grid_baseline.py / run_improved.py + data/emb)
+data/pred/grid_*/
+data/pred/labse_dp/

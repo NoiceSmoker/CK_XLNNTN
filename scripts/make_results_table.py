@@ -11,7 +11,7 @@ import json
 import os
 import re
 
-ORDER = ["length", "hanviet", "crocoalign_base", "crocoalign_tuned", "labse_dp", "labse_hanviet_dp"]
+ORDER = ["crocoalign_base", "crocoalign_tuned", "length", "hanviet", "labse_dp", "labse_hanviet_dp", "labse_dp_devsel"]
 
 
 def load(results_dir):

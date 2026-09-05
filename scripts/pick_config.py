@@ -37,6 +37,45 @@ def score_dir(gold_dir, pred_dir):
     return dict(per_file=rows, average=avg)
 
 
+def run_cv(args, cfgs):
+    """Leave-one-section-out trên gold gán tay. Mỗi fold: chọn cfg tốt nhất (F1 strict TB)
+    trên các mục khác, áp dụng cho mục bị giữ lại. Không mục nào tự chọn cấu hình cho mình."""
+    files = sorted(f for f in os.listdir(args.test_gold) if f.endswith(".jsonl"))
+    if len(files) < 2:
+        sys.exit("CV cần >= 2 mục trong test gold")
+    table = {}  # cfg -> {file: metrics}
+    for c in cfgs:
+        row = {}
+        for f in files:
+            p = os.path.join(args.pred_root, c, f)
+            if os.path.exists(p):
+                row[f] = sc.score_files(os.path.join(args.test_gold, f), p)
+        if len(row) == len(files):
+            table[c] = row
+    if not table:
+        sys.exit(f"không có cấu hình đủ mục trong {args.pred_root} (filter='{args.filter}')")
+
+    print(f"=== {args.name}: {len(table)} cấu hình, CV leave-one-out trên {len(files)} mục gán tay ===")
+    per_file, chosen = [], []
+    for held in files:
+        others = [f for f in files if f != held]
+        best = max(table, key=lambda c: sum(table[c][f]["f1_strict"] for f in others) / len(others))
+        r = dict(table[best][held]); r["file"] = held
+        per_file.append(r); chosen.append(f"{held[:-6]}←{best}")
+        print(f"  giữ {held[:-6]:26s} chọn {best:28s} F1_str={r['f1_strict']:.3f} F1_lax={r['f1_lax']:.3f}")
+    keys = [k for k in per_file[0] if k != "file"]
+    avg = {k: sum(r[k] for r in per_file) / len(per_file) for k in keys}
+    print(f"  TB: strict P/R/F1 = {avg['precision_strict']:.3f}/{avg['recall_strict']:.3f}/{avg['f1_strict']:.3f}"
+          f"   lax = {avg['precision_lax']:.3f}/{avg['recall_lax']:.3f}/{avg['f1_lax']:.3f}")
+    os.makedirs(args.results_dir, exist_ok=True)
+    out = os.path.join(args.results_dir, f"{args.tag}__test.json")
+    cfg_short = "CV3: " + "; ".join(c.split("←")[1] for c in chosen)
+    json.dump(dict(name=args.name, config=cfg_short, selection="cv-loo", folds=chosen,
+                   per_file=per_file, average=avg), open(out, "w", encoding="utf-8"),
+              ensure_ascii=False, indent=2)
+    print(f"-> {out}")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--pred-root", required=True)
@@ -46,10 +85,15 @@ def main():
     ap.add_argument("--name", required=True)
     ap.add_argument("--tag", required=True, help="tên file: data/results/<tag>__{dev,test}.json")
     ap.add_argument("--results-dir", default="data/results")
+    ap.add_argument("--cv", action="store_true",
+                    help="chọn cấu hình bằng leave-one-section-out TRÊN gold gán tay "
+                         "(chọn trên các mục còn lại, chấm mục bị giữ lại) thay vì trên DEV silver")
     args = ap.parse_args()
 
     cfgs = sorted(d for d in os.listdir(args.pred_root)
                   if os.path.isdir(os.path.join(args.pred_root, d)) and d.startswith(args.filter))
+    if args.cv:
+        return run_cv(args, cfgs)
     scored = []
     for c in cfgs:
         r = score_dir(args.dev_gold, os.path.join(args.pred_root, c))

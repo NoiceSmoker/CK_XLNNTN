@@ -1,20 +1,20 @@
 {
-  "name": "Hán-Việt lexical + DP",
-  "config": "CV3: t0.10_g0.05_c1; t0.10_g0.05_c1; t0.10_g0.05_c1",
+  "name": "LaBSE(ckpt)+HánViệt+DP (cải tiến 2)",
+  "config": "CV3: w0.3_t0.15_g0.05_c1; w0.3_t0.15_g0.10_c1; w0.3_t0.15_g0.10_c1",
   "selection": "cv-loo",
   "folds": [
-    "10-Ky-Trieu-Viet-Vuong←t0.10_g0.05_c1",
-    "7-Ky-Si-Vuong←t0.10_g0.05_c1",
-    "9-Ky-tien-Ly←t0.10_g0.05_c1"
+    "10-Ky-Trieu-Viet-Vuong←w0.3_t0.15_g0.05_c1",
+    "7-Ky-Si-Vuong←w0.3_t0.15_g0.10_c1",
+    "9-Ky-tien-Ly←w0.3_t0.15_g0.10_c1"
   ],
   "per_file": [
     {
-      "precision_strict": 0.9,
-      "recall_strict": 0.9166666666666666,
-      "f1_strict": 0.908256880733945,
+      "precision_strict": 0.88,
+      "recall_strict": 0.8958333333333334,
+      "f1_strict": 0.8878460816518067,
       "precision_lax": 0.98,
-      "recall_lax": 1.0,
-      "f1_lax": 0.98989898989899,
+      "recall_lax": 0.9791666666666666,
+      "f1_lax": 0.9795831561037857,
       "file": "10-Ky-Trieu-Viet-Vuong.jsonl"
     },
     {
@@ -37,11 +37,11 @@
     }
   ],
   "average": {
-    "precision_strict": 0.9298441298441298,
-    "recall_strict": 0.9387622028467099,
-    "f1_strict": 0.9342683681796631,
+    "precision_strict": 0.9231774631774631,
+    "recall_strict": 0.9318177584022654,
+    "f1_strict": 0.927464768485617,
     "precision_lax": 0.9933333333333333,
-    "recall_lax": 1.0,
-    "f1_lax": 0.9966329966329966
+    "recall_lax": 0.9930555555555555,
+    "f1_lax": 0.9931943853679286
   }
 }

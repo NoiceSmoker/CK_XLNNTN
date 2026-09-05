@@ -1,0 +1,41 @@
+{
+  "name": "LaBSE(ckpt)+DP — chọn trên DEV silver",
+  "config": "w1.0_t0.25_g0.05_c0",
+  "per_file": [
+    {
+      "precision_strict": 1.0,
+      "recall_strict": 1.0,
+      "f1_strict": 1.0,
+      "precision_lax": 1.0,
+      "recall_lax": 1.0,
+      "f1_lax": 1.0,
+      "file": "1-Ky-Hong-Bang-thi.jsonl"
+    },
+    {
+      "precision_strict": 1.0,
+      "recall_strict": 1.0,
+      "f1_strict": 1.0,
+      "precision_lax": 1.0,
+      "recall_lax": 1.0,
+      "f1_lax": 1.0,
+      "file": "2-Ky-nha-Thuc.jsonl"
+    },
+    {
+      "precision_strict": 1.0,
+      "recall_strict": 1.0,
+      "f1_strict": 1.0,
+      "precision_lax": 1.0,
+      "recall_lax": 1.0,
+      "f1_lax": 1.0,
+      "file": "3-Ky-nha-Trieu.jsonl"
+    }
+  ],
+  "average": {
+    "precision_strict": 1.0,
+    "recall_strict": 1.0,
+    "f1_strict": 1.0,
+    "precision_lax": 1.0,
+    "recall_lax": 1.0,
+    "f1_lax": 1.0
+  }
+}

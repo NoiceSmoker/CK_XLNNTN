@@ -1,0 +1,41 @@
+{
+  "name": "LaBSE(ckpt)+DP — chọn trên DEV silver",
+  "config": "w1.0_t0.25_g0.05_c0",
+  "per_file": [
+    {
+      "precision_strict": 0.8235294117647058,
+      "recall_strict": 0.8541666666666666,
+      "f1_strict": 0.8385682980277575,
+      "precision_lax": 0.9607843137254902,
+      "recall_lax": 0.9791666666666666,
+      "f1_lax": 0.9698883975573805,
+      "file": "10-Ky-Trieu-Viet-Vuong.jsonl"
+    },
+    {
+      "precision_strict": 0.7866666666666666,
+      "recall_strict": 0.8028169014084507,
+      "f1_strict": 0.7946597353497165,
+      "precision_lax": 0.9733333333333334,
+      "recall_lax": 0.9859154929577465,
+      "f1_lax": 0.9795840122687626,
+      "file": "7-Ky-Si-Vuong.jsonl"
+    },
+    {
+      "precision_strict": 0.890625,
+      "recall_strict": 0.9047619047619048,
+      "f1_strict": 0.8976377952755906,
+      "precision_lax": 0.9375,
+      "recall_lax": 0.9523809523809523,
+      "f1_lax": 0.9448818897637795,
+      "file": "9-Ky-tien-Ly.jsonl"
+    }
+  ],
+  "average": {
+    "precision_strict": 0.8336070261437909,
+    "recall_strict": 0.8539151576123407,
+    "f1_strict": 0.8436219428843549,
+    "precision_lax": 0.9572058823529411,
+    "recall_lax": 0.9724877040017885,
+    "f1_lax": 0.9647847665299741
+  }
+}
