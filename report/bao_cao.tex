@@ -1,0 +1,360 @@
+% Báo cáo Đề tài 05 — Chinese–Vietnamese sentence alignment
+% Biên dịch: tectonic bao_cao.tex   (hoặc xelatex; KHÔNG dùng pdflatex vì fontspec/xeCJK)
+\documentclass[12pt,a4paper]{article}
+
+% ---------- font & ngôn ngữ
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setmonofont{Courier New}[Scale=0.9]
+\usepackage{xeCJK}
+\setCJKmainfont{Songti SC}          % chữ Hán trong ví dụ
+\usepackage[vietnamese]{babel}
+
+% ---------- bố cục
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{setspace}\onehalfspacing
+\usepackage{parskip}
+\usepackage{booktabs,array,longtable,multirow}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage[hidelinks]{hyperref}
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf}
+
+\lstset{basicstyle=\ttfamily\footnotesize,breaklines=true,frame=single,
+        backgroundcolor=\color{gray!8},columns=fullflexible,keepspaces=true}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\B}[1]{\textbf{#1}}
+
+% ---------- thông tin bìa (sửa cho đúng)
+\newcommand{\truong}{TRƯỜNG ĐẠI HỌC \ldots}
+\newcommand{\khoa}{KHOA \ldots}
+\newcommand{\monhoc}{Xử lý ngôn ngữ tự nhiên}
+\newcommand{\hocvien}{Ngô Trường Minh Đạt}
+\newcommand{\gvhd}{\ldots}
+
+\begin{document}
+
+% =====================================================================
+\begin{titlepage}
+\centering
+{\large \truong\\ \khoa\par}
+\vspace{3cm}
+{\Large \B{BÁO CÁO CUỐI KỲ}\\[0.3cm] Môn: \monhoc\par}
+\vspace{2cm}
+{\LARGE \B{Đề tài 05}\\[0.4cm]
+ \B{Dóng hàng câu Hán -- Việt cho}\\[0.2cm]
+ \B{\emph{Đại Việt Sử Ký Toàn Thư}}\\[0.4cm]
+ \large bằng mô hình CroCoAlign (EACL 2024) và các phương pháp đối chứng, cải tiến\par}
+\vfill
+\begin{tabular}{rl}
+Học viên: & \hocvien\\
+Giảng viên hướng dẫn: & \gvhd\\
+\end{tabular}
+\vspace{2cm}
+
+{\large Tháng 9 năm 2026}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+% =====================================================================
+\section{Mục tiêu và yêu cầu đề tài}
+
+Đề tài yêu cầu ba việc trên cặp ngôn ngữ Hán cổ -- Việt hiện đại, dữ liệu \emph{Đại Việt Sử Ký Toàn Thư}
+(bản fulltext của nomfoundation.org):
+\begin{enumerate}
+  \item \B{Tiền xử lý dữ liệu} để đầu vào phù hợp với mô hình.
+  \item \B{Cài đặt và chạy lại mô hình CroCoAlign} từ mã nguồn GitHub theo bài báo EACL 2024 \cite{crocoalign}.
+  \item \B{Thực nghiệm và đánh giá} kết quả dóng hàng câu; có thể \B{cải tiến} để đạt kết quả tốt hơn.
+\end{enumerate}
+
+Tài nguyên: bài báo \cite{crocoalign}; mã nguồn \url{https://github.com/Babelscape/CroCoAlign};
+dữ liệu \url{https://www.nomfoundation.org/nom-project/history-of-greater-vietnam/Fulltext?uiLang=vn}.
+Toàn bộ mã, dữ liệu và kết quả của báo cáo này nằm trong kho \code{CK\_XLNNTN} (nhánh \code{eval-manual-gold}).
+
+% =====================================================================
+\section{Tổng quan mô hình CroCoAlign}
+
+CroCoAlign \cite{crocoalign} là hệ dóng hàng câu neural, end-to-end, có ngữ cảnh. Kiến trúc gồm
+(i) bộ nhúng câu \B{LaBSE} \cite{labse} cho 109 ngôn ngữ, có cả tiếng Trung và tiếng Việt;
+(ii) một \B{bộ mã hoá ngữ cảnh} (DistilBERT nhỏ) đặt mỗi câu trong ngữ cảnh tài liệu;
+(iii) một \B{đầu phân loại MLP} trên tích ngoài câu nguồn $\times$ câu đích, dự đoán cặp có dóng hàng hay không.
+
+Suy luận: tính embedding $\to$ FAISS truy hồi $k{=}200$ câu đích gần nhất $\to$ lọc theo khoảng cách vị trí
+tương đối (\code{min\_dist}) $\to$ mô hình chấm điểm từng cặp $\to$ thủ tục \emph{recovery} bằng LaBSE cho cặp
+nhiều--nhiều $\to$ gom cụm. Hệ hỗ trợ liên kết 1-1, 1-$n$, $n$-1, $n$-$m$ và câu không có cặp.
+Định dạng vào: hai file \code{.jsonl}, mỗi dòng một câu \code{\{"ids":[...],"text":[...]\}}; ra: TSV.
+
+% =====================================================================
+\section{Cài đặt và chạy lại CroCoAlign (Yêu cầu 2)}
+
+Mã nguồn được đưa vào kho dưới dạng \emph{git submodule} ghim commit \code{2e93992} (HEAD của upstream) nên tái lập
+được chính xác. Repo ghim \code{torch==1.11}, \code{pytorch-lightning==1.5}, \code{transformers==4.20} -- không cài
+được trên phần cứng và hệ điều hành hiện tại. Bảng~\ref{tab:install} tóm tắt các vướng mắc và cách khắc phục;
+nguyên tắc là \B{không sửa mã gốc}, mọi vá lỗi nằm trong các wrapper ở \code{scripts/}.
+
+\begin{table}[h]\centering\small
+\caption{Vướng mắc khi cài đặt và cách khắc phục}\label{tab:install}
+\begin{tabular}{p{3.6cm}p{5.2cm}p{6.2cm}}
+\toprule
+\B{Vấn đề} & \B{Nguyên nhân} & \B{Khắc phục}\\
+\midrule
+GPU không chạy được torch repo ghim & RTX 5050 là kiến trúc Blackwell (sm\_120), không tương thích \code{torch==1.11} & torch 2.11+cu128 (WSL); torch 2.14 CPU (macOS)\\
+\code{faiss-gpu} không cài được & chỉ có bản cho CUDA cũ & \code{faiss-cpu} (vài nghìn câu, đủ nhanh)\\
+Nạp checkpoint lỗi & PL~2.6 bỏ \code{\_load\_model\_state}; torch~2.6 mặc định \code{weights\_only=True}; sentence-transformers đổi tên \code{auto\_model}$\to$\code{model} & loader vá lỗi \code{run\_align.py}: giải nén \code{.ckpt.zip}, nạp \code{weights\_only=False}, ánh xạ lại khoá $\Rightarrow$ \code{missing=0}\\
+Thiếu phụ thuộc của nn-core & cài \code{--no-deps} để tránh ép lightning cũ & thêm GitPython, python-dotenv\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Kiểm chứng: chạy ví dụ EN$\leftrightarrow$IT kèm repo cho kết quả đúng; sau đó chạy end-to-end Hán$\leftrightarrow$Việt với
+checkpoint LaBSE chính thức (2,31~GB) trên cả WSL2 + GPU và macOS arm64 (CPU). Số liệu trong báo cáo này lấy từ lần
+chạy trên macOS (\code{.venv}: torch 2.14, transformers 5.16, sentence-transformers 6.0, PL 2.6.5).
+
+% =====================================================================
+\section{Dữ liệu và tiền xử lý (Yêu cầu 1)}
+
+\subsection{Khảo sát nguồn}
+Mỗi mục (kỷ) của bản fulltext phân trang phía server (POST \code{curPg}). Mỗi trang có một bảng gồm ô
+\emph{Hán + phiên âm} xen kẽ theo \emph{block}
+\code{<chữ Hán> [trang*dòng*cột] <phiên âm Hán-Việt có dấu câu>}
+và ô \emph{Dịch Quốc Ngữ} là bản dịch tiếng Việt hiện đại, cùng thứ tự.
+
+\subsection{Hai phát hiện then chốt}
+\begin{enumerate}
+  \item \B{Dấu câu của phiên âm} cho phép tách câu chữ Hán cổ (vốn không có dấu câu): mỗi block $\approx$ một câu.
+  Đây là lời giải cho bài toán khó nhất của tiền xử lý.
+  \item Phiên âm Hán-Việt đi kèm 1:1 với từng câu Hán là một \B{tín hiệu từ vựng miễn phí} nối sang bản dịch:
+  tên người, địa danh, chức quan, niên hiệu đều là từ Hán-Việt (\emph{Sĩ Nhiếp, Giao Châu, Thái thú, Kiến An}).
+  Tín hiệu này dùng được cho cả gán nhãn tay lẫn dóng hàng.
+\end{enumerate}
+
+\subsection{Thực hiện}
+\code{scrape\_dvsktt.py} (chạy được với \code{requests} hoặc thuần \code{urllib}) cào 14 mục Ngoại kỷ;
+\code{preprocess.py} tách câu Hán theo marker, làm sạch bản dịch (bỏ chú giải trong ngoặc vuông, niên đại),
+tách câu Việt theo dấu kết câu, xuất \code{zh.jsonl}/\code{vi.jsonl} đúng định dạng CroCoAlign và
+\code{blocks.tsv} (Hán $\leftrightarrow$ phiên âm). Thống kê ở Bảng~\ref{tab:data}.
+
+\begin{table}[h]\centering
+\caption{Dữ liệu sau tiền xử lý}\label{tab:data}
+\begin{tabular}{lrrrr}
+\toprule
+ & \B{Mục} & \B{Trang} & \B{Câu Hán} & \B{Câu Việt}\\
+\midrule
+Tổng & 14 & 190 & 1\,703 & 1\,833\\
+DEV (mục 1, 2, 3) & 3 & 57 & 523 & 569\\
+TEST (mục 7, 9, 10) & 3 & 23 & 190 & 215\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Nhiễu thực tế: bản dịch chèn chú giải, tách/gộp câu; vài câu cụt do lỗi ở nguồn
+(\emph{``KỶ TRIỆU V''}, \emph{``là Ki''}); câu bị cắt ngang trang ở cả hai bản.
+
+% =====================================================================
+\section{Thiết kế đánh giá (Yêu cầu 3)}
+
+Phiên bản đầu của đề tài chấm CroCoAlign bằng một \emph{silver gold} sinh từ cosine LaBSE + quy hoạch động đơn điệu,
+và chọn siêu tham số trên chính tập báo cáo. Cách làm đó có hai lỗi: \B{đánh giá vòng tròn} (CroCoAlign cũng dựa
+trên LaBSE) và \B{tune trên test}. Thiết kế cuối sửa cả hai (Bảng~\ref{tab:design}).
+
+\begin{table}[h]\centering\small
+\caption{Thiết kế DEV / TEST}\label{tab:design}
+\begin{tabular}{p{2.2cm}p{6.3cm}p{6.5cm}}
+\toprule
+ & \B{DEV} & \B{TEST}\\
+\midrule
+Mục & 1 Hồng Bàng, 2 Nhà Thục, 3 Nhà Triệu & 7 Sĩ Vương, 9 Tiền Lý, 10 Triệu Việt Vương\\
+Gold & \emph{silver}: DP đơn điệu trên cosine LaBSE & \B{gán tay}: đọc phiên âm Hán-Việt đối chiếu bản dịch\\
+Quy mô & 523 / 569 câu & 190 / 215 câu, 185 nhóm\\
+Dùng để & chọn cấu hình CroCoAlign tuned & \B{báo cáo}; cấu hình các hệ DP chọn bằng CV leave-one-section-out\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Gold gán tay.} Ba mục TEST được gán thủ công bằng cách đọc phiên âm Hán-Việt đối chiếu bản dịch, theo
+năm quy tắc (liên kết theo nội dung không theo vị trí; nhóm nhỏ nhất có thể; câu cắt ngang cùng chỗ thì ghép từng
+mảnh; chú giải/niên đại thuộc block chứa nó; mỗi id xuất hiện đúng một lần). Mọi quyết định không phải 1-1 có chú
+thích trong \code{data/annotation/*.align.txt}; \code{annot2gold.py} kiểm tra phủ. Phân bố nhóm: 1-1 = 160,
+1-2 = 10, 1-3 = 5, 1-6/1-7 = 2, 2-1 = 3, 2-2 = 2, 1-0 = 3. Gold này \B{độc lập hoàn toàn với LaBSE/CroCoAlign}.
+
+\paragraph{Không chọn cấu hình trên tập báo cáo.} CroCoAlign tuned chọn trên DEV. Với các hệ dựa trên DP, DEV silver
+\emph{suy biến}: hệ LaBSE+DP đạt $F_1 = 1{,}000$ trên DEV vì silver được sinh bởi chính thuật toán đó, nên DEV không
+phân biệt được cấu hình. Vì vậy cấu hình các hệ DP chọn bằng \B{cross-validation leave-one-section-out trên gold gán
+tay}: với mỗi mục TEST, chọn cấu hình tốt nhất trên hai mục còn lại rồi chấm mục bị giữ lại. Không mục nào tự chọn
+cấu hình cho mình.
+
+\paragraph{Thước đo.} $P/R/F_1$ \B{strict} (nhóm khớp hoàn toàn) và \B{lax} (khớp một phần) theo Vecalign
+\cite{vecalign}, đúng như \code{evaluate.py} của CroCoAlign. Scorer độc lập \code{score.py} (thuần Python) tái hiện
+logic này và được kiểm chứng khớp ba chữ số với số liệu của \code{evaluate.py} gốc.
+
+\paragraph{Các hệ thống so sánh.} Bảng~\ref{tab:systems}.
+
+\begin{table}[h]\centering\small
+\caption{Các hệ thống}\label{tab:systems}
+\begin{tabular}{p{4.6cm}p{10.4cm}}
+\toprule
+\B{Hệ thống} & \B{Mô tả}\\
+\midrule
+CroCoAlign (gốc) & checkpoint LaBSE chính thức, \code{min\_dist}=0,05, ngưỡng 0,5\\
+CroCoAlign (tuned) & \code{min\_dist}=0,15, ngưỡng 0,20 -- chọn trên DEV\\
+Gale--Church độ dài + DP & prior tỉ lệ độ dài chữ Hán / âm tiết Việt \cite{galechurch}; DP đơn điệu 1-1/1-0/0-1/1-2/2-1\\
+Hán-Việt lexical + DP & IDF-weighted Dice giữa phiên âm Hán-Việt và câu Việt; cùng DP\\
+Cải tiến 1: LaBSE(ckpt) + DP & bộ mã hoá LaBSE \emph{của chính checkpoint CroCoAlign} $\to$ cosine $\to$ DP đơn điệu\\
+Cải tiến 2: LaBSE + Hán-Việt + DP & $S = w\cdot\cos_{\text{LaBSE}} + (1-w)\cdot\text{lex}_{\text{HánViệt}}$ $\to$ DP\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Mọi hệ DP có tuỳ chọn \emph{gộp trên văn bản ghép}: điểm cho bước 1-2 / 2-1 tính trên hai câu ghép lại (với LaBSE:
+mã hoá cặp câu ghép) thay vì trung bình hai ô. Lưới cấu hình: hệ baseline $t\in\{0{,}10; 0{,}15; 0{,}20\}$,
+$g\in\{0{,}05; 0{,}10\}$, $c\in\{0,1\}$; hệ LaBSE thêm $w\in\{1; 0{,}7; 0{,}5; 0{,}3\}$,
+$t\in\{0{,}15; 0{,}25; 0{,}35; 0{,}45\}$.
+
+% =====================================================================
+\section{Kết quả}
+
+\begin{table}[h]\centering\small
+\caption{Kết quả trên TEST (gold gán tay, 185 nhóm), trung bình 3 mục. Cấu hình các hệ DP chọn bằng CV.}
+\label{tab:main}
+\begin{tabular}{lcccccc}
+\toprule
+\B{Hệ thống} & $P_{s}$ & $R_{s}$ & \B{$F_{1,s}$} & $P_{l}$ & $R_{l}$ & \B{$F_{1,l}$}\\
+\midrule
+CroCoAlign (gốc)                          & 0,536 & 0,522 & \B{0,529} & 0,648 & 0,642 & \B{0,645}\\
+CroCoAlign (tuned, chọn trên DEV)         & 0,569 & 0,561 & \B{0,565} & 0,669 & 0,669 & \B{0,669}\\
+Gale--Church độ dài + DP                  & 0,869 & 0,890 & \B{0,879} & 0,947 & 0,965 & \B{0,956}\\
+Hán-Việt lexical + DP                     & 0,930 & 0,939 & \B{0,934} & 0,993 & 1,000 & \B{0,997}\\
+Cải tiến 1: LaBSE(ckpt) + DP              & 0,914 & 0,922 & \B{0,918} & 0,995 & 0,995 & \B{0,995}\\
+Cải tiến 2: LaBSE + Hán-Việt + DP         & 0,923 & 0,932 & \B{0,927} & 0,993 & 0,993 & \B{0,993}\\
+\midrule
+\emph{(đối chứng)} cải tiến 1, chọn cấu hình trên DEV silver & 0,834 & 0,854 & 0,844 & 0,957 & 0,972 & 0,965\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]\centering\small
+\caption{$F_1$ strict / lax theo từng mục TEST}\label{tab:perfile}
+\begin{tabular}{lccc}
+\toprule
+\B{Hệ thống} & \B{7 Sĩ Vương} & \B{9 Tiền Lý} & \B{10 Triệu Việt Vương}\\
+\midrule
+CroCoAlign (gốc)             & 0,489 / 0,629 & 0,587 / 0,619 & 0,510 / 0,688\\
+CroCoAlign (tuned)           & 0,565 / 0,648 & 0,619 / 0,651 & 0,510 / 0,708\\
+Gale--Church độ dài + DP     & 0,801 / 0,938 & 1,000 / 1,000 & 0,837 / 0,929\\
+Hán-Việt lexical + DP        & 0,910 / 1,000 & 0,984 / 1,000 & 0,908 / 0,990\\
+Cải tiến 1: LaBSE + DP       & 0,882 / 0,986 & 0,984 / 1,000 & 0,888 / 1,000\\
+Cải tiến 2: LaBSE + HV + DP  & 0,910 / 1,000 & 0,984 / 1,000 & 0,888 / 0,980\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Trên DEV (silver), CroCoAlign gốc đạt 0,609 / 0,669 và tuned 0,646 / 0,717; mức tăng +3,7 điểm strict trên DEV
+tái hiện thành +3,6 trên TEST.
+
+% =====================================================================
+\section{Phân tích và cải tiến}
+
+\subsection{Nguồn lỗi của CroCoAlign là bộ giải mã, không phải encoder}
+Giữ nguyên LaBSE của chính checkpoint CroCoAlign, chỉ thay bộ giải mã ``FAISS top-$k$ + lọc vị trí + ngưỡng từng
+cặp'' bằng quy hoạch động đơn điệu, $F_1$ strict đi từ 0,529 lên \B{0,918} (+39 điểm). Bản dịch \emph{Đại Việt Sử Ký
+Toàn Thư} theo sát thứ tự bản Hán; CroCoAlign quyết định từng cặp độc lập nên bỏ phí ràng buộc thứ tự -- đó là nguồn
+lỗi chính. Mô hình được thiết kế cho tài liệu nhiễu, phi đơn điệu, không phải cho song ngữ dịch sát như ở đây.
+
+\subsection{Tinh chỉnh CroCoAlign}
+Bản dịch tiếng Việt có nhiều câu hơn (chèn chú giải, tách câu) nên vị trí tương đối trôi dần
+($\approx 6{,}5\%$ ở mục dài), vượt bộ lọc gốc \code{min\_dist}=0,05 và loại nhầm ứng viên đúng. Nới lên 0,15 và hạ
+ngưỡng quyết định từ 0,5 xuống 0,20 (tăng recall) cho +3,7 trên DEV và +3,6 trên TEST -- nhất quán, không overfit.
+
+\subsection{Khi giải mã đúng, tín hiệu tương đồng ít quan trọng}
+Cùng bộ giải mã: độ dài thuần 0,879; Hán-Việt 0,934; LaBSE 0,918; hợp nhất 0,927. Ba hệ đầu bảng chênh nhau
+$\le 3$ nhóm trên 185. Encoder neural \B{không hơn} tín hiệu từ vựng miễn phí có sẵn ở nguồn trên dữ liệu này.
+Hợp nhất với $w=0{,}3$ nhỉnh hơn LaBSE thuần nhưng chưa vượt lexical thuần.
+
+\subsection{Gộp trên văn bản ghép là chi tiết quan trọng nhất của DP}
+CV chọn $c=1$ ở \emph{mọi} fold của \emph{mọi} hệ. Với gộp trung bình, nhóm 1-2 có một câu Việt ngắn
+(\emph{``Hữu ty hỏi vì cớ gì?''}) bị tách thành 1-1 + câu bỏ trống; Hán-Việt lexical đi từ 0,859 (c=0) lên 0,934 (c=1).
+
+\subsection{Silver gold thiên vị cấu trúc -- hai bằng chứng}
+(i) LaBSE+DP đạt 1,000 trên DEV silver (silver là điểm bất động của nó); chọn cấu hình trên DEV cho 0,844 trên TEST,
+chọn bằng CV cho 0,918. (ii) Trên DEV silver, gộp-trung-bình thắng gộp-văn-bản-ghép (0,933 so với 0,882); trên gold
+gán tay thì ngược lại (0,859 so với 0,934). Số liệu chỉ trên silver -- như ở phiên bản đầu của đề tài -- không được
+coi là chân trị.
+
+\subsection{Lỗi còn lại}
+Hệ tốt nhất sai 11/185 nhóm, toàn bộ là \B{1-$n$ với $n\ge 3$} (chú giải dài, lời bình sử thần bị tách nhiều câu
+Việt, vd. block Hán về bóng nêu ứng với 7 câu Việt) hoặc \B{2-2} (niên đại + lời tâu cắt lệch ở hai bản) -- ngoài
+tập bước của DP. Lỗi của CroCoAlign: tiêu đề/tên ngắn (\emph{涇陽王}, \emph{壬戌元年}) bị bỏ sót; vị trí trôi khi bản
+dịch chèn chú giải.
+
+% =====================================================================
+\section{Hạn chế và hướng phát triển}
+\begin{itemize}
+  \item Gold gán tay 185 nhóm / 3 mục -- đủ để phân xử nhưng còn nhỏ (3 nhóm $\approx$ 1,6 điểm $F_1$); nên mở rộng
+  và có người gán thứ hai để đo đồng thuận. CV ba fold trên ba mục cũng còn thô.
+  \item CroCoAlign tuned vẫn chọn cấu hình trên DEV silver; có thể chọn lại bằng CV.
+  \item Mở rộng DP với bước 1-3 / 2-2 để xử lý 11 lỗi còn lại; fine-tune LaBSE trên cặp Hán cổ -- Việt.
+\end{itemize}
+
+% =====================================================================
+\section{Kết luận}
+Đề tài đã (1) xây dựng pipeline cào và tiền xử lý cho 14 mục \emph{Đại Việt Sử Ký Toàn Thư}, giải quyết tách câu Hán
+cổ bằng dấu câu của phiên âm; (2) cài đặt và chạy lại CroCoAlign từ mã nguồn gốc với checkpoint chính thức trên
+stack hiện đại mà không sửa mã gốc; (3) đánh giá bằng gold gán tay độc lập với mô hình, chọn cấu hình bằng CV, có
+baseline đối chứng. Kết quả chính: CroCoAlign zero-shot đạt $F_1$ strict 0,529 (tuned 0,565); giữ nguyên encoder của
+nó nhưng giải mã đơn điệu đạt 0,918; và một baseline thuần từ vựng Hán-Việt, không cần mô hình neural, đạt 0,934.
+Bài học phương pháp: với song ngữ dịch sát, ràng buộc thứ tự quan trọng hơn chất lượng embedding, và silver gold
+sinh từ mô hình không thể dùng để chấm mô hình cùng gốc.
+
+% =====================================================================
+\appendix
+\section{Cấu trúc kho mã và cách tái lập}
+\begin{lstlisting}
+CK_XLNNTN/
+  CroCoAlign/            submodule ma goc (.gitmodules) + checkpoints/crocoalign.ckpt
+  scripts/
+    scrape_dvsktt.py  preprocess.py             # YC1
+    run_align.py  run_eval.py  run_eval_tuned.py # YC2: wrapper va loader, chay CroCoAlign goc/tuned
+    score.py                                    # scorer doc lap (= evaluate.py)
+    baseline_hanviet.py  grid_baseline.py       # baseline phi-neural + luoi cau hinh
+    make_annot_sheet.py  annot2gold.py          # gan nhan tay -> gold
+    run_improved.py  pick_config.py             # cai tien LaBSE+DP; chon cau hinh (CV / DEV)
+    make_results_table.py  run_wsl_all.sh       # bang ket qua; mot lenh cho toan bo phan torch
+  data/
+    raw/  processed/     14 muc
+    gold/                silver (DEV)        gold_manual/   gan tay (TEST)
+    annotation/          phieu + .align.txt co chu thich + tieu chi gan nhan
+    pred/  results/      du doan; JSON so lieu
+  BAO_CAO.md  RESULTS.md  PLAN.md  report/bao_cao.tex
+\end{lstlisting}
+
+\begin{lstlisting}[language=bash]
+# thuan Python 3.9+, khong can thu vien ngoai
+python3 scripts/scrape_dvsktt.py --out data/raw --sections 1-Ky-Hong-Bang-thi ... 14-Ky-nha-Ngo
+python3 scripts/preprocess.py --raw data/raw --out data/processed
+python3 scripts/annot2gold.py --section 7-Ky-Si-Vuong \
+    --align data/annotation/7-Ky-Si-Vuong.align.txt --out data/gold_manual/7-Ky-Si-Vuong.jsonl
+# phan can torch (CroCoAlign + LaBSE), macOS .venv hoac WSL env crocoalign
+PY=.venv/bin/python bash scripts/run_wsl_all.sh      # ~15 phut CPU, tu chen bang vao RESULTS.md
+\end{lstlisting}
+
+% =====================================================================
+\begin{thebibliography}{9}
+\bibitem{crocoalign} F.~Molfese, A.~Bejgu, S.~Tedeschi, S.~Conia, R.~Navigli.
+  \emph{CroCoAlign: A Cross-Lingual, Context-Aware and Fully-Neural Sentence Alignment System for Long Texts}.
+  Proc. EACL 2024 (Long Papers), 2209--2220. \url{https://aclanthology.org/2024.eacl-long.135/}
+\bibitem{vecalign} B.~Thompson, P.~Koehn. \emph{Vecalign: Improved Sentence Alignment in Linear Time and Space}.
+  Proc. EMNLP-IJCNLP 2019.
+\bibitem{labse} F.~Feng, Y.~Yang, D.~Cer, N.~Arivazhagan, W.~Wang.
+  \emph{Language-agnostic BERT Sentence Embedding}. Proc. ACL 2022.
+\bibitem{galechurch} W.~A.~Gale, K.~W.~Church. \emph{A Program for Aligning Sentences in Bilingual Corpora}.
+  Computational Linguistics 19(1), 1993.
+\bibitem{dvsktt} Ngô Sĩ Liên và các sử thần triều Lê. \emph{Đại Việt Sử Ký Toàn Thư}. Bản fulltext,
+  Vietnamese Nôm Preservation Foundation. \url{https://www.nomfoundation.org/}
+\end{thebibliography}
+
+\end{document}
