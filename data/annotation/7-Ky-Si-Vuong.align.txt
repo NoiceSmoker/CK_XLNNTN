@@ -1,0 +1,74 @@
+# Gold gán tay — 7-Ky-Si-Vuong (đọc phiên âm Hán-Việt đối chiếu bản dịch)
+zh_1 zh_2 -> vi_1          # niên đại + "Lê Văn Hưu viết" gộp vào 1 câu Việt
+zh_3 -> vi_2
+zh_4 -> vi_3
+zh_5 -> vi_4
+zh_6 -> vi_5 vi_6 vi_7     # tiêu đề + tại vị/thọ + lời bình tách 3 câu
+zh_7 -> vi_8
+zh_8 -> vi_9
+zh_9 -> vi_10
+zh_10 -> vi_11 vi_12       # "(tức là Long Biên)" nằm ở vi_12 nhưng là chú ở đầu zh_11
+zh_11 -> vi_13
+zh_12 -> vi_14 vi_15
+zh_13 -> vi_16             # "Thời Thứ sử Chu" bị cắt ngang trang ở cả hai bản
+zh_14 -> vi_17
+zh_15 -> vi_18
+zh_16 -> vi_19
+zh_17 zh_18 -> vi_20 vi_21 # lời tâu Lý Tiến: Hán cắt 2 block, Việt cắt niên đại/lời tâu
+zh_19 -> vi_22
+zh_20 -> vi_23
+zh_21 -> vi_24
+zh_22 -> vi_25
+zh_23 -> vi_26
+zh_24 -> vi_27 vi_28
+zh_25 -> vi_29
+zh_26 -> vi_30 vi_31
+zh_27 -> vi_32
+zh_28 -> vi_33             # vi_33 bị cụt ở nguồn ("là Ki")
+zh_29 -> vi_34 vi_35 vi_36 vi_37 vi_38 vi_39 vi_40   # chú giải dài về bóng nêu
+zh_30 -> vi_41
+zh_31 -> vi_42
+zh_32 -> vi_43             # vi_43 cụt ở nguồn
+zh_33 ->                   # bản dịch thiếu câu này (mất đoạn ở nguồn)
+zh_34 -> vi_44
+zh_35 -> vi_45
+zh_36 -> vi_46
+zh_37 -> vi_47
+zh_38 -> vi_48
+zh_39 -> vi_49
+zh_40 -> vi_50 vi_51 vi_52 # "vợ cả, vợ|hầu" bị cắt giữa từ ở vi_52/53
+zh_41 -> vi_53
+zh_42 -> vi_54
+zh_43 -> vi_55 vi_56
+zh_44 -> vi_57
+zh_45 -> vi_58
+zh_46 -> vi_59
+zh_47 -> vi_60
+zh_48 -> vi_61             # "An Viễn | tướng quân" cắt song song ở hai bản
+zh_49 -> vi_62
+zh_50 -> vi_63
+zh_51 -> vi_64
+zh_52 -> vi_65
+zh_53 -> vi_66
+zh_54 -> vi_67
+zh_55 -> vi_68
+zh_56 -> vi_69
+zh_57 -> vi_70
+zh_58 -> vi_71
+zh_59 -> vi_72
+zh_60 -> vi_73
+zh_61 -> vi_74
+zh_62 -> vi_75
+zh_63 -> vi_76
+zh_64 -> vi_77
+zh_65 -> vi_78 vi_79 vi_80 # lời bình + niên đại (Việt tách 3)
+zh_66 -> vi_81
+zh_67 -> vi_82             # "lay | động" cắt song song
+zh_68 -> vi_83
+zh_69 -> vi_84 vi_85
+zh_70 -> vi_86 vi_87
+zh_71 -> vi_88
+zh_72 -> vi_89
+zh_73 -> vi_90
+zh_74 -> vi_91
+zh_75 ->                   # "quyển chi tam chung" không có trong bản dịch

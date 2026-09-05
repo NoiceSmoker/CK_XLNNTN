@@ -1,0 +1,41 @@
+{
+  "name": "Gale–Church độ dài + DP",
+  "per_file": [
+    {
+      "precision_strict": 0.95,
+      "recall_strict": 0.9620253164556962,
+      "f1_strict": 0.9559748427672956,
+      "precision_lax": 0.95,
+      "recall_lax": 0.9620253164556962,
+      "f1_lax": 0.9559748427672956,
+      "file": "1-Ky-Hong-Bang-thi.jsonl"
+    },
+    {
+      "precision_strict": 0.8035714285714286,
+      "recall_strict": 0.8446601941747572,
+      "f1_strict": 0.8236036604607132,
+      "precision_lax": 0.8035714285714286,
+      "recall_lax": 0.8446601941747572,
+      "f1_lax": 0.8236036604607132,
+      "file": "2-Ky-nha-Thuc.jsonl"
+    },
+    {
+      "precision_strict": 0.8308157099697885,
+      "recall_strict": 0.8721311475409836,
+      "f1_strict": 0.8509722488817539,
+      "precision_lax": 0.8308157099697885,
+      "recall_lax": 0.8721311475409836,
+      "f1_lax": 0.8509722488817539,
+      "file": "3-Ky-nha-Trieu.jsonl"
+    }
+  ],
+  "average": {
+    "precision_strict": 0.861462379513739,
+    "recall_strict": 0.8929388860571456,
+    "f1_strict": 0.8768502507032543,
+    "precision_lax": 0.861462379513739,
+    "recall_lax": 0.8929388860571456,
+    "f1_lax": 0.8768502507032543
+  },
+  "config": "t=0.10 g=0.05"
+}

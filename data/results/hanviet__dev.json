@@ -1,0 +1,41 @@
+{
+  "name": "Hán-Việt lexical + DP",
+  "per_file": [
+    {
+      "precision_strict": 0.975,
+      "recall_strict": 0.9873417721518988,
+      "f1_strict": 0.9811320754716981,
+      "precision_lax": 0.975,
+      "recall_lax": 0.9873417721518988,
+      "f1_lax": 0.9811320754716981,
+      "file": "1-Ky-Hong-Bang-thi.jsonl"
+    },
+    {
+      "precision_strict": 0.875,
+      "recall_strict": 0.9223300970873787,
+      "f1_strict": 0.8980418636056718,
+      "precision_lax": 0.875,
+      "recall_lax": 0.9223300970873787,
+      "f1_lax": 0.8980418636056718,
+      "file": "2-Ky-nha-Thuc.jsonl"
+    },
+    {
+      "precision_strict": 0.9033232628398792,
+      "recall_strict": 0.9344262295081968,
+      "f1_strict": 0.9186115453026465,
+      "precision_lax": 0.9033232628398792,
+      "recall_lax": 0.9344262295081968,
+      "f1_lax": 0.9186115453026465,
+      "file": "3-Ky-nha-Trieu.jsonl"
+    }
+  ],
+  "average": {
+    "precision_strict": 0.9177744209466264,
+    "recall_strict": 0.9480326995824914,
+    "f1_strict": 0.9325951614600054,
+    "precision_lax": 0.9177744209466264,
+    "recall_lax": 0.9480326995824914,
+    "f1_lax": 0.9325951614600054
+  },
+  "config": "t=0.10 g=0.10 w_len=0"
+}

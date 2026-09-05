@@ -1,0 +1,3 @@
+[submodule "CroCoAlign"]
+	path = CroCoAlign
+	url = https://github.com/Babelscape/CroCoAlign.git

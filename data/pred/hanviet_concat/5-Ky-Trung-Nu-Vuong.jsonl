@@ -1,0 +1,21 @@
+{"sources": {"ids": ["zh_1"], "text": ["徵女王紀"]}, "targets": {"ids": ["vi_1"], "text": ["KỶ TRƯNG NỮ VƯƠNG."]}}
+{"sources": {"ids": ["zh_2"], "text": ["徵王"]}, "targets": {"ids": ["vi_2"], "text": ["TRƯNG VƯƠNG."]}}
+{"sources": {"ids": ["zh_3"], "text": ["在位三年"]}, "targets": {"ids": ["vi_3"], "text": ["Ở ngôi 3 năm."]}}
+{"sources": {"ids": ["zh_4"], "text": ["王甚雄勇逐蘇定建國稱王然以女主不能成再造之功"]}, "targets": {"ids": ["vi_4"], "text": ["Vua rất hùng dũng, đuổi Tô Định, dựng nước xưng vương, nhưng vì là vua đàn bà, không thể làm nên công tái tạo."]}}
+{"sources": {"ids": ["zh_5"], "text": ["諱側姓徵"]}, "targets": {"ids": ["vi_5"], "text": ["Tên huý là Trắc, họ Trưng."]}}
+{"sources": {"ids": ["zh_6"], "text": ["本姓雒峯州麋冷縣雒將之女朱鳶縣詩索之妻也"]}, "targets": {"ids": ["vi_6"], "text": ["Nguyên là họ Lạc, con gái của Lạc tướng huyện Mê Linh , Phong Châu, vợ của Thi Sách ở huyện Chu Diên ."]}}
+{"sources": {"ids": [], "text": []}, "targets": {"ids": ["vi_7"], "text": ["(Thi Sách cũng là con Lạc tướng, con hai nhà tướng kết hôn với nhau."]}}
+{"sources": {"ids": ["zh_7"], "text": ["詩索亦雒將子两家子相爲婚姻綱目集覧以雒爲姓誤矣都麋冷麋音縻"]}, "targets": {"ids": ["vi_8", "vi_9"], "text": ["Sách Cương mục tập lãm lấy Lạc làm họ là lầm).", "Đóng đô ở Mê Linh."]}}
+{"sources": {"ids": ["zh_8"], "text": ["庚子元年漢建武十六年"]}, "targets": {"ids": ["vi_10"], "text": ["Canh Tý, năm thứ 1 , (Hán Kiến Vũ năm thứ 16)."]}}
+{"sources": {"ids": ["zh_9"], "text": ["春二月王苦太守蘇定绳以法及讐定之殺其夫乃與其妹貳舉兵攻陷州治"]}, "targets": {"ids": ["vi_11"], "text": ["Mùa xuân, tháng 2, vua khổ vì Thái thú Tô Định dùng pháp luật trói buộc, lại thù Định giết chồng mình, mới cùng với em gái là Nhị nổi binh đánh hãm trị sở ở châu."]}}
+{"sources": {"ids": ["zh_10"], "text": ["定奔還"]}, "targets": {"ids": ["vi_12"], "text": ["Định chạy về nước."]}}
+{"sources": {"ids": ["zh_11"], "text": ["南海九真日南合浦皆應之畧定嶺南六十"]}, "targets": {"ids": ["vi_13"], "text": ["Các quận Nam Hải, Cửu Chân, Nhật Nam, Hợp Phố đều hưởng ứng, lấy được"]}}
+{"sources": {"ids": ["zh_12"], "text": ["五城自立爲王始稱徵姓焉"]}, "targets": {"ids": ["vi_14"], "text": ["65 thành ở Lĩnh Nam, tự lập làm vua, mới xưng là họ Trưng."]}}
+{"sources": {"ids": ["zh_13"], "text": ["辛丑二年漢建武十七年"]}, "targets": {"ids": ["vi_15"], "text": ["Tân Sửu, năm thứ 2 , (Hán Kiến Vũ năm thứ 17)."]}}
+{"sources": {"ids": ["zh_14"], "text": ["春二月晦日食"]}, "targets": {"ids": ["vi_16"], "text": ["Mùa xuân, tháng 2, ngày 30, nhật thực."]}}
+{"sources": {"ids": ["zh_15"], "text": ["漢以徵氏稱王舉兵攻陷城邑邊郡苦之乃命長沙合浦及我交州具車船修橋道通障溪儲粮榖拜馬援爲伏波將軍以扶樂侯刘隆爲副來侵"]}, "targets": {"ids": ["vi_17"], "text": ["Nhà Hán thấy họ Trưng xưng vương, dấy quân đánh lấy các thành ấp, các quận biên thuỳ bị khổ, mới hạ lệnh cho Trường Sa, Hợp Phố và Giao Châu ta sắp sẵn xe thuyền, sửa sang cầu đường, thông các núi khe, chứa thóc lương, cho Mã Viện làm Phục Ba tướng quân, Phù Lạc hầu Lưu Long làm phó sang xâm lược."]}}
+{"sources": {"ids": ["zh_16"], "text": ["壬寅三年漢建武十八年"]}, "targets": {"ids": ["vi_18"], "text": ["Nhâm Dần, năm thứ 3 42], (Hán Kiến Vũ năm thứ 18)."]}}
+{"sources": {"ids": ["zh_17"], "text": ["春正月馬援沿海而進隨山刊道千餘里至浪泊上羅城西街之西名浪泊與王戰"]}, "targets": {"ids": ["vi_19"], "text": ["Mùa xuân, tháng giêng, Mã Viện theo ven biển mà tiến, san núi làm đường hơn nghìn dặm, đến Lãng Bạc (ở phía tây Tây Nhai của La Thành, gọi là Lãng Bạc) đánh nhau với vua."]}}
+{"sources": {"ids": ["zh_18"], "text": ["王見虜大張自度烏合之恐不能支退保禁溪禁溪史作金溪亦以王女子慮不能勝敵遂走散"]}, "targets": {"ids": ["vi_20"], "text": ["Vua thấy thế giặc mạnh lắm, tự nghĩ quân mình ô hợp, sợ không chống nổi, lui quân về giữ Cấm Khê (Cấm Khê, sử chép là Kim Khê)."]}}
+{"sources": {"ids": [], "text": []}, "targets": {"ids": ["vi_21"], "text": ["Quân cũng cho vua là đàn bà, sợ không đánh nổi địch, bèn tan chạy."]}}
+{"sources": {"ids": ["zh_19"], "text": ["國統復絶"]}, "targets": {"ids": ["vi_22"], "text": ["Quốc thống lại mất."]}}

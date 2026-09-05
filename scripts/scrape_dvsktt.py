@@ -21,7 +21,14 @@ import re
 import sys
 import time
 
-import requests
+try:  # môi trường WSL/conda có sẵn
+    import requests
+except ImportError:  # máy trần chỉ có stdlib -> dùng urllib
+    requests = None
+import mimetypes
+import urllib.error
+import urllib.request
+import uuid
 
 ROOT = "https://www.nomfoundation.org/nom-project/history-of-greater-vietnam"
 INDEX_URL = f"{ROOT}/Fulltext?uiLang=vn"
@@ -39,32 +46,65 @@ def clean(s: str) -> str:
     return re.sub(r"[ \t\r\n]+", " ", s).strip()
 
 
-def get(url, session, tries=5):
+def _urlopen(req, tries):
     for i in range(tries):
         try:
-            r = session.get(url, headers=HEADERS, timeout=30)
-            r.encoding = "utf-8"
-            if r.ok:
-                return r.text
-        except requests.RequestException as e:
-            print(f"  GET retry {i+1}: {e}", file=sys.stderr)
-        time.sleep(2 * (i + 1))
-    raise RuntimeError(f"GET failed: {url}")
+            with urllib.request.urlopen(req, timeout=30) as r:
+                return r.read().decode("utf-8", "replace")
+        except (urllib.error.URLError, OSError) as e:
+            print(f"  retry {i+1}: {e}", file=sys.stderr)
+            time.sleep(2 * (i + 1))
+    raise RuntimeError(f"request failed: {req.full_url}")
 
 
-def post_page(url, page, session, tries=5):
-    for i in range(tries):
-        try:
-            r = session.post(
-                url, headers=HEADERS, files={"curPg": (None, str(page))}, timeout=30
-            )
-            r.encoding = "utf-8"
-            if r.ok:
-                return r.text
-        except requests.RequestException as e:
-            print(f"  POST retry {i+1}: {e}", file=sys.stderr)
-        time.sleep(2 * (i + 1))
-    raise RuntimeError(f"POST failed: {url} curPg={page}")
+def _multipart(fields):
+    """Đóng gói multipart/form-data thủ công (khớp form `search_en` của site)."""
+    boundary = uuid.uuid4().hex
+    body = b""
+    for name, value in fields.items():
+        body += (
+            f"--{boundary}\r\n"
+            f'Content-Disposition: form-data; name="{name}"\r\n\r\n'
+            f"{value}\r\n"
+        ).encode("utf-8")
+    body += f"--{boundary}--\r\n".encode("utf-8")
+    return body, f"multipart/form-data; boundary={boundary}"
+
+
+def get(url, session=None, tries=5):
+    if requests is not None and session is not None:
+        for i in range(tries):
+            try:
+                r = session.get(url, headers=HEADERS, timeout=30)
+                r.encoding = "utf-8"
+                if r.ok:
+                    return r.text
+            except requests.RequestException as e:
+                print(f"  GET retry {i+1}: {e}", file=sys.stderr)
+            time.sleep(2 * (i + 1))
+        raise RuntimeError(f"GET failed: {url}")
+    return _urlopen(urllib.request.Request(url, headers=HEADERS), tries)
+
+
+def post_page(url, page, session=None, tries=5):
+    if requests is not None and session is not None:
+        for i in range(tries):
+            try:
+                r = session.post(
+                    url, headers=HEADERS, files={"curPg": (None, str(page))}, timeout=30
+                )
+                r.encoding = "utf-8"
+                if r.ok:
+                    return r.text
+            except requests.RequestException as e:
+                print(f"  POST retry {i+1}: {e}", file=sys.stderr)
+            time.sleep(2 * (i + 1))
+        raise RuntimeError(f"POST failed: {url} curPg={page}")
+    body, ctype = _multipart({"curPg": str(page)})
+    req = urllib.request.Request(
+        url, data=body, headers={**HEADERS, "Content-Type": ctype}, method="POST"
+    )
+    return _urlopen(req, tries)
 
 
 def list_sections(session):
@@ -155,7 +195,7 @@ def main():
     args = ap.parse_args()
 
     os.makedirs(args.out, exist_ok=True)
-    session = requests.Session()
+    session = requests.Session() if requests is not None else None
 
     if args.list or (not args.sections and not args.all):
         secs = list_sections(session)

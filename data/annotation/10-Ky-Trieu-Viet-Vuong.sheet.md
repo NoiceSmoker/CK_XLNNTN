@@ -1,0 +1,170 @@
+# Phiếu gán nhãn — 10-Ky-Trieu-Viet-Vuong
+
+Hán: 51 câu · Việt: 59 câu
+
+## NGUỒN (Hán + phiên âm)
+
+- **zh_1** 絶煙火人跡夜則以獨木船出兵擊覇先營殺獲甚眾所得粮食爲持久計
+    - _tuyệt yên hoả nhân tích, dạ tắc dĩ độc mộc thuyền xuất binh kích Bá Tiên doanh, sát hoạch thậm chúng, sở đắc lương thực vi trì cửu kế._
+- **zh_2** 覇先蹀而攻之竟不能得
+    - _Bá Tiên điệp nhi công chi, cánh bất năng đắc._
+- **zh_3** 國人號夜澤王
+    - _Quốc nhân hiệu Dạ Trạch Vương._
+- **zh_4** 世傳雄王時王女仙容媚娘出遊海口船回至褚家鄕洲步行洲上遇褚童子裸身先匿葦叢中自以爲月老葦緣其合爲夫妻畏罪避居岸上所居便成都會王調兵討之童子仙容恐惧待罪忽夜半風雨暴至舂撞所居棟宇自拨居人及鷄犬一時同升于天留其空址在澤中時人呼其洲曰自然洲其澤曰一夜澤今存舊號云
+    - _[Thế truyền Hùng Vương thời, vương nữ Tiên Dung Mị Nương xuất du hải khẩu, thuyền hồi chí Chử Gia hương châu, bộ hành châu thượng, ngộ Chử Đồng Tử loã thân tiên nặc vi tùng trung, tự dĩ vi nguyệt lão vi duyên, kì hợp vi phu thê, uý tội tị cư ngạn thượng, sở cư tiện thành đô hội. Vương điều binh thảo chi. Đồng Tử Tiên Dung khủng cụ đãi tội. Hốt dạ bán phong vũ bạo chí thung chàng sở cư, đống vũ tự bạt, cư nhân cập kê khuyển nhất thời đồng thăng vu thiên, lưu kì không chỉ tại trạch trung. Thời nhân hô kì châu viết Tự Nhiên châu, kì trạch viết Nhất Dạ trạch, kim tồn cựu hiệu vân]._
+- **zh_5** 右前南帝起辛酉終丁卯凣七年
+    - _Hữu Tiền Nam Đế, khởi Tân Dậu, chung Đinh Mão, phàm thất niên._
+- **zh_6** 趙越王紀
+    - _Triệu Việt Vương KỶ._
+- **zh_7** 按舊史不載趙越王𣑯郎王今釆野史及他書始載越王位號附𣑯郎王以補之
+    - _[Án cựu sử bất tải Triệu Việt Vương, Đào Lang Vương, kim thái dã sử cập tha thư, thuỷ tải Việt Vương vị hiệu phụ Đào Lang Vương dĩ bổ chi]._
+- **zh_8** 趙越王
+    - _Triệu Việt Vương._
+- **zh_9** 在位二十三年
+    - _Tại vị nhị thập tam niên._
+- **zh_10** 附𣑯郎王王㨿險設奇以摧大敵惜夫過愛其女𦤶有女壻之衬
+    - _Phụ: Đào Lang Vương [Vương cứ hiểm, thiết kì dĩ thôi đại địch, tích phu quá ái kì nữ trí hữu nữ tế chi sấn]._
+- **zh_11** 王姓趙諱光復趙肅之子朱鳶縣人威壮勇烈從南帝征伐有功拜左將軍
+    - _Vương tính Triệu huý Quang Phục, Triệu Túc chi tử, Chu Diên huyện nhân, uy tráng dũng liệt, tòng Nam Đế chinh phạt hữu công, bái tả Tướng quân._
+- **zh_12** 南帝薨乃稱王都龍編遷武寕
+    - _Nam Đế hoăng, nãi xưng vương, đô Long Biên, thiên Vũ Ninh._
+- **zh_13** 戊辰元年梁太清二年
+    - _Mậu Thìn, nguyên niên, [Lương Thái Thanh nhị niên]._
+- **zh_14** 春三月辛亥三帝在屈獠洞中日久肙瘴病薨
+    - _Xuân, tam nguyệt, Tân Hợi, Nam Đế tại Khuất Lạo động trung, nhật cửu quyên chướng bệnh hoăng._
+- **zh_15** 黎文休曰兵法云三萬齊力天下莫能當焉
+    - _Lê Văn Hưu viết: Binh pháp vân: "Tam vạn tề lực, thiên hạ mạc năng đương yên"._
+- **zh_16** 今李賁有眾五萬而不能守國然則賁短於爲將
+    - _Kim Lí Bí hữu chúng ngũ vạn nhi bất năng thủ quốc, nhiên tắc Bí đoản ư vi tướng.._
+- **zh_17** 耶抑新集之兵不可與戰耶李賁亦中才之將其臨敵制勝不爲不能然卒以两敗身亡者盖不幸而遇陳覇先之善用兵也
+    - _da? Ức tân tập chi binh bất khả dữ chiến da? Lí Bí diệc trung tài chi tướng, kì lâm địch chế thắng bất vi bất năng, nhiên tốt dĩ lưỡng bại thân vong giả, cái bất hạnh nhi ngộ Trần Bá Tiên chi thiện dụng binh dã._
+- **zh_18** 史臣鼯士連曰前南帝之𦥷兵除暴宜若順乎天矣然而卒𦤶敗亡者盖天未欲我國平治耶嗚呼非特遇覇先之善用兵又遭江水之暴涨以助其勢庸非天乎
+    - _Sử thần Ngô Sĩ Liên viết: Tiền Nam Đế chi hưng binh trừ bạo, nghi nhược thuận hồ thiên hĩ, nhiên nhi tốt trí bại vong giả, cái thiên vị dục ngã quốc bình trị da? Ô hô! Phi đặc ngộ Bá Tiên chi thiện dụng binh, hựu tao giang thuỷ chi bạo trướng dĩ trợ kì thế, dung phi thiên hồ?._
+- **zh_19** 己巳二年梁太清三年
+    - _Kỉ Tị, nhị niên [Lương Thái Thanh tam niên]._
+- **zh_20** 王居澤中以梁兵不退之故焚香祈禱懇吿于天地神祇於是得龍爪兠鍪之瑞
+    - _Vương cư trạch trung dĩ Lương binh bất thoái chi, cố phần hương kì đảo, khẩn cáo vu thiên địa thần kì, ư thị đắc long trảo đâu mâu chi thuỵ,.._
+- **zh_21** 用以擊賊
+    - _dụng dĩ kích tặc._
+- **zh_22** 自此軍聲大振所向無敵
+    - _Tự thử quân thanh đại chấn, sở hướng vô địch._
+- **zh_23** 俗傳澤中神人褚童子時乘黃龍自天而下脱龍爪付王俾戴兜鍪上以擊賊
+    - _[Tục truyền trạch trung thần nhân Chử Đồng Tử thời thừa hoàng long tự thiên nhi hạ, thoát long trảo phó vương, tỉ đái đâu mâu thượng dĩ kích tặc]._
+- **zh_24** 庚午三年梁簡文帝綱太寳元年
+    - _Canh Ngọ, tam niên, [Lương Giản Văn Đế Cương, Thái Bảo nguyên niên]._
+- **zh_25** 春正月梁授陳覇先威明將軍交州刺史
+    - _Xuân, chính nguyệt, Lương thụ Trần Bá Tiên Uy minh tướng quân Giao Châu thứ sử._
+- **zh_26** 覇先又圖欲持守日久使粮絶兵疲則可破會
+    - _Bá Tiên hựu đồ dục trì thủ nhật cửu, sử lương tuyệt binh bì tắc khả phá hội._
+- **zh_27** 梁有侯景之亂召還委裨將楊孱攻王
+    - _Lương hữu Hầu Cảnh chi loạn, triệu hoàn, uỷ tì tướng Dương Sàn công vương._
+- **zh_28** 王縱兵擊之
+    - _Vương túng binh kích chi._
+- **zh_29** 孱拒戰敗死
+    - _Sàn cự chiến, bại tử._
+- **zh_30** 梁軍潰北歸
+    - _Lương quân hội Bắc quy._
+- **zh_31** 國乃平
+    - _Quốc nãi bình._
+- **zh_32** 王入龍編城居之
+    - _Vương nhập Long Biên thành cư chi._
+- **zh_33** 南帝兄天寳居夷獠中稱桃郎王立國曰野能國
+    - _Nam Đế huynh Thiên Bảo cư Di Lạo trung, xưng Đào Lang Vương, lập quốc viết Dã Năng quốc._
+- **zh_34** 先是南帝避居屈獠之時天寳與族將李佛子率三萬人入九眞
+    - _Tiên thị Nam Đế tị cư Khuất Lạo chi thời, Thiên Bảo dữ tộc tướng Lí Phật Tử suất tam vạn nhân nhập Cửu Chân._
+- **zh_35** 陳覇先追擊
+    - _Trần Bá Tiên truy kích.._
+- **zh_36** 之天寳兵敗乃收餘眾萬人奔哀牢境夷獠中見桃江原頭野能洞地廣衍沃可居築城居之因地名建國號
+    - _chi, Thiên Bảo binh bại, nãi thu dư chúng vạn nhân bôn Ai Lao cảnh Di Lạo trung, kiến Đào Giang nguyên đầu Dã Năng động, địa quảng diễn ốc khả cư, trúc thành cư chi, nhân địa danh kiến quốc hiệu._
+- **zh_37** 至是眾推爲主稱桃郎王
+    - _Chí thị chúng suy vi chủ, xưng Đào Lang Vương._
+- **zh_38** 乙亥八年梁敬帝方智紹泰元年
+    - _Ất Hợi, bát niên, [Lương Kính Đế Phương Trí, Thiệu Thái nguyên niên]._
+- **zh_39** 桃郎王卒于野能國無嗣眾推李佛子爲嗣統其眾
+    - _[Đào Lang Vương tốt vu Dã Năng quốc, vô tự, chúng suy Lí Phật Tử vi tự, thống kì chúng._
+- **zh_40** 丁丑十年梁太平二年陳武帝先永定元年
+    - _Đinh Sửu thập niên, [Lương Thái Bình nhị niên, Trần Vũ Đế Tiên, Vĩnh Định nguyên niên]._
+- **zh_41** 李佛子率眾東下與王戰于太平縣凣五接陣未决勝負而佛子兵少却意王有異術乃和請盟
+    - _Lí Phật Tử suất chúng Đông hạ, dữ vương chiến vu Thái Bình huyện, phàm ngũ tiếp trận, vị quyết thắng phụ, nhi Phật Tử binh thiểu khước, ý Vương hữu dị thuật, nãi giảng hoà thỉnh minh._
+- **zh_42** 王以佛子前南帝族不忍絶遂割界于君臣州今慈廉縣上下葛二社是也居國之
+    - _Vương dĩ Phật Tử tiền Nam Đế tộc, bất nhẫn tuyệt, toại cát giới vu Quân Thần châu [Kim Từ Liêm huyện Thượng Hạ Cát nhị xã thị dã] cư quốc chi.._
+- **zh_43** 西遷嗚鳶城今慈廉縣下姥社是也其社今有八郎神祠盖雅郎之祠也
+    - _Tây, thiên Ô Diên thành [Kim Từ Liêm huyện, Hạ Mỗ xã thị dã, kì xã kim hữu Bát Lang thần từ, cái Nhã Lang chi từ dã]._
+- **zh_44** 後佛子有子雅郎求婚王女杲娘
+    - _Hậu Phật Tử hữu tử Nhã Lang cầu hôn Vương nữ Cảo Nương._
+- **zh_45** 許之遂成姻好
+    - _Hứa chi, toại thành nhân hảo._
+- **zh_46** 王鍾愛杲娘居雅郎爲贅壻焉夫居妻家日贅壻
+    - _Vương chung ái Cảo Nương, cư Nhã Lang vi chuế tế yên phu cư thê gia. nhật chuế tế]._
+- **zh_47** 庚寅二十三年陳宣帝頊大建二年
+    - _Canh Dần, nhị thập tam niên, [Trần Tuyên Đế Húc, Đại Kiến nhị niên]._
+- **zh_48** 雅郎謂其妻曰昔吾两父王爲讐今爲婚姻不亦善乎然此父何術能却彼父兵
+    - _Nhã Lang vị kì thê viết: "Tích Ngô lưỡng phụ vương vi thù, kim vi hôn nhân bất diệc thiện hồ? Nhiên thử phụ hà thuật năng khước bỉ phụ binh?"._
+- **zh_49** 杲娘不覺其意密取龍爪兜鍪示之
+    - _Cảo Nương bất giác kì ý mật, thủ long trảo đâu mâu thị chi._
+- **zh_50** 雅郎潜謀易其爪私謂杲娘曰吾聞父母深恩重如天地吾夫婦雅相愛重不忍契闊吾且割愛歸家
+    - _Nhã Lang tiềm mưu dịch kì trảo, tư vị Cảo Nương viết: "Ngô văn phụ mẫu thâm ân, trọng như thiên địa, ngô phu phụ nhã tương ái trọng, bất nhẫn khế khoát, ngô thả cát ái quy gia"._
+- **zh_51** 雅郎歸與其父謀襲王取其國
+    - _Nhã Lang quy, dữ kì phụ mưu tập vương, thủ kì quốc._
+
+## ĐÍCH (Việt)
+
+- **vi_1** tuyệt không để khói lửa và dấu người, ban đêm dùng thuyền độc mộc đem quân ra đánh doanh trại của quân Bá Tiên, giết và bắt sống rất nhiều, lấy được lương thực để làm kế cầm cự lâu dài.
+- **vi_2** Bá Tiên theo hút mà đánh, nhưng không đánh được.
+- **vi_3** Người trong nước gọi là Dạ Trạch Vương.
+- **vi_4** (Tục truyền thời Hùng Vương, con gái Hùng Vương là Tiên Dung Mỵ Nương ra chơi cửa biển.
+- **vi_5** Thuyền về đến bãi ở hương Chử Gia, Tiên Dung lên trên bãi, gặp Chử Đồng Tử trần truồng núp trong bụi lau, tự cho là Nguyệt lão xe duyên, bèn cùng nhau làm vợ chồng, sợ tội phải ở lánh trên bờ sông, chỗ ấy trở thành nơi đô hội.
+- **vi_6** Hùng Vương đem quân đến đánh.
+- **vi_7** Đồng Tử và Tiên Dung sợ hãi đợi tội.
+- **vi_8** Bỗng nửa đêm mưa gió dữ dội làm rung chuyển nơi ở, rường cột tự bốc lên, người và gà chó trong một lúc cùng bay lên trời, chỉ còn lại cái nền không ở giữa đầm.
+- **vi_9** Người bấy giờ gọi bãi ấy là bãi Tự Nhiên, đầm ấy là đầm Nhất Dạ, nay vẫn còn tên gọi cũ).
+- **vi_10** Trở lên là Tiền Lý Nam Đế, từ năm Tân Dậu đến năm Đinh Mão, tất cả 7 năm (541- 547).
+- **vi_11** KỶ TRIỆU V
+- **vi_12** TRIỆU VIỆT VƯƠNG.
+- **vi_13** Phụ: Đào Lang Vương Ở ngôi 23 năm .
+- **vi_14** Vua giữ đất hiểm, dùng kỳ binh để đánh giặc lớn, tiếc vì quá yêu con gái đến nỗi mắc hoạ vì con rể.
+- **vi_15** Vua họ Triệu, tên huý là Quang Phục, là con Triệu Túc, người huyện Chu Diên, uy tráng dũng liệt, theo Nam Đế đi đánh dẹp có công, được trao chức Tả tướng quân.
+- **vi_16** Nam Đế mất, bèn xưng vương, đóng đô ở Long Biên, sau dời sang Vũ Ninh .
+- **vi_17** Mậu Thìn, năm thứ 1 , (Lương Thái Thanh năm thứ 2).
+- **vi_18** Mùa xuân, tháng 3, ngày Tân Hợi Nam Đế ở động Khuất Lạo lâu ngày nhiễm lam chướng, ốm chết.
+- **vi_19** Lê Văn Hưu nói: Binh pháp có câu: "Ba vạn quân đều sức, thiên hạ không ai địch nổi".
+- **vi_20** Nay Lý Bí có 5 vạn quân mà không giữ được nước, thế thì Bí kém tài làm tướng
+- **vi_21** chăng?
+- **vi_22** Hay là quân lính mới họp không thể đánh được chăng?
+- **vi_23** Lý Bí cũng là bậc tướng trung tài, ra trận chế ngự quân địch giành phần thắng không phải là không làm được, nhưng bị hai lần thua rồi chết, bởi không may gặp phải Trần Bá Tiên là kẻ giỏi dùng binh vậy.
+- **vi_24** Sử thần Ngô Sĩ Liên nói: Tiền Lý Nam Đế dấy binh trừ bạo, đáng là thuận đạo trời, thế mà cuối cùng đến nỗi bại vong, là vì trời chưa muốn cho nước ta được bình trị chăng?
+- **vi_25** Than ôi!
+- **vi_26** Không chỉ vì gặ phải Bá Tiên là kẻ giỏi dùng binh, mà còn gặp lúc nước sông đột ngột dâng lên trợ thế , há chẳng phải cũng do trời hay sao?
+- **vi_27** Kỷ Tỵ, năm thứ 2 , (Lương Thái Thanh năm thứ 3).
+- **vi_28** Vua ở trong đầm thấy quân Lương không lui, mới đốt hương cầu đảo, khẩn thiết kinh cáo với trời đất thần kỳ, thế rồi có điềm lành được mũ đâu mâu móng rồng
+- **vi_29** dùng để đánh giặc.
+- **vi_30** Từ đó quân thanh lừng lẫy, đến đâu không ai địch nổi (tục truyền rằng thần nhân trong đầm là Chử Đồng Tử bấy giờ cưỡi rồng vàng từ trên trời rơi xuống, rút móng rồng trao cho vua, bảo gài lên mũ đâu mâu mà đánh giặc).
+- **vi_31** Canh Ngọ, năm thứ 3 , (Lương Giản Văn Đế Cương, Thái Bảo {151 năm thứ 1).
+- **vi_32** Mùa xuân, tháng giêng, nhà Lương cho Trần Bá Tiên làm Uy minh tướng quân Giao Châu thứ sử.
+- **vi_33** Bá Tiên lại mưu tính cầm cự lâu ngày khiến cho lương hết quân mỏi thì có thể phá được.
+- **vi_34** Gặp lúc nhà Lương có loạn Hầu Cảnh, gọi về, uỷ cho tì tướng là Dương Sàn đánh nhau với vua.
+- **vi_35** Vua tung quân ra đánh.
+- **vi_36** Sàn chống cự, thua chết.
+- **vi_37** Quân Lương tan vỡ chạy về Bắc.
+- **vi_38** Nước ta được yên.
+- **vi_39** Vua vào thành Long Biên ở.
+- **vi_40** Anh của Nam Đế là Thiên Bảo, ở đất người Di Lạo, xưng là Đào Lang Vương, lập nước gọi là nước Dã Năng.
+- **vi_41** Trước đó, khi Nam Đế tránh ở động Khuất Lạo, Thiên Bảo cùng với tướng người họ là Lý Phật Tử đem 3 vạn người vào Cửu Chân.
+- **vi_42** Trần Bá Tiên đuổi theo đánh
+- **vi_43** Thiên Bảo bị thua, bèn thu nhặt quân còn sót được vạn người chạy sang đất người Di Lạo ở Ai Lao, thấy động Dã Năng ở đầu nguôn Đào Giang, đất phẳng rộng màu mỡ có thể ở được, mới đắp thành để ở, nhân tên đất ấy mà đặt quốc hiệu.
+- **vi_44** Đến bây giờ quân chúng tôn làm chúa, xưng là Đào Lang Vương.
+- **vi_45** Ất Hợi, năm thứ 8 , (Lương Kính Đế Phương Trí, Thiệu Thái năm thứ 1).
+- **vi_46** Đào Lang Vương mất ở nước Dã Năng, không có con nối, quân chúng suy tôn Lý Phật Tử lên nối ngôi, thống lĩnh quân chúng.
+- **vi_47** năm thứ 1).
+- **vi_48** Lý Phật Tử đem quân xuống miền Đông đánh nhau với vua ở huyện Thái Bình, năm lần giáp trận, chưa phân thắng bại, mà quân của Phật Tử hơi lùi, ngờ là vua có thuật lạ, bèn giảng hoà xin ăn thề.
+- **vi_49** Vua nghĩ rằng Phật Tử là người họ của Tiền Nam Đế, không nỡ cự tuyệt, bèn chia địa giới ở bãi Quân Thần (nay là hai xã Thượng Cát, Hạ Cát ở huyện Từ Liêm) cho ở phía
+- **vi_50** tây của nước dời đến thành Ô Diên (nay là xã Hạ Mỗ, huyện Từ Liêm, xã ấy nay có đền thờ thần Bát Lang, tức là đền thờ Nhã Lang vậy).
+- **vi_51** Sau Phật Tử có con trai là Nhã Lang, xin lấy con gái của vua là Cảo Nương.
+- **vi_52** Vua bằng lòng, bèn thành thông gia.
+- **vi_53** Vua yêu quý Cảo Nương, cho Nhã Lang ở gửi rể.
+- **vi_54** Canh Dần, năm thứ 23 , (Trần Tuyên Đế Húc, Đại Kiến năm thứ 2).
+- **vi_55** Nhã Lang bảo vợ rằng: "Trước hai vua cha chúng ta cừu thù với nhau, nay là thông gia, chẳng cũng hay lắm ư?
+- **vi_56** Nhưng cha nàng có thuật gì mà có thể làm lui được quân của cha tôi?".
+- **vi_57** Cảo Nương không biết ý của chồng, bí mật lấy mũ đâu mâu móng rồng cho xem.
+- **vi_58** Nhã Lang mưu ngầm tráo đổi cái móng ấy, rồi bảo riêng với Cảo Nương rằng: "Tôi nghĩ ơn sâu của cha mẹ nặng bằng trời đất, vợ chồng ta hoà nhã yêu quý nhau không nỡ xa cách, nhưng tôi phải tạm dứt tình, về thăm cha mẹ".
+- **vi_59** Nhã Lang về, cùng với cha bàn mưu đánh úp vua, chiếm lấy nước.
