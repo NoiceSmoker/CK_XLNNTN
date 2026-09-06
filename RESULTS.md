@@ -1,7 +1,7 @@
 # Kết quả — Dóng hàng câu Hán ↔ Việt (Đại Việt Sử Ký Toàn Thư)
 
 Đề tài 05. Báo cáo đầy đủ: `report/bao_cao.pdf`; gói nộp: `SUBMISSION.md`.
-Phần cần GPU chạy trên WSL2 (RTX 5050, env `crocoalign`); mọi bước còn lại thuần Python.
+Phần cần torch chạy được trên CPU (`.venv`) hoặc GPU; mọi bước còn lại thuần Python.
 
 ## 1. Thiết kế đánh giá
 
@@ -28,11 +28,10 @@ Phần cần GPU chạy trên WSL2 (RTX 5050, env `crocoalign`); mọi bước c
 |---|---|---|
 | Gale–Church độ dài + DP | prior tỉ lệ độ dài (chữ Hán ↔ âm tiết Việt), DP đơn điệu 1-1/1-0/0-1/1-2/2-1 | không |
 | Hán-Việt lexical + DP | IDF-weighted Dice giữa **phiên âm Hán-Việt** và câu Việt, cùng DP | không |
-| ↳ gộp văn bản ghép (ablation) | như trên, nhưng điểm 1-2/2-1 tính trên văn bản ghép thay vì trung bình 2 ô | không |
 | CroCoAlign (gốc) | checkpoint LaBSE chính thức, `min_dist=0.05`, ngưỡng 0.5 | có |
 | CroCoAlign (tuned) | `min_dist=0.15`, ngưỡng 0.20 — chọn trên DEV | có |
 | LaBSE+DP (cải tiến 1) | bộ mã hoá LaBSE *của checkpoint CroCoAlign* → cosine → DP đơn điệu | có |
-| LaBSE+HánViệt+DP (cải tiến 2) | `S = w·cos_LaBSE + (1−w)·lex_HánViệt` → DP; `w` chọn trên DEV | có |
+| LaBSE+HánViệt+DP (cải tiến 2) | `S = w·cos_LaBSE + (1−w)·lex_HánViệt` → DP; `w` chọn bằng CV | có |
 
 Mọi hệ thống chạy bằng **một lệnh**: `PY=.venv/bin/python bash scripts/run_all.sh` (đã chạy thực tế trên
 macOS arm64, CPU, ~15 phút; trên WSL/GPU dùng `PY` của env `crocoalign`). Lệnh tự chấm điểm và chèn bảng bên dưới.
@@ -81,8 +80,8 @@ ràng buộc thứ tự — đó là nguồn lỗi chính, không phải chất 
 
 ### 4.2. Tín hiệu tương đồng ít quan trọng một khi giải mã đúng
 Cùng bộ giải mã: prior độ dài thuần 0.879; phiên âm Hán-Việt 0.934; LaBSE 0.918; LaBSE+Hán-Việt 0.927. Bốn hệ nằm
-trong ~5 điểm, ba hệ đầu bảng chênh nhau ≤ 3 nhóm/185. Encoder của CroCoAlign **không hơn** tín hiệu từ vựng miễn
-phí có sẵn ở nguồn trên dữ liệu này. Hợp nhất (w=0.3) nhỉnh hơn LaBSE thuần nhưng chưa vượt lexical thuần.
+trong ~5 điểm, ba hệ đầu bảng chênh nhau ≤ 3 nhóm/185. Encoder của CroCoAlign **không hơn** tín hiệu từ vựng sẵn
+có ở nguồn trên dữ liệu này. Hợp nhất (w=0.3) nhỉnh hơn LaBSE thuần nhưng chưa vượt lexical thuần.
 
 ### 4.3. Gộp trên văn bản ghép là chi tiết quan trọng nhất của DP
 CV chọn `c=1` ở **mọi** fold của **mọi** hệ. Với gộp trung bình, các nhóm 1-2 có một câu Việt ngắn ("Hữu ty hỏi vì cớ
@@ -94,8 +93,8 @@ chọn bằng CV cho 0.918. (ii) Trên DEV silver, gộp-trung-bình thắng g�
 tay thì ngược lại (0.859 vs 0.934). Số liệu chỉ trên silver không được coi là chân trị.
 
 ### 4.5. Lỗi còn lại
-Hệ tốt nhất sai 11/185 nhóm, toàn bộ là **1-n với n ≥ 3** (chú giải dài, lời bình sử thần tách nhiều câu Việt) hoặc
-**2-2** — ngoài tập bước 1-1/1-0/0-1/1-2/2-1 của DP. Lỗi CroCoAlign: tiêu đề/tên ngắn bị bỏ, vị trí trôi khi bản
+Hệ tốt nhất sai 11/185 nhóm: 9 là **1-n với n ≥ 3** (chú giải dài, lời bình sử thần tách nhiều câu Việt) hoặc
+**2-2** — ngoài tập bước 1-1/1-0/0-1/1-2/2-1 của DP; 2 là nhóm 1-2 có câu Việt thứ hai quá ngắn nên bị bỏ trống. Lỗi CroCoAlign: tiêu đề/tên ngắn bị bỏ, vị trí trôi khi bản
 dịch chèn chú giải.
 
 ## 5. Cách tái lập

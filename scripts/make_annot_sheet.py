@@ -8,7 +8,7 @@ Người gán nhãn đọc phiên âm ↔ bản dịch rồi ghi liên kết và
 
 Dùng:
   python make_annot_sheet.py --processed data/processed --section 7-Ky-Si-Vuong \
-      --out data/gold_manual/7-Ky-Si-Vuong.sheet.md
+      --out data/annotation/7-Ky-Si-Vuong.sheet.md
 """
 import argparse
 import json

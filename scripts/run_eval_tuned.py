@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Đánh giá CroCoAlign với 2 siêu tham số điều chỉnh được (cải tiến Pha 4):
+Đánh giá CroCoAlign với 2 siêu tham số suy luận điều chỉnh được:
   --min-dist    : nới bộ lọc vị trí (gốc 0.05) -> cứu các cặp bị lệch vị trí do drift
   --threshold   : ngưỡng quyết định thay cho round(0.5) -> đánh đổi P/R
 

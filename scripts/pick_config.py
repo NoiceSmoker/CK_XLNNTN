@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """
-Chọn cấu hình trên DEV, báo cáo trên TEST (tránh tune-trên-test).
+Chọn cấu hình rồi báo cáo trên TEST (tránh tune-trên-test). Hai chế độ:
+  - mặc định : chọn trên DEV (data/gold, silver)
+  - --cv     : chọn bằng leave-one-section-out ngay trên gold gán tay (dùng cho các hệ DP,
+               vì DEV silver suy biến với chúng)
 
 Duyệt mọi thư mục con của --pred-root (mỗi thư mục = 1 cấu hình), chấm trên DEV
 (data/gold, silver) -> chọn cấu hình F1 strict cao nhất -> chấm cấu hình đó trên
@@ -9,6 +12,7 @@ TEST (data/gold_manual, gán tay) -> ghi 2 JSON như score.py để make_results
 Dùng:
   python pick_config.py --pred-root data/pred/labse_dp --name "LaBSE+HánViệt+DP" --tag labse_hanviet_dp
   python pick_config.py --pred-root data/pred/labse_dp --filter w1.0_ --name "LaBSE+DP" --tag labse_dp
+  python pick_config.py --cv --pred-root data/pred/grid_hanviet --name "Hán-Việt lexical + DP" --tag hanviet
 """
 import argparse
 import json

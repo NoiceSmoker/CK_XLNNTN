@@ -4,7 +4,7 @@ Yêu cầu nộp: dataset, source (nhóm viết), model đã huấn luyện / li
 
 | Hạng mục | Vị trí trong kho | Ghi chú |
 |---|---|---|
-| **Báo cáo** | `report/bao_cao.pdf` (nguồn `report/bao_cao.tex`, XeLaTeX/tectonic) | dạng bài báo, 10 trang + bìa; Phụ lục A = hướng dẫn tái lập từng lệnh |
+| **Báo cáo** | `report/bao_cao.pdf` (nguồn `report/bao_cao.tex`, XeLaTeX/tectonic) | dạng bài báo, 11 trang + bìa; Phụ lục A = hướng dẫn tái lập từng lệnh |
 | **Dataset** | `data/raw/` (thô theo trang, 14 mục) · `data/processed/` (`*.zh.jsonl`, `*.vi.jsonl`, `*.blocks.tsv`) · `data/gold_manual/` (gold gán tay, 3 mục, 185 nhóm) · `data/annotation/` (phiếu, file gán nhãn có chú thích, tiêu chí) · `data/gold/` (silver DEV) | nguồn: nomfoundation.org, cào bằng `scripts/scrape_dvsktt.py` |
 | **Source (nhóm viết)** | `scripts/` — cào, tiền xử lý, wrapper chạy CroCoAlign, scorer, baseline, gán nhãn, cải tiến, chọn cấu hình, bảng kết quả, runner một lệnh | thuần Python; phần cần torch ghi rõ trong Phụ lục A |
 | **Mã nguồn mô hình bên ngoài** | `CroCoAlign/` — git submodule, ghim commit `2e93992` của https://github.com/Babelscape/CroCoAlign | không sửa mã gốc |

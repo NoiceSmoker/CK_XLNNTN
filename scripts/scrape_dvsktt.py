@@ -10,7 +10,7 @@ POST multipart {curPg: n} tới URL mục -> HTML chứa 1 bảng:
 Kết quả: 1 file JSONL / mục, mỗi dòng = 1 trang:
   {"section","page_idx","page_label","han_phienam","dich"}
 
-Chạy (trong env có `requests`):
+Chạy (dùng `requests` nếu có, không thì thuần `urllib`):
   python scrape_dvsktt.py --sections 1-Ky-Hong-Bang-thi --out data/raw
   python scrape_dvsktt.py --all --out data/raw          # toàn bộ (chậm)
 """
