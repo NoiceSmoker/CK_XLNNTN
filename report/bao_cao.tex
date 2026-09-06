@@ -1,6 +1,6 @@
 % Báo cáo Đề tài 05 — Chinese–Vietnamese sentence alignment (dạng bài báo, 8–10 trang)
 % Biên dịch: tectonic bao_cao.tex   (hoặc xelatex; KHÔNG dùng pdflatex vì fontspec/xeCJK)
-\documentclass[12pt,a4paper]{article}
+\documentclass[11pt,a4paper]{article}
 
 % ---------- font & ngôn ngữ
 \usepackage{fontspec}
@@ -171,7 +171,7 @@ cặp nào có $M_{ij}>0{,}5$ được coi là liên kết. Cách này cho phép
 và ngược lại.
 
 \begin{figure}[t]\centering
-\includegraphics[width=0.82\linewidth]{fig_crocoalign_arch.png}
+\includegraphics[width=0.74\linewidth]{fig_crocoalign_arch.png}
 \caption{Kiến trúc \croco{} (hình lấy từ kho mã của tác giả \cite{crocoalign}). Bộ nhúng câu được giữ cố định; bộ mã
 hoá ngữ cảnh và đầu phân loại được huấn luyện. Ma trận $n\times m$ với các ô xanh là những cặp được dóng hàng.}
 \label{fig:arch}
@@ -259,10 +259,17 @@ dấu \code{. ! ? ;}. Bảng~\ref{tab:data} thống kê 14 mục đã xử lý.
 6 thuộc Đông Hán & -- & 9 & 83 & 94     & 13 Nam Bắc phân tranh & -- & 5 & 56 & 55\\
 7 Sĩ Vương & TEST & 11 & 75 & 91        & 14 Nhà Ngô & -- & 14 & 107 & 139\\
 \midrule
-\multicolumn{10}{l}{\B{Tổng}: 190 trang, \B{1\,703} câu Hán, \B{1\,833} câu Việt}\\
+\multicolumn{10}{l}{\B{Tổng}: 178 trang, \B{1\,703} câu Hán, \B{1\,833} câu Việt}\\
 \bottomrule
 \end{tabular}
 \end{table}
+
+\begin{figure}[h]\centering
+\includegraphics[width=0.92\linewidth]{fig_data.pdf}
+\caption{Trái: số câu Hán và câu Việt của 14 mục sau tiền xử lý (mục DEV và TEST được đánh dấu). Phải: phân bố loại
+liên kết trong 185 nhóm gold gán tay; ngoài 160 nhóm một-một còn có các nhóm một-nhiều dài do chú giải và lời bình.}
+\label{fig:data}
+\end{figure}
 
 Dữ liệu thực tế có một số nhiễu cần lưu ý. Bản dịch có nhiều câu hơn bản Hán khoảng 8\% do chú giải và tách câu. Một
 vài câu bị cụt ngay ở nguồn (\emph{``KỶ TRIỆU V''}, \emph{``là Ki''}). Có những câu bị cắt ngang ở ranh giới trang trong
@@ -391,6 +398,13 @@ mà không cần checkpoint.
 % =====================================================================
 \section{Kết quả}\label{sec:results}
 
+\begin{figure}[h]\centering
+\includegraphics[width=0.88\linewidth]{fig_results.pdf}
+\caption{$F_1$ strict và lax trên TEST của sáu hệ thống (số liệu của Bảng~\ref{tab:main}). Ranh giới giữa hai nhóm
+là cách giải mã: quyết định từng cặp độc lập (\croco{}) so với quy hoạch động đơn điệu.}
+\label{fig:results}
+\end{figure}
+
 \begin{table}[h]\centering\small
 \caption{Kết quả trên TEST (gold gán tay, 185 nhóm), trung bình ba mục; $s$ là strict, $l$ là lax. Cấu hình của các
 hệ DP được chọn bằng CV (Mục~\ref{sec:cv}); CV chọn $c=1$ ở mọi fold của mọi hệ.}\label{tab:main}
@@ -418,26 +432,26 @@ Cải tiến 2: LaBSE + Hán-Việt ($w=0{,}3$) + DP         & 0,923 & 0,932 & \
 \midrule
 \croco{} nguyên bản          & 0,489 / 0,629 & 0,587 / 0,619 & 0,510 / 0,688 & 0,609 / 0,669\\
 \croco{} tinh chỉnh          & 0,565 / 0,648 & 0,619 / 0,651 & 0,510 / 0,708 & 0,646 / 0,717\\
-Gale--Church độ dài + DP     & 0,801 / 0,938 & 1,000 / 1,000 & 0,837 / 0,929 & 0,849 / 0,941\\
-Hán-Việt lexical + DP        & 0,910 / 1,000 & 0,984 / 1,000 & 0,908 / 0,990 & 0,882 / 0,961\\
+Gale--Church độ dài + DP     & 0,801 / 0,938 & 1,000 / 1,000 & 0,837 / 0,929 & 0,847 / 0,944\\
+Hán-Việt lexical + DP        & 0,910 / 1,000 & 0,984 / 1,000 & 0,908 / 0,990 & 0,872 / 0,955\\
 Cải tiến 1: LaBSE + DP       & 0,882 / 0,986 & 0,984 / 1,000 & 0,888 / 1,000 & 1,000 / 1,000\\
 Cải tiến 2: LaBSE + HV + DP  & 0,910 / 1,000 & 0,984 / 1,000 & 0,888 / 0,980 & --\\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Bảng~\ref{tab:main} và \ref{tab:perfile} cho thấy \croco{} chạy zero-shot chỉ đạt $F_1$ strict trong khoảng
+Bảng~\ref{tab:main}, \ref{tab:perfile} và Hình~\ref{fig:results} cho thấy \croco{} chạy zero-shot chỉ đạt $F_1$ strict trong khoảng
 0,53--0,57 trên gold gán tay, thấp hơn rất nhiều so với con số 87,5 mà tác giả báo cáo trên Opus Books; dữ liệu của
 chúng tôi rõ ràng nằm ngoài phân phối mà mô hình được huấn luyện. Việc tinh chỉnh hai siêu tham số suy luận trên DEV
 mang lại thêm 3,6 điểm trên TEST, gần như trùng với mức tăng 3,7 điểm quan sát được trên DEV, nên có thể nói tinh chỉnh
-này không bị overfit. Đáng chú ý hơn cả là mọi hệ dùng quy hoạch động đơn điệu đều vượt \croco{} từ 31 đến 40 điểm, và
+này không bị overfit. Đáng chú ý hơn cả là mọi hệ dùng quy hoạch động đơn điệu đều vượt \croco{} từ 31 đến 41 điểm, và
 khi giữ nguyên bộ mã hoá LaBSE của checkpoint mà chỉ đổi bộ giải mã, $F_1$ strict đi từ 0,529 lên 0,918.
 
 % =====================================================================
 \section{Phân tích}\label{sec:analysis}
 
 \subsection{Vấn đề nằm ở bộ giải mã}
-Bảng~\ref{tab:errors} liệt kê vài lỗi tiêu biểu của \croco{} nguyên bản trên mục 7, nơi 33 trong 75 câu Hán bị dóng
+Hình~\ref{fig:heatmap} và Bảng~\ref{tab:errors} minh hoạ các lỗi tiêu biểu của \croco{} nguyên bản trên mục 7, nơi 36 trong 75 câu Hán bị dóng
 sai. Có thể nhận ra ba kiểu lỗi. Kiểu thứ nhất là bỏ sót những câu dài có nội dung rõ ràng (zh\_3, zh\_7, zh\_8): xác
 suất mà đầu phân loại đưa ra thấp hơn 0,5 dù cosine LaBSE của cặp đúng khá cao. Kiểu thứ hai là nối nhầm sang một câu
 ở rất xa nhưng cùng chủ đề, như zh\_9 bị nối với vi\_56 cách đó 46 câu; điều này chỉ xảy ra được vì mỗi cặp được quyết
@@ -462,14 +476,31 @@ zh\_6 士王在位四十年壽九十年王寬厚\ldots & vi\_5 + vi\_6 + vi\_7 (
 \end{tabular}
 \end{table}
 
+\begin{figure}[t]\centering
+\includegraphics[width=0.9\linewidth]{fig_heatmap.pdf}
+\caption{Ma trận cosine LaBSE của mục 7 Sĩ Vương ($75\times91$; ô càng đậm càng tương đồng). Trái: gold gán tay
+(ô xanh) bám sát đường chéo, thể hiện tính đơn điệu của cặp văn bản. Phải: dự đoán của \croco{} nguyên bản (dấu
+$\times$ đỏ) bỏ trống nhiều đoạn trên đường chéo và có vài liên kết bật ra rất xa, dù embedding bên dưới là như nhau.}
+\label{fig:heatmap}
+\end{figure}
+
 \subsection{Tín hiệu tương đồng không còn là yếu tố quyết định}
 Khi đã dùng chung bộ giải mã, khoảng cách giữa các nguồn tín hiệu thu hẹp đáng kể: baseline độ dài đạt 0,879, từ vựng
 Hán-Việt 0,934, LaBSE 0,918 và hợp nhất 0,927. Ba hệ đứng đầu chỉ chênh nhau không quá ba nhóm trên tổng số 185, nằm
 trong sai số của một tập kiểm tra nhỏ. Nói cách khác, trên dữ liệu này bộ mã hoá đa ngữ không tỏ ra hơn tín hiệu từ
 vựng sẵn có ở nguồn. Phiên bản hợp nhất với $w=0{,}3$ (tức là tín hiệu từ vựng chiếm 70\%) có nhỉnh hơn LaBSE thuần
 nhưng vẫn chưa vượt được baseline từ vựng. Một phần nguyên nhân là với văn ngôn thế kỷ XV, cosine LaBSE của những cặp
-đúng thường chỉ vào khoảng 0,5--0,7 (chẳng hạn 按黃帝時建萬國 và ``Xét: Thời Hoàng Đế dựng muôn nước'' có cosine
-0,52), thấp hơn nhiều so với các cặp ngôn ngữ hiện đại.
+đúng khá thấp: trên 160 cặp một-một của gold, trung vị chỉ là 0,42 (khoảng tứ phân vị 0,35--0,49), so với trung bình
+0,11 của mọi cặp. Chẳng hạn 帝姓李諱賁龍興太平人也 và ``Vua họ Lý, tên huý là Bí, người Thái Bình Long Hưng'' chỉ có
+cosine 0,46; tiêu đề ngắn như 前李紀 và ``KỶ NHÀ TIỀN LÝ'' chỉ 0,15. Tín hiệu vì thế vẫn tách được cặp đúng khỏi cặp
+sai (Hình~\ref{fig:cosine}), nhưng biên độ hẹp hơn nhiều so với các cặp ngôn ngữ hiện đại.
+
+\begin{figure}[h]\centering
+\includegraphics[width=0.62\linewidth]{fig_cosine.pdf}
+\caption{Phân bố cosine LaBSE của 160 cặp một-một trong gold (đậm) so với toàn bộ các cặp $(s_i,t_j)$ của ba mục
+TEST (nhạt). Hai phân bố tách nhau nhưng cặp đúng chỉ có trung vị 0,42.}
+\label{fig:cosine}
+\end{figure}
 
 \subsection{Cách tính điểm gộp}
 Trong tất cả các fold của tất cả các hệ, cross-validation đều chọn $c=1$, tức là tính điểm gộp trên văn bản ghép. Với
@@ -488,9 +519,10 @@ bạc, như ở phiên bản đầu của đề tài, không nên được coi l
 và hệ sinh gold có cùng nguồn gốc.
 
 \subsection{Lỗi còn lại và hạn chế}
-Hệ tốt nhất còn sai 11 trong 185 nhóm, và tất cả đều là nhóm một-$n$ với $n\ge3$ (các chú giải dài, lời bình của sử
-thần được tách thành nhiều câu Việt; block về bóng nêu ứng với bảy câu Việt) hoặc nhóm hai-hai (niên đại và lời tâu bị
-cắt lệch nhau). Những nhóm này nằm ngoài tập bước của bộ giải mã, nên lỗi không đến từ tín hiệu tương đồng. Về hạn chế
+Hệ tốt nhất còn sai 11 trong 185 nhóm. Chín trong số đó là nhóm một-$n$ với $n\ge3$ (các chú giải dài, lời bình của
+sử thần được tách thành nhiều câu Việt; block về bóng nêu ứng với bảy câu Việt) hoặc nhóm hai-hai (niên đại và lời tâu
+bị cắt lệch nhau), tức là nằm ngoài tập bước của bộ giải mã; hai nhóm còn lại là nhóm một-hai mà câu Việt thứ hai
+quá ngắn nên bị bỏ trống. Về hạn chế
 của nghiên cứu, bộ gold 185 nhóm trên ba mục còn nhỏ (ba nhóm tương đương khoảng 1,6 điểm $F_1$) và do một người gán,
 chưa có số đo đồng thuận; cross-validation ba fold trên ba mục cũng còn thô; \croco{} tinh chỉnh vẫn được chọn cấu hình
 trên DEV bạc; và chúng tôi chưa thử fine-tune bộ mã hoá ngữ cảnh của \croco{} trên cặp Hán cổ -- Việt.
