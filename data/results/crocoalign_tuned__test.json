@@ -1,5 +1,6 @@
 {
   "name": "CroCoAlign (tuned)",
+  "config": "min_dist=0.15 thr=0.20 (DEV)",
   "per_file": [
     {
       "precision_strict": 0.5208333333333334,
@@ -36,6 +37,5 @@
     "precision_lax": 0.6692585442585443,
     "recall_lax": 0.669004769356882,
     "f1_lax": 0.6691315822995212
-  },
-  "config": "min_dist=0.15 thr=0.20 (DEV)"
+  }
 }

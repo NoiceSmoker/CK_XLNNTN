@@ -176,6 +176,7 @@ def main():
     ap.add_argument("--pred-dir")
     ap.add_argument("--json-out", help="ghi số liệu ra file JSON")
     ap.add_argument("--name", default="system", help="tên hệ thống, để in/ghi")
+    ap.add_argument("--config", default="", help="nhãn cấu hình, ghi vào JSON (cột 'Cấu hình' của bảng)")
     args = ap.parse_args()
 
     pairs = []
@@ -222,7 +223,7 @@ def main():
     if args.json_out:
         os.makedirs(os.path.dirname(args.json_out) or ".", exist_ok=True)
         with open(args.json_out, "w", encoding="utf-8") as f:
-            json.dump({"name": args.name, "per_file": rows, "average": avg},
+            json.dump({"name": args.name, "config": args.config, "per_file": rows, "average": avg},
                       f, ensure_ascii=False, indent=2)
         print(f"-> {args.json_out}")
 

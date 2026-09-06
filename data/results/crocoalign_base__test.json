@@ -1,5 +1,6 @@
 {
   "name": "CroCoAlign (gốc)",
+  "config": "min_dist=0.05 thr=0.5",
   "per_file": [
     {
       "precision_strict": 0.5208333333333334,
@@ -36,6 +37,5 @@
     "precision_lax": 0.6484788359788359,
     "recall_lax": 0.6420886429689246,
     "f1_lax": 0.645235073098766
-  },
-  "config": "min_dist=0.05 thr=0.5"
+  }
 }

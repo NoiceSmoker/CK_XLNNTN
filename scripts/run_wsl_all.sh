@@ -25,8 +25,8 @@ echo "### [3/4] Cải tiến: LaBSE(ckpt) (+ Hán-Việt) + DP đơn điệu —
 
 echo "### [4/4] Chấm điểm (thuần python)"
 # CroCoAlign gốc / tuned (tuned chọn trên DEV silver, cấu hình cố định)
-"$PY" scripts/score.py --gold-dir data/gold_manual --pred-dir data/pred/crocoalign_base_test  --name "CroCoAlign (gốc)"   --json-out data/results/crocoalign_base__test.json
-"$PY" scripts/score.py --gold-dir data/gold_manual --pred-dir data/pred/crocoalign_tuned_test --name "CroCoAlign (tuned)" --json-out data/results/crocoalign_tuned__test.json
+"$PY" scripts/score.py --gold-dir data/gold_manual --pred-dir data/pred/crocoalign_base_test  --name "CroCoAlign (gốc)"   --config "min_dist=0.05 thr=0.5" --json-out data/results/crocoalign_base__test.json
+"$PY" scripts/score.py --gold-dir data/gold_manual --pred-dir data/pred/crocoalign_tuned_test --name "CroCoAlign (tuned)" --config "min_dist=0.15 thr=0.20 (DEV)" --json-out data/results/crocoalign_tuned__test.json
 # Baseline phi-neural: lưới cấu hình + chọn bằng CV leave-one-section-out trên gold gán tay
 "$PY" scripts/grid_baseline.py --method length  --out-root data/pred/grid_length
 "$PY" scripts/grid_baseline.py --method hanviet --out-root data/pred/grid_hanviet
