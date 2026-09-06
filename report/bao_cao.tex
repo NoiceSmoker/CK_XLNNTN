@@ -11,7 +11,7 @@
 \usepackage[vietnamese]{babel}
 
 % ---------- bố cục
-\usepackage[margin=2.3cm]{geometry}
+\usepackage[margin=2.2cm]{geometry}
 \usepackage{parskip}
 \usepackage{booktabs,array,multirow}
 \usepackage{graphicx}
@@ -35,12 +35,10 @@
 \newcommand{\B}[1]{\textbf{#1}}
 \newcommand{\croco}{CroCoAlign}
 
-% ---------- thông tin (sửa cho đúng)
-\newcommand{\truong}{TRƯỜNG ĐẠI HỌC \ldots}
-\newcommand{\khoa}{KHOA \ldots}
-\newcommand{\monhoc}{Xử lý ngôn ngữ tự nhiên}
-\newcommand{\hocvien}{Ngô Trường Minh Đạt}
-\newcommand{\gvhd}{\ldots}
+% ---------- thông tin
+\definecolor{darkblue}{RGB}{0,32,96}
+\newcommand{\monhoc}{Xử lý ngôn ngữ tự nhiên nâng cao}
+\newcommand{\hocvien}{Nguyễn Đình Lộc, Ngô Trương Minh Đạt, Trần Đắc Khoa}
 \newif\ifcover \covertrue     % \coverfalse để bỏ trang bìa
 
 \begin{document}
@@ -49,146 +47,182 @@
 \ifcover
 \begin{titlepage}
 \centering
-{\large \truong\\ \khoa\par}
-\vspace{3cm}
-{\Large \B{BÁO CÁO CUỐI KỲ}\\[0.3cm] Môn: \monhoc\par}
-\vspace{2cm}
-{\LARGE \B{Đề tài 05}\\[0.4cm]
- \B{Dóng hàng câu Hán -- Việt cho \emph{Đại Việt Sử Ký Toàn Thư}}\\[0.4cm]
- \large bằng mô hình \croco{} (EACL 2024): tái lập, đánh giá trên gold gán tay\\ và cải tiến bằng giải mã đơn điệu\par}
-\vfill
-\begin{tabular}{rl}
-Học viên: & \hocvien\\
-Giảng viên hướng dẫn: & \gvhd\\
-\end{tabular}
-\vspace{1.5cm}
+\vspace*{0.4cm}
+{\large\B{ĐẠI HỌC QUỐC GIA THÀNH PHỐ HỒ CHÍ MINH}\\[3pt]
+\B{TRƯỜNG ĐẠI HỌC KHOA HỌC TỰ NHIÊN}\\[3pt]
+\B{KHOA CÔNG NGHỆ THÔNG TIN}\par}
+\vspace{4pt}\rule{0.55\linewidth}{0.6pt}
 
-{\large Tháng 9 năm 2026}
+\vspace{\stretch{1.2}}
+{\Large\B{BÁO CÁO CUỐI KỲ}\\[8pt]
+ \large\B{MÔN XỬ LÝ NGÔN NGỮ TỰ NHIÊN NÂNG CAO}\par}
+
+\vspace{\stretch{1.2}}
+{\Large\B{ĐỀ TÀI 05}\par}
+\vspace{10pt}
+{\Large\B{``CHINESE--VIETNAMESE SENTENCE ALIGNMENT''}\par}
+\vspace{14pt}
+{\normalsize\itshape Dóng hàng câu Hán -- Việt cho Đại Việt Sử Ký Toàn Thư bằng \croco{}\\[3pt]
+Tái lập, đánh giá trên gold gán tay và cải tiến bằng giải mã đơn điệu\par}
+
+\vspace{\stretch{1.4}}
+{\large
+\begin{tabular}{@{}r@{\hspace{1em}}l@{}}
+\textbf{\textcolor{darkblue}{NHÓM THỰC HIỆN:}} & 25C11050 -- Nguyễn Đình Lộc \\[2pt]
+& 25C15003 -- Ngô Trương Minh Đạt \\[2pt]
+& 25C15015 -- Trần Đắc Khoa \\
+\end{tabular}\par}
+
+\vspace{\stretch{1.4}}
+\rule{0.55\linewidth}{0.6pt}\\[6pt]
+{\large Thành phố Hồ Chí Minh, tháng 9 năm 2026}
+\vspace*{0.4cm}
 \end{titlepage}
 \setcounter{page}{1}
 \fi
 
 % =====================================================================
 \begin{center}
-{\Large\B{Dóng hàng câu Hán -- Việt cho \emph{Đại Việt Sử Ký Toàn Thư} bằng \croco{}:\\[2pt]
-tái lập, đánh giá trên gold gán tay và cải tiến}}\\[8pt]
-{\large \hocvien}\\[2pt]
-{\small Môn \monhoc{} -- Đề tài 05 -- Mã nguồn, dữ liệu và kết quả: kho \code{CK\_XLNNTN}, nhánh \code{eval-manual-gold}}
+{\Large\B{Dóng hàng câu Hán -- Việt cho \emph{Đại Việt Sử Ký Toàn Thư}}\\[3pt]
+\B{bằng \croco{}: tái lập, đánh giá trên gold gán tay và cải tiến}}\\[8pt]
+\begin{tabular}{c@{\hspace{2.2em}}c@{\hspace{2.2em}}c}
+\large Nguyễn Đình Lộc & \large Ngô Trương Minh Đạt & \large Trần Đắc Khoa\\
+\small 25C11050 & \small 25C15003 & \small 25C15015
+\end{tabular}\\[4pt]
+{\small\itshape Khoa Công nghệ Thông tin, Trường Đại học Khoa học Tự nhiên, ĐHQG-HCM}\\[1pt]
+{\small Báo cáo cuối kỳ môn \monhoc{} -- Đề tài 05}
 \end{center}
 
 \begin{center}\B{Tóm tắt}\end{center}
 \begingroup\small
-Dóng hàng câu (\emph{sentence alignment}) là bước tạo ngữ liệu song song cho dịch máy và nghiên cứu văn bản cổ. Báo cáo
-này thực hiện đề tài 05: xây dựng ngữ liệu Hán cổ -- Việt hiện đại từ bản fulltext \emph{Đại Việt Sử Ký Toàn Thư}
-(14 mục Ngoại kỷ, 1\,703 câu Hán / 1\,833 câu Việt), cài đặt và chạy lại \croco{} \cite{crocoalign} -- hệ dóng hàng
-neural có ngữ cảnh, đạt SOTA trên Opus Books -- từ mã nguồn gốc với checkpoint chính thức trên stack phần mềm hiện đại,
-rồi đánh giá và cải tiến. Khác với cách đánh giá bằng \emph{silver gold} sinh từ chính mô hình (vòng tròn), chúng tôi gán
-tay 185 nhóm liên kết trên 3 mục làm tập kiểm tra độc lập, tách DEV/TEST, chọn cấu hình bằng cross-validation, và so với
-hai baseline phi-neural. Kết quả: \croco{} zero-shot đạt $F_1$ strict 0,529 (tinh chỉnh: 0,565); giữ nguyên bộ mã hoá
-LaBSE của checkpoint nhưng thay bộ giải mã bằng quy hoạch động đơn điệu đạt \B{0,918} (+39 điểm); một baseline thuần từ
-vựng Hán-Việt không cần mô hình neural đạt \B{0,934}. Phân tích cho thấy với song ngữ dịch sát, ràng buộc thứ tự quan trọng
-hơn chất lượng embedding, và silver gold không thể dùng để chấm mô hình cùng gốc. Toàn bộ pipeline tái lập bằng một lệnh
-trên CPU.
+Dóng hàng câu là bước đầu tiên để xây dựng ngữ liệu song song, và với các văn bản cổ thì đây thường là bước tốn công
+nhất. Trong báo cáo này chúng tôi thực hiện đề tài 05 trên cặp Hán cổ -- Việt hiện đại của \emph{Đại Việt Sử Ký Toàn
+Thư}: xây dựng ngữ liệu từ bản fulltext của nomfoundation.org (14 mục Ngoại kỷ, 1\,703 câu Hán và 1\,833 câu Việt),
+cài đặt và chạy lại hệ dóng hàng \croco{} \cite{crocoalign} từ mã nguồn gốc với checkpoint chính thức, rồi đánh giá và
+tìm cách cải tiến. Thay vì chấm điểm bằng gold tự sinh từ chính mô hình, chúng tôi gán tay 185 nhóm liên kết trên ba
+mục làm tập kiểm tra, tách riêng tập phát triển, chọn cấu hình bằng cross-validation và so sánh với hai baseline không
+dùng mạng nơ-ron. Trên tập kiểm tra này \croco{} đạt $F_1$ strict 0,529 khi chạy nguyên bản và 0,565 sau tinh chỉnh.
+Khi giữ nguyên bộ mã hoá LaBSE của checkpoint nhưng thay bộ giải mã bằng quy hoạch động đơn điệu, kết quả tăng lên
+0,918; một baseline chỉ dựa trên phiên âm Hán-Việt đạt 0,934. Kết quả cho thấy với những cặp văn bản dịch sát như
+ĐVSKTT, ràng buộc về thứ tự câu quan trọng hơn chất lượng biểu diễn ngữ nghĩa, đồng thời gold tự sinh từ một mô hình
+không thể dùng để đánh giá các mô hình cùng gốc với nó. Toàn bộ pipeline có thể chạy lại bằng một lệnh trên CPU.
 \endgroup
 
 % =====================================================================
 \section{Giới thiệu}
 
-Cho hai tài liệu là bản dịch của nhau, \emph{dóng hàng câu} tìm các nhóm câu tương ứng ($1$-$1$, $1$-$n$, $n$-$1$,
-$n$-$m$, hoặc câu không có cặp). Đây là bước nền cho dịch máy, tra cứu song ngữ và số hoá văn bản cổ. Cặp Hán cổ --
-Việt của \emph{Đại Việt Sử Ký Toàn Thư} (ĐVSKTT) có ba đặc thù: (i) văn bản Hán cổ \B{không có dấu câu}, nên ngay việc
-xác định ``câu'' đã là bài toán; (ii) khoảng cách ngôn ngữ và thời đại lớn -- mô hình đa ngữ hiện đại được huấn luyện trên
-tiếng Trung hiện đại, không phải văn ngôn thế kỷ XV; (iii) bản dịch chèn nhiều chú giải, niên đại và tách/gộp câu, nên
-dóng hàng không thuần $1$-$1$.
+Cho hai tài liệu là bản dịch của nhau, bài toán dóng hàng câu yêu cầu tìm các nhóm câu tương ứng giữa chúng, có thể là
+một-một, một-nhiều, nhiều-một, nhiều-nhiều, hoặc câu không có đối ứng. Đây là bước nền cho dịch máy, tra cứu song ngữ và
+số hoá văn bản cổ. Cặp Hán cổ -- Việt của \emph{Đại Việt Sử Ký Toàn Thư} (viết tắt ĐVSKTT) có vài đặc điểm khiến bài
+toán khó hơn bình thường. Văn bản Hán cổ không có dấu câu, nên ngay việc xác định thế nào là một ``câu'' đã là vấn đề.
+Khoảng cách ngôn ngữ và thời đại cũng lớn: các mô hình đa ngữ hiện nay được huấn luyện trên tiếng Trung hiện đại, không
+phải văn ngôn thế kỷ XV. Cuối cùng, bản dịch tiếng Việt chèn khá nhiều chú giải và niên đại, lại thường tách hoặc gộp
+câu, nên quan hệ giữa hai bản không thuần một-một.
 
-Đề tài yêu cầu: (1) tiền xử lý dữ liệu cho phù hợp mô hình; (2) cài đặt và chạy lại \croco{} \cite{crocoalign} theo bài
-báo EACL 2024; (3) thực nghiệm, đánh giá, và có thể cải tiến. Đóng góp của báo cáo:
+Đề tài đặt ra ba yêu cầu: tiền xử lý dữ liệu cho phù hợp với mô hình, cài đặt và chạy lại \croco{} \cite{crocoalign}
+theo bài báo EACL 2024, và thực nghiệm, đánh giá, nếu được thì cải tiến. Những đóng góp chính của chúng tôi gồm:
 \begin{itemize}
-  \item Pipeline cào và tiền xử lý 14 mục ĐVSKTT, giải quyết tách câu Hán cổ bằng dấu câu của \emph{phiên âm Hán-Việt}
-  đi kèm ở nguồn (Mục~\ref{sec:data}).
-  \item Tái lập \croco{} với checkpoint chính thức trên torch~2.x / transformers~5.x mà không sửa mã gốc (Mục~\ref{sec:setup}).
-  \item Bộ gold \B{gán tay} 185 nhóm, giao thức DEV/TEST + cross-validation, scorer độc lập khớp \code{evaluate.py}
-  gốc, hai baseline phi-neural (Mục~\ref{sec:eval}).
-  \item Hai cải tiến giữ nguyên bộ mã hoá của \croco{} nhưng thay bộ giải mã bằng quy hoạch động đơn điệu, tăng
-  $F_1$ strict từ 0,529 lên 0,918; và bằng chứng định lượng rằng silver gold sinh từ mô hình thiên vị cấu trúc
-  (Mục~\ref{sec:results}--\ref{sec:analysis}).
+  \item một pipeline cào và tiền xử lý 14 mục ĐVSKTT, trong đó vấn đề tách câu Hán cổ được giải quyết nhờ dấu câu của
+  phần phiên âm Hán-Việt đi kèm ở nguồn (Mục~\ref{sec:data});
+  \item việc tái lập \croco{} với checkpoint chính thức trên phiên bản torch 2.x và transformers 5.x mà không phải sửa
+  mã gốc (Mục~\ref{sec:setup});
+  \item một bộ gold gán tay gồm 185 nhóm liên kết, giao thức đánh giá tách DEV/TEST kết hợp cross-validation, một
+  scorer độc lập tái hiện đúng \code{evaluate.py} gốc và hai baseline không dùng mạng nơ-ron (Mục~\ref{sec:eval});
+  \item hai cải tiến giữ nguyên bộ mã hoá của \croco{} nhưng thay bộ giải mã bằng quy hoạch động đơn điệu, đưa $F_1$
+  strict từ 0,529 lên 0,918, cùng với bằng chứng định lượng cho thấy gold tự sinh từ mô hình bị thiên vị về cấu trúc
+  (Mục~\ref{sec:results} và \ref{sec:analysis}).
 \end{itemize}
 
 % =====================================================================
 \section{Nghiên cứu liên quan}
 
-\B{Phương pháp thống kê.} Gale và Church \cite{galechurch} dóng hàng bằng tỉ lệ độ dài câu và quy hoạch động (DP)
-đơn điệu với các bước $1$-$1$, $1$-$0$, $0$-$1$, $1$-$2$, $2$-$1$, $2$-$2$; đơn giản nhưng vẫn là baseline mạnh khi hai
-bản đi song song. Hunalign và Bleualign \cite{bleualign} thêm từ điển hoặc bản dịch máy làm tín hiệu.
-\B{Phương pháp nhúng câu.} Vecalign \cite{vecalign} dùng embedding đa ngữ (LASER) với DP xấp xỉ đa mức, tuyến tính theo
-độ dài, và định nghĩa thước đo strict/lax $P/R/F_1$ mà \croco{} và báo cáo này dùng lại. LaBSE \cite{labse} là bộ nhúng
-câu 109 ngôn ngữ huấn luyện bằng translation-ranking, cho cosine giữa bản dịch cao và ổn định, được dùng làm bộ mã hoá
-trong \croco{}.
-\B{\croco{}} \cite{crocoalign} là hệ đầu tiên end-to-end, có ngữ cảnh: quyết định từng cặp câu bằng một bộ phân loại
-neural trên embedding đã được ngữ-cảnh-hoá, không cần DP; đạt macro-$F_1$ strict 87,5 trên 20 cặp ngôn ngữ Opus Books
-so với 85,9 của Vecalign. Điểm khác biệt của báo cáo này là dữ liệu \emph{ngoài phân phối} (Hán cổ, gần đơn điệu tuyệt
-đối) và việc kiểm chứng \croco{} bằng gold gán tay thay vì gold tự sinh.
+Các phương pháp dóng hàng câu sớm nhất dựa trên thống kê độ dài. Gale và Church \cite{galechurch} giả định tỉ lệ độ
+dài giữa câu nguồn và câu đích xấp xỉ phân phối chuẩn, rồi dùng quy hoạch động đơn điệu với các bước một-một, một-không,
+không-một, một-hai, hai-một và hai-hai để tìm phép dóng hàng có xác suất cao nhất. Dù đơn giản, phương pháp này vẫn là
+một baseline đáng kể khi hai bản đi song song với nhau. Các hệ sau đó như Hunalign hay Bleualign \cite{bleualign} bổ
+sung từ điển song ngữ hoặc bản dịch máy để có thêm tín hiệu về nội dung.
+
+Với sự xuất hiện của các bộ nhúng câu đa ngữ, Vecalign \cite{vecalign} thay tín hiệu độ dài bằng độ tương đồng cosine
+giữa embedding LASER, dùng quy hoạch động xấp xỉ nhiều mức để giữ độ phức tạp tuyến tính, và định nghĩa bộ thước đo
+strict/lax mà \croco{} cũng như báo cáo này dùng lại. LaBSE \cite{labse} là bộ nhúng câu cho 109 ngôn ngữ được huấn
+luyện theo mục tiêu xếp hạng bản dịch, cho độ tương đồng giữa các cặp dịch cao và ổn định; đây là bộ mã hoá được
+\croco{} sử dụng.
+
+\croco{} \cite{crocoalign} là hệ đầu tiên giải quyết bài toán theo hướng hoàn toàn nơ-ron và có ngữ cảnh: mỗi cặp câu
+được một bộ phân loại quyết định dựa trên embedding đã được ngữ cảnh hoá theo tài liệu, không dùng quy hoạch động. Trên
+20 cặp ngôn ngữ của Opus Books, hệ đạt macro-$F_1$ strict 87,5 so với 85,9 của Vecalign. Điểm khác của nghiên cứu này
+là dữ liệu nằm ngoài phân phối huấn luyện (Hán cổ, quan hệ gần như đơn điệu tuyệt đối) và việc kiểm chứng \croco{}
+bằng gold gán tay thay vì gold tự sinh.
 
 % =====================================================================
 \section{Mô hình \croco{}}\label{sec:model}
 
 \subsection{Kiến trúc}
-Hình~\ref{fig:arch} tóm tắt kiến trúc (theo \cite{crocoalign}, kiểm chứng lại trong mã nguồn
-\code{pl\_modules/pl\_module.py}). Cho câu nguồn $s_1..s_n$ và câu đích $t_1..t_m$:
-\begin{enumerate}
-  \item \B{Bộ nhúng câu} LaBSE (\emph{đóng băng}) cho $E_{s_i}, E_{t_j}\in\mathbb{R}^{768}$.
-  \item \B{Bộ mã hoá ngữ cảnh}: một Transformer kiểu DistilBERT khởi tạo ngẫu nhiên (6 lớp, 6 đầu, dropout 0,2), nhận
-  \emph{chuỗi embedding câu} của một tài liệu làm đầu vào (\code{inputs\_embeds}) và nhờ positional embedding + attention
-  tạo ra embedding có ngữ cảnh $C_{s_i}, C_{t_j}$. Đây là đóng góp chính của bài báo: câu được đặt trong ngữ cảnh các câu
-  lân cận trước khi so khớp.
-  \item \B{Đầu phân loại}: với mọi cặp $(i,j)$ tính tích Hadamard $C_{s_i}\odot C_{t_j}$, đưa qua
-  $\text{Linear}(768{\to}384)\to\text{Dropout}\to\text{ReLU}\to\text{Linear}(384{\to}1)$ và sigmoid, cho xác suất
-  $M_{ij}$; ngưỡng 0,5 quyết định liên kết. Mỗi câu nguồn có thể nối với 0, 1 hoặc nhiều câu đích và ngược lại.
-\end{enumerate}
+Hình~\ref{fig:arch} mô tả kiến trúc \croco{} theo bài báo; chúng tôi đã đối chiếu lại với mã nguồn trong
+\code{pl\_modules/pl\_module.py}. Cho dãy câu nguồn $s_1,\dots,s_n$ và câu đích $t_1,\dots,t_m$, mô hình gồm ba
+thành phần. Trước hết, bộ nhúng câu LaBSE (được giữ cố định trong suốt quá trình huấn luyện) sinh ra các vector
+$E_{s_i}, E_{t_j}\in\mathbb{R}^{768}$. Tiếp theo, một bộ mã hoá ngữ cảnh, thực chất là một Transformer theo cấu hình
+DistilBERT với 6 lớp, 6 đầu chú ý và dropout 0,2, được khởi tạo ngẫu nhiên và nhận vào chuỗi embedding câu của cả tài
+liệu (qua tham số \code{inputs\_embeds}); nhờ positional embedding và cơ chế chú ý, đầu ra $C_{s_i}, C_{t_j}$ mang thông
+tin về các câu lân cận. Đây là đóng góp chính của bài báo: mỗi câu được đặt trong ngữ cảnh trước khi so khớp. Cuối
+cùng, với mọi cặp $(i,j)$, tích Hadamard $C_{s_i}\odot C_{t_j}$ được đưa qua một đầu phân loại gồm
+$\text{Linear}(768{\to}384)$, dropout, ReLU và $\text{Linear}(384{\to}1)$, rồi qua sigmoid để ra xác suất $M_{ij}$;
+cặp nào có $M_{ij}>0{,}5$ được coi là liên kết. Cách này cho phép một câu nguồn nối với không, một hoặc nhiều câu đích
+và ngược lại.
 
 \begin{figure}[t]\centering
 \includegraphics[width=0.82\linewidth]{fig_crocoalign_arch.png}
-\caption{Kiến trúc \croco{} (hình của tác giả \cite{crocoalign}, kho GitHub Babelscape/CroCoAlign): bộ nhúng câu đóng
-băng, bộ mã hoá ngữ cảnh và đầu phân loại được huấn luyện; ma trận $n\times m$ với ô xanh là cặp dóng hàng.}
+\caption{Kiến trúc \croco{} (hình lấy từ kho mã của tác giả \cite{crocoalign}). Bộ nhúng câu được giữ cố định; bộ mã
+hoá ngữ cảnh và đầu phân loại được huấn luyện. Ma trận $n\times m$ với các ô xanh là những cặp được dóng hàng.}
 \label{fig:arch}
 \end{figure}
 
 \subsection{Huấn luyện}
-Hàm mất mát là binary cross-entropy trên toàn ma trận, với $\hat M$ là ma trận gold:
-\[\mathcal{L}=-\frac{1}{nm}\sum_{i,j}\Big[\hat M_{ij}\log\sigma(M_{ij})+(1-\hat M_{ij})\log\big(1-\sigma(M_{ij})\big)\Big].\] Dữ liệu: Opus Books (16 ngôn ngữ, 64 cặp, 251 sách; 231 sách huấn luyện, 10 kiểm định,
-10 kiểm tra); 77\% liên kết là $1$-$1$. Cấu hình (\code{conf/nn/default.yaml}): AdamW, lr $5\cdot10^{-6}$ (bài báo:
-$10^{-5}$), weight decay 0,01, warmup 10\%, batch 64 câu, gradient clipping 10, early stopping (patience 10) theo
-$F_1$ strict trên tập kiểm định; huấn luyện trên RTX 3090~Ti. Checkpoint công bố (2,31~GB) chứa cả LaBSE lẫn bộ mã hoá
-ngữ cảnh và đầu phân loại; báo cáo này \B{không huấn luyện lại} mà dùng checkpoint đó (zero-shot với Hán cổ -- Việt).
+Mô hình được huấn luyện với hàm mất mát binary cross-entropy trên toàn bộ ma trận, trong đó $\hat M$ là ma trận gold:
+\[\mathcal{L}=-\frac{1}{nm}\sum_{i,j}\Big[\hat M_{ij}\log\sigma(M_{ij})+(1-\hat M_{ij})\log\big(1-\sigma(M_{ij})\big)\Big].\]
+Dữ liệu huấn luyện lấy từ phần sách của dự án Opus, gồm 16 ngôn ngữ, 64 cặp ngôn ngữ và 251 cuốn sách, trong đó 231
+cuốn dùng để huấn luyện, 10 để kiểm định và 10 để kiểm tra; khoảng 77\% liên kết là một-một. Theo tệp cấu hình
+\code{conf/nn/default.yaml}, tác giả dùng AdamW với learning rate $5\cdot10^{-6}$ (bài báo ghi $10^{-5}$), weight decay
+0,01, warmup 10\%, batch 64 câu, gradient clipping 10 và early stopping với patience 10 theo $F_1$ strict trên tập kiểm
+định; mô hình được huấn luyện trên một GPU RTX 3090~Ti. Checkpoint công bố nặng 2,31~GB, chứa cả LaBSE lẫn bộ mã hoá
+ngữ cảnh và đầu phân loại. Chúng tôi không huấn luyện lại mà dùng nguyên checkpoint này, tức là chạy zero-shot trên cặp
+Hán cổ -- Việt.
 
 \subsection{Suy luận trên tài liệu dài}\label{sec:inference}
-Vì không đưa cả tài liệu vào GPU, \croco{} suy luận theo lô (\code{batch\_size}=32 câu):
-\B{Pointing} -- với mỗi lô nguồn, dùng FAISS tìm $k$ câu đích có cosine LaBSE cao nhất với câu đầu lô, \B{loại ứng viên
-có vị trí tương đối lệch quá} \code{min\_dist}=0,05, thử từng cửa sổ đích quanh ứng viên và giữ cửa sổ cho nhiều liên
-kết nhất; \B{Recovery} -- nếu một câu nguồn bị nối với các câu đích không kề nhau, chọn lại bằng cosine LaBSE của câu
-(\code{labse}) hoặc của câu kèm $N{=}3$ câu lân cận (\code{labse-batch}, biến thể tốt nhất trong bài báo). Điểm quan
-trọng cho phân tích sau này: \B{mỗi cặp được quyết định độc lập}, không có ràng buộc thứ tự toàn cục như DP.
+Vì không thể đưa cả tài liệu vào bộ nhớ GPU, \croco{} suy luận theo từng lô 32 câu qua hai thủ tục. Thủ tục thứ nhất,
+gọi là \emph{pointing}, dùng FAISS tìm $k$ câu đích có cosine LaBSE cao nhất với câu đầu của lô nguồn, loại những ứng
+viên có vị trí tương đối trong tài liệu lệch quá ngưỡng \code{min\_dist} $=0{,}05$, rồi thử từng cửa sổ đích quanh các
+ứng viên còn lại và giữ cửa sổ cho nhiều liên kết nhất. Thủ tục thứ hai, \emph{recovery}, xử lý trường hợp một câu
+nguồn bị nối với những câu đích không kề nhau bằng cách chọn lại theo cosine LaBSE, hoặc của riêng câu đó
+(\code{labse}), hoặc của câu kèm ba câu lân cận (\code{labse-batch}, biến thể tốt nhất trong bài báo). Cần lưu ý rằng
+trong cả quá trình này, mỗi cặp câu được quyết định độc lập với các cặp khác; không có ràng buộc toàn cục nào về thứ tự
+như trong quy hoạch động. Chi tiết này sẽ quan trọng khi phân tích kết quả.
 
 % =====================================================================
-\section{Dữ liệu và tiền xử lý (Yêu cầu 1)}\label{sec:data}
+\section{Dữ liệu và tiền xử lý}\label{sec:data}
 
 \subsection{Nguồn và cấu trúc}
-Bản fulltext ĐVSKTT của nomfoundation.org gồm 73 mục, mỗi mục nhiều trang khắc in, phân trang phía server bằng POST
-\code{curPg}. Mỗi trang có một bảng HTML: ô thứ nhất chứa \emph{chữ Hán và phiên âm Hán-Việt xen kẽ theo block}
+Bản fulltext ĐVSKTT của nomfoundation.org gồm 73 mục, mỗi mục là nhiều trang khắc in, được phân trang phía server bằng
+tham số POST \code{curPg}. Mỗi trang có một bảng HTML: ô thứ nhất chứa chữ Hán và phiên âm Hán-Việt xen kẽ theo từng
+block, có dạng
 \begin{center}\small\code{<chữ Hán> [trang*dòng*cột] <phiên âm Hán-Việt, có dấu câu>}\end{center}
-ô thứ hai (``Dịch Quốc Ngữ'') là bản dịch tiếng Việt hiện đại, cùng thứ tự. Ví dụ một block:
+còn ô thứ hai (``Dịch Quốc Ngữ'') là bản dịch tiếng Việt hiện đại theo cùng thứ tự. Một block điển hình trông như sau:
 \begin{center}\small
 按黃帝時建萬國以交趾界於西南遠在百粵之表 \code{[1a*4*1]} \emph{Án: Hoàng đế thời, kiến vạn quốc, dĩ Giao Chỉ giới ư
 Tây Nam, viễn tại Bách Việt chi biểu.}\\
 $\rightarrow$ ``Xét: Thời Hoàng Đế dựng muôn nước, lấy địa giới Giao Chỉ về phía Tây Nam, xa ngoài đất Bách Việt.''
 \end{center}
 
-\subsection{Hai phát hiện then chốt}
-\B{(1) Dấu câu của phiên âm cho phép tách câu Hán cổ.} Người biên soạn đã đặt dấu chấm/chấm hỏi ở phiên âm; mỗi block
-Hán tương ứng đúng một đoạn phiên âm kết thúc bằng dấu kết câu, nên block $\approx$ câu. Không cần mô hình tách câu Hán cổ.
-\B{(2) Phiên âm là tín hiệu từ vựng nối hai bản.} Bản dịch hiện đại giữ nguyên rất nhiều từ Hán-Việt (\emph{Sĩ Nhiếp,
-Giao Châu, Thái thú, Kiến An, Long Biên}); độ trùng âm tiết giữa phiên âm và câu Việt đo được mà không cần mô hình.
-Phát hiện này dùng cho cả gán nhãn tay (Mục~\ref{sec:gold}) lẫn baseline (Mục~\ref{sec:baselines}).
+\subsection{Hai quan sát quyết định cách làm}
+Quan sát thứ nhất liên quan đến việc tách câu. Người biên soạn bản phiên âm đã đặt dấu chấm, dấu hỏi ở cuối mỗi đoạn
+phiên âm, và mỗi block chữ Hán ứng đúng với một đoạn như vậy. Nói cách khác, ranh giới câu của văn bản Hán cổ đã được
+đánh dấu gián tiếp qua phần phiên âm, nên chúng tôi có thể coi mỗi block là một câu mà không cần đến mô hình tách câu
+riêng cho văn ngôn.
+
+Quan sát thứ hai là phiên âm Hán-Việt còn đóng vai trò cầu nối từ vựng giữa hai bản. Bản dịch hiện đại giữ nguyên rất
+nhiều từ Hán-Việt, đặc biệt là tên người, địa danh, chức quan và niên hiệu (\emph{Sĩ Nhiếp, Giao Châu, Thái thú, Kiến
+An, Long Biên}), nên độ trùng lặp âm tiết giữa phiên âm và câu dịch là một tín hiệu đo được mà không cần mô hình nào.
+Chúng tôi dùng tín hiệu này cho cả việc gán nhãn tay (Mục~\ref{sec:gold}) lẫn baseline (Mục~\ref{sec:baselines}).
 
 \subsection{Pipeline}
 \begin{figure}[h]\centering\small
@@ -201,18 +235,18 @@ Phát hiện này dùng cho cả gán nhãn tay (Mục~\ref{sec:gold}) lẫn bas
 \node[box,right=of pp] (out) {\code{zh.jsonl} / \code{vi.jsonl}\\\code{blocks.tsv} (Hán$\leftrightarrow$phiên âm)};
 \draw[arr] (web)--(raw); \draw[arr] (raw)--(pp); \draw[arr] (pp)--(out);
 \end{tikzpicture}}
-\caption{Pipeline tiền xử lý. Đầu ra \code{zh.jsonl}/\code{vi.jsonl} đúng định dạng \croco{}
-(mỗi dòng \code{\{"ids":[...],"text":[...]\}}); \code{blocks.tsv} giữ phiên âm cho gán nhãn và baseline.}
+\caption{Pipeline tiền xử lý. Hai tệp \code{zh.jsonl} và \code{vi.jsonl} theo đúng định dạng đầu vào của \croco{}
+(mỗi dòng \code{\{"ids":[...],"text":[...]\}}); \code{blocks.tsv} giữ lại phiên âm để phục vụ gán nhãn và baseline.}
 \end{figure}
 
-\code{scrape\_dvsktt.py} chạy được với \code{requests} hoặc thuần \code{urllib} (POST multipart tự dựng), có retry và
-delay 0,8~s/trang. \code{preprocess.py}: tách block bằng biểu thức chính quy trên marker
-\code{[\textbackslash d+[ab]*\textbackslash d+*\textbackslash d+]}, giữ ký tự CJK (kể cả vùng CJK mở rộng B/F),
-tách câu Việt theo \code{. ! ? ;} sau khi bỏ nội dung trong ngoặc vuông (chú giải, niên đại). Bảng~\ref{tab:data} thống kê
-14 mục đã xử lý.
+Script \code{scrape\_dvsktt.py} có thể chạy với \code{requests} hoặc chỉ với \code{urllib} của thư viện chuẩn (tự dựng
+POST multipart), có cơ chế thử lại và nghỉ 0,8 giây giữa các trang. Script \code{preprocess.py} tách block bằng biểu
+thức chính quy trên marker \code{[\textbackslash d+[ab]*\textbackslash d+*\textbackslash d+]}, giữ lại ký tự CJK (kể cả
+các vùng mở rộng B và F), bỏ nội dung trong ngoặc vuông của bản dịch (chú giải, niên đại) rồi tách câu Việt theo các
+dấu \code{. ! ? ;}. Bảng~\ref{tab:data} thống kê 14 mục đã xử lý.
 
 \begin{table}[h]\centering\footnotesize
-\caption{14 mục Ngoại kỷ sau tiền xử lý. DEV = mục 1--3, TEST = mục 7, 9, 10.}\label{tab:data}
+\caption{14 mục Ngoại kỷ sau tiền xử lý. DEV gồm mục 1--3, TEST gồm mục 7, 9, 10.}\label{tab:data}
 \begin{tabular}{llrrr@{\hspace{1.2em}}llrrr}
 \toprule
 \B{Mục} & \B{Vai trò} & \B{Trang} & \B{Hán} & \B{Việt} & \B{Mục} & \B{Vai trò} & \B{Trang} & \B{Hán} & \B{Việt}\\
@@ -230,132 +264,146 @@ tách câu Việt theo \code{. ! ? ;} sau khi bỏ nội dung trong ngoặc vuô
 \end{tabular}
 \end{table}
 
-Nhiễu thực tế cần lưu ý: bản dịch có $\approx$8\% câu nhiều hơn bản Hán (chú giải, tách câu); vài câu cụt do lỗi ở
-nguồn (\emph{``KỶ TRIỆU V''}, \emph{``là Ki''}); câu bị cắt ngang trang ở cả hai bản (\emph{``Thời Thứ sử Chu'' | ``Phù bị
-giặc Di giết\ldots''}); chú giải dài (truyền thuyết Chử Đồng Tử: 1 block Hán ứng với 6 câu Việt).
+Dữ liệu thực tế có một số nhiễu cần lưu ý. Bản dịch có nhiều câu hơn bản Hán khoảng 8\% do chú giải và tách câu. Một
+vài câu bị cụt ngay ở nguồn (\emph{``KỶ TRIỆU V''}, \emph{``là Ki''}). Có những câu bị cắt ngang ở ranh giới trang trong
+cả hai bản (\emph{``Thời Thứ sử Chu'' | ``Phù bị giặc Di giết\ldots''}). Cũng có những chú giải rất dài, chẳng hạn truyền
+thuyết Chử Đồng Tử được dịch thành sáu câu Việt cho một block Hán.
 
 % =====================================================================
-\section{Cài đặt và chạy lại \croco{} (Yêu cầu 2)}\label{sec:setup}
+\section{Cài đặt và chạy lại \croco{}}\label{sec:setup}
 
-Mã nguồn được đưa vào kho dưới dạng git submodule ghim commit \code{2e93992} (HEAD upstream, 09/2024). Repo ghim
-\code{torch==1.11}, \code{pytorch-lightning==1.5}, \code{transformers==4.20}, \code{faiss-gpu==1.7.2} -- không cài được
-trên phần cứng hiện có (GPU Blackwell sm\_120; macOS arm64). Bảng~\ref{tab:install} liệt kê các vướng mắc; nguyên tắc
-là \B{không sửa mã gốc}, mọi vá lỗi nằm trong wrapper ở \code{scripts/} (\code{run\_align.py}, \code{run\_eval.py},
-\code{run\_eval\_tuned.py}).
+Mã nguồn \croco{} được đưa vào kho của chúng tôi dưới dạng git submodule, ghim ở commit \code{2e93992} (HEAD của
+upstream, tháng 9/2024) để bảo đảm tái lập. Tệp \code{requirements.txt} của repo ghim \code{torch==1.11},
+\code{pytorch-lightning==1.5}, \code{transformers==4.20} và \code{faiss-gpu==1.7.2}, tất cả đều không cài được trên
+phần cứng hiện có (GPU kiến trúc Blackwell sm\_120 và máy macOS arm64). Chúng tôi vì vậy phải dùng các phiên bản mới
+hơn nhiều, kéo theo một loạt điểm không tương thích được liệt kê trong Bảng~\ref{tab:install}. Nguyên tắc xuyên suốt
+là không sửa mã gốc: mọi vá lỗi đều nằm trong các wrapper ở thư mục \code{scripts/} (\code{run\_align.py},
+\code{run\_eval.py}, \code{run\_eval\_tuned.py}).
 
 \begin{table}[h]\centering\small
-\caption{Vướng mắc khi cài đặt và cách khắc phục}\label{tab:install}
+\caption{Các vướng mắc khi cài đặt và cách khắc phục}\label{tab:install}
 \begin{tabular}{p{3.4cm}p{5.4cm}p{6.6cm}}
 \toprule
 \B{Vấn đề} & \B{Nguyên nhân} & \B{Khắc phục}\\
 \midrule
 torch ghim không chạy & RTX 5050 (sm\_120) không tương thích \code{torch==1.11}; macOS không có CUDA & torch 2.11+cu128 (WSL2) / torch 2.14 CPU (macOS)\\
-\code{faiss-gpu} không cài được & chỉ có cho CUDA cũ & \code{faiss-cpu}; dữ liệu vài nghìn câu, đủ nhanh\\
-Nạp checkpoint lỗi & PL~2.6 bỏ \code{\_load\_model\_state} mà \code{nn\_core.load\_model} gọi; torch~2.6 mặc định \code{weights\_only=True}; sentence-transformers~$\ge$3 đổi tên module \code{auto\_model}$\to$\code{model} & loader tự viết: giải nén \code{.ckpt.zip}, \code{torch.load(weights\_only=False)}, ánh xạ lại khoá state\_dict; kết quả \code{missing=0}, chỉ 2 buffer \code{position\_ids} thừa (vô hại)\\
+\code{faiss-gpu} không cài được & chỉ có bản cho CUDA cũ & \code{faiss-cpu}; dữ liệu vài nghìn câu, đủ nhanh\\
+Nạp checkpoint lỗi & PL~2.6 bỏ \code{\_load\_model\_state} mà \code{nn\_core.load\_model} gọi; torch~2.6 mặc định \code{weights\_only=True}; sentence-transformers~$\ge$3 đổi tên module \code{auto\_model}$\to$\code{model} & loader tự viết: giải nén \code{.ckpt.zip}, \code{torch.load(weights\_only=False)}, ánh xạ lại khoá state\_dict; kết quả \code{missing=0}, chỉ dư 2 buffer \code{position\_ids} không ảnh hưởng\\
 Thiếu phụ thuộc nn-core & phải cài \code{--no-deps} để không bị ép lightning cũ & thêm GitPython, python-dotenv\\
-Đường dẫn tương đối & \code{evaluate.py} ghi \code{results\_*.tsv} vào CWD & runner \code{cd} vào thư mục đích, dùng đường dẫn tuyệt đối\\
+Đường dẫn tương đối & \code{evaluate.py} ghi \code{results\_*.tsv} vào thư mục hiện hành & runner chuyển vào thư mục đích và dùng đường dẫn tuyệt đối\\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\B{Kiểm chứng.} (i) Ví dụ EN$\leftrightarrow$IT kèm repo cho kết quả đúng, kể cả câu tiêu đề không có cặp; (ii) chạy
-end-to-end Hán$\leftrightarrow$Việt với checkpoint chính thức trên hai môi trường: WSL2 + RTX 5050 (env
-\code{crocoalign}: Python 3.10, torch 2.11+cu128, PL 2.6.5) và macOS arm64 CPU (\code{.venv}: Python 3.10, torch 2.14,
-transformers 5.16, sentence-transformers 6.0, PL 2.6.5, faiss-cpu, nn-template-core 0.1.1). Số liệu trong báo cáo lấy từ
-lần chạy macOS; toàn bộ phần cần torch (\croco{} gốc + tuned trên TEST, cải tiến trên 14 mục $\times$ 64 cấu hình) chạy
-hết trong $\approx$15 phút CPU, mỗi lượt \croco{} trên 190 câu TEST $\approx$5 phút kể cả nạp mô hình.
+Để kiểm chứng, chúng tôi chạy trước ví dụ EN--IT kèm theo repo và thu được kết quả đúng, kể cả với câu tiêu đề không
+có đối ứng. Sau đó pipeline Hán--Việt được chạy trọn vẹn với checkpoint chính thức trên hai môi trường: WSL2 với GPU
+RTX 5050 (env \code{crocoalign}: Python 3.10, torch 2.11+cu128, PL 2.6.5) và macOS arm64 chỉ dùng CPU (\code{.venv}:
+Python 3.10, torch 2.14, transformers 5.16, sentence-transformers 6.0, PL 2.6.5, faiss-cpu, nn-template-core 0.1.1).
+Số liệu trong báo cáo lấy từ lần chạy trên macOS. Toàn bộ phần cần torch, gồm \croco{} nguyên bản và tinh chỉnh trên
+tập TEST cùng các cải tiến trên 14 mục với 64 cấu hình, chạy hết trong khoảng 15 phút CPU; riêng mỗi lượt \croco{} trên
+190 câu TEST mất khoảng 5 phút kể cả thời gian nạp mô hình.
 
 % =====================================================================
-\section{Phương pháp đánh giá và cải tiến (Yêu cầu 3)}\label{sec:eval}
+\section{Phương pháp đánh giá và cải tiến}\label{sec:eval}
 
 \subsection{Gold gán tay}\label{sec:gold}
-Phiên bản đầu của đề tài chấm \croco{} bằng \emph{silver gold} sinh từ cosine LaBSE + DP đơn điệu và chọn siêu tham số
-trên chính tập báo cáo -- vừa \B{vòng tròn} (\croco{} cũng dựa trên LaBSE) vừa \B{tune trên test}. Thiết kế cuối
-(Bảng~\ref{tab:design}) sửa cả hai. Ba mục TEST (7, 9, 10; 190 câu Hán, 215 câu Việt) được gán tay bằng cách đọc phiên
-âm Hán-Việt đối chiếu bản dịch, theo 5 quy tắc: liên kết theo \emph{nội dung} không theo vị trí; nhóm nhỏ nhất có thể;
-câu cắt ngang cùng chỗ ở hai bản thì ghép từng mảnh, cắt lệch thì gộp $n$-$m$; chú giải/niên đại/tiêu đề thuộc block chứa
-nó, bản dịch không có thì để trống; mỗi id xuất hiện đúng một lần (\code{annot2gold.py} kiểm tra). Kết quả 185 nhóm:
-$1$-$1$ = 160, $1$-$2$ = 10, $1$-$3$ = 5, $1$-$6$/$1$-$7$ = 2, $2$-$1$ = 3, $2$-$2$ = 2, $1$-$0$ = 3. Mọi quyết định không
-phải $1$-$1$ có chú thích trong \code{data/annotation/*.align.txt}; tiêu chí và quy trình rà soát độc lập ghi trong
-\code{data/annotation/README.md}. Gold này \B{độc lập hoàn toàn với LaBSE/\croco{}}.
+Ở phiên bản đầu của đề tài, chúng tôi chấm \croco{} bằng một bộ gold ``bạc'' sinh tự động từ cosine LaBSE và quy hoạch
+động đơn điệu, đồng thời chọn siêu tham số trên chính tập dùng để báo cáo. Nhìn lại, cách làm này có hai lỗi: đánh giá
+bị vòng tròn vì \croco{} cũng dựa trên LaBSE, và siêu tham số bị tinh chỉnh trên tập kiểm tra. Thiết kế cuối cùng
+(Bảng~\ref{tab:design}) sửa cả hai điểm.
+
+Ba mục TEST (7, 9 và 10, tổng cộng 190 câu Hán và 215 câu Việt) được gán nhãn thủ công bằng cách đọc phiên âm Hán-Việt
+đối chiếu với bản dịch. Chúng tôi theo năm quy tắc: liên kết dựa trên nội dung chứ không dựa trên vị trí; nhóm phải nhỏ
+nhất có thể; câu bị cắt ngang ở cùng một chỗ trong hai bản thì ghép từng mảnh, cắt lệch thì gộp thành nhóm nhiều-nhiều;
+chú giải, niên đại và tiêu đề thuộc về block chứa chúng, nếu bản dịch không có thì để trống; và mỗi câu chỉ xuất hiện
+đúng một lần (điều kiện này được \code{annot2gold.py} kiểm tra tự động). Kết quả là 185 nhóm, gồm 160 nhóm một-một, 10
+nhóm một-hai, 5 nhóm một-ba, 2 nhóm một-sáu hoặc một-bảy, 3 nhóm hai-một, 2 nhóm hai-hai và 3 câu Hán không có đối
+ứng. Mọi quyết định không phải một-một đều được chú thích lý do trong \code{data/annotation/*.align.txt}; tiêu chí và
+quy trình rà soát độc lập được ghi trong \code{data/annotation/README.md}. Bộ gold này không phụ thuộc vào LaBSE hay
+\croco{} dưới bất kỳ hình thức nào.
 
 \begin{table}[h]\centering\small
 \caption{Thiết kế DEV / TEST}\label{tab:design}
-\begin{tabular}{p{2.1cm}p{6.2cm}p{7.2cm}}
+\begin{tabular}{p{2.0cm}p{6.1cm}p{7.1cm}}
 \toprule
  & \B{DEV} & \B{TEST}\\
 \midrule
 Mục & 1 Hồng Bàng, 2 Nhà Thục, 3 Nhà Triệu & 7 Sĩ Vương, 9 Tiền Lý, 10 Triệu Việt Vương\\
-Gold & \emph{silver}: DP đơn điệu trên cosine LaBSE (\code{build\_silver.py}) & \B{gán tay} 185 nhóm\\
+Gold & silver: DP đơn điệu trên cosine LaBSE (\code{build\_silver.py}) & gán tay, 185 nhóm\\
 Quy mô & 523 / 569 câu & 190 / 215 câu\\
-Dùng để & chọn \code{min\_dist}, ngưỡng của \croco{} tuned & \B{báo cáo}; cấu hình các hệ DP chọn bằng CV leave-one-section-out\\
+Dùng để & chọn \code{min\_dist} và ngưỡng của \croco{} tinh chỉnh & báo cáo; cấu hình các hệ DP chọn bằng CV leave-one-section-out\\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \subsection{Thước đo}
-Theo Vecalign \cite{vecalign} và \code{evaluate.py} của \croco{}: một liên kết dự đoán là \emph{đúng strict} nếu trùng
-hoàn toàn với một nhóm gold (cả tập câu nguồn lẫn tập câu đích), \emph{đúng lax} nếu có ít nhất một câu nguồn và một
-câu đích chung với nhóm gold chứa câu nguồn đó. $P$ tính trên các liên kết dự đoán (kể cả liên kết rỗng), $R$ tính trên
-các nhóm gold không rỗng, $F_1$ là trung bình điều hoà; điểm cuối là trung bình 3 mục. \code{scripts/score.py} tái hiện
-đúng logic này bằng Python thuần và được kiểm chứng khớp ba chữ số thập phân với \code{evaluate.py} trên 6 tổ hợp
-(3 mục $\times$ 2 cấu hình), nên mọi hệ đều chấm trên cùng một thước đo và chấm được không cần GPU.
+Chúng tôi dùng bộ thước đo của Vecalign \cite{vecalign}, cũng là thước đo trong \code{evaluate.py} của \croco{}. Một
+liên kết dự đoán được tính là đúng theo nghĩa strict nếu trùng hoàn toàn với một nhóm gold, cả về tập câu nguồn lẫn tập
+câu đích; theo nghĩa lax, chỉ cần có ít nhất một câu nguồn và một câu đích chung với nhóm gold chứa câu nguồn đó.
+Precision tính trên các liên kết dự đoán (kể cả liên kết rỗng), recall tính trên các nhóm gold không rỗng, $F_1$ là
+trung bình điều hoà, và điểm cuối là trung bình của ba mục. Script \code{scripts/score.py} tái hiện đúng logic này bằng
+Python thuần; chúng tôi đã đối chiếu với \code{evaluate.py} trên sáu tổ hợp (ba mục, hai cấu hình) và các con số khớp
+đến ba chữ số thập phân. Nhờ vậy mọi hệ đều được chấm trên cùng một thước đo, và việc chấm không cần GPU.
 
-\subsection{Chọn cấu hình: vì sao cross-validation thay cho DEV}\label{sec:cv}
-Với \croco{}, hai siêu tham số suy luận (\code{min\_dist}, ngưỡng) được chọn trên DEV. Với các hệ dùng DP, DEV silver
-\B{suy biến}: silver được sinh bởi đúng thuật toán ``cosine LaBSE + DP'', nên hệ LaBSE+DP đạt $F_1 = 1{,}000$ trên DEV
-với mọi cấu hình gần gốc -- DEV không phân biệt được gì và luôn chọn trọng số $w=1$. Vì vậy cấu hình các hệ DP được chọn
-bằng \B{cross-validation leave-one-section-out trên gold gán tay}: với mỗi mục TEST, chọn cấu hình có $F_1$ strict trung
-bình cao nhất trên \emph{hai mục còn lại}, rồi chấm mục bị giữ lại; không mục nào tự chọn cấu hình cho mình
-(\code{pick\_config.py --cv}). Dòng ``chọn trên DEV silver'' vẫn được giữ trong bảng kết quả làm đối chứng.
+\subsection{Chọn cấu hình bằng cross-validation}\label{sec:cv}
+Với \croco{}, hai siêu tham số suy luận là \code{min\_dist} và ngưỡng quyết định được chọn trên DEV. Với các hệ dùng
+quy hoạch động thì DEV không dùng được cho mục đích này, vì bộ gold bạc của DEV được sinh bởi đúng thuật toán ``cosine
+LaBSE cộng quy hoạch động'': hệ LaBSE+DP đạt $F_1=1{,}000$ trên DEV với mọi cấu hình gần cấu hình gốc, và DEV vì thế
+luôn chọn trọng số $w=1$. Chúng tôi thay bằng cross-validation theo kiểu bỏ-một-mục trên chính gold gán tay: với mỗi
+mục TEST, cấu hình được chọn là cấu hình có $F_1$ strict trung bình cao nhất trên hai mục còn lại, sau đó mới chấm mục
+bị giữ lại. Không mục nào tự chọn cấu hình cho mình (\code{pick\_config.py --cv}). Kết quả khi chọn trên DEV vẫn được
+giữ trong bảng để đối chiếu.
 
-\subsection{Baseline phi-neural}\label{sec:baselines}
-Cả hai baseline dùng cùng một bộ giải mã DP đơn điệu (Mục~\ref{sec:dp}) và chỉ khác ma trận tương đồng $S$:
-\B{Gale--Church độ dài}: $S_{ij}=\exp(-z_{ij}^2/2)$ với $z_{ij}=\big(\log(\ell^{v}_j/\ell^{h}_i)-\log\bar r\big)/\sigma$,
-$\ell^{h}$ là số chữ Hán, $\ell^{v}$ số âm tiết Việt, $\bar r$ tỉ lệ toàn mục, $\sigma=0{,}6$.
-\B{Hán-Việt lexical}: Dice có trọng số IDF giữa tập âm tiết của phiên âm $A_i$ và của câu Việt $B_j$ (chữ thường, bỏ
-dấu câu và số):
+\subsection{Hai baseline không dùng mạng nơ-ron}\label{sec:baselines}
+Cả hai baseline dùng chung bộ giải mã quy hoạch động ở Mục~\ref{sec:dp} và chỉ khác nhau ở ma trận tương đồng $S$.
+Baseline độ dài theo Gale--Church đặt $S_{ij}=\exp(-z_{ij}^2/2)$ với
+$z_{ij}=\big(\log(\ell^{v}_j/\ell^{h}_i)-\log\bar r\big)/\sigma$, trong đó $\ell^{h}$ là số chữ Hán, $\ell^{v}$ là số
+âm tiết Việt, $\bar r$ là tỉ lệ độ dài trung bình của cả mục và $\sigma=0{,}6$. Baseline từ vựng Hán-Việt dùng hệ số
+Dice có trọng số IDF giữa tập âm tiết $A_i$ của phiên âm và tập âm tiết $B_j$ của câu Việt (sau khi chuyển về chữ
+thường, bỏ dấu câu và chữ số):
 \[S_{ij}=\frac{2\sum_{w\in A_i\cap B_j}\mathrm{idf}(w)}{\sum_{w\in A_i}\mathrm{idf}(w)+\sum_{w\in B_j}\mathrm{idf}(w)},\qquad
-\mathrm{idf}(w)=\log\frac{N+1}{\mathrm{df}(w)+0{,}5}\]
-tính trên toàn bộ câu của mục. IDF làm giảm trọng số các hư từ
-(\emph{chi, nhi, dã}; \emph{và, của}) và tôn tên riêng.
+\mathrm{idf}(w)=\log\frac{N+1}{\mathrm{df}(w)+0{,}5},\]
+với $N$ là tổng số câu của mục. Trọng số IDF làm giảm ảnh hưởng của hư từ (\emph{chi, nhi, dã} ở phía Hán; \emph{và,
+của} ở phía Việt) và nhấn mạnh tên riêng.
 
 \subsection{Bộ giải mã đơn điệu và hai cải tiến}\label{sec:dp}
-Gọi $D(i,j)$ là điểm dóng hàng tốt nhất của $i$ câu Hán đầu với $j$ câu Việt đầu:
+Gọi $D(i,j)$ là điểm dóng hàng tốt nhất giữa $i$ câu Hán đầu và $j$ câu Việt đầu. Ta có công thức truy hồi
 \begin{align*}
 D(i,j)=\max\Big\{&\,D(i{-}1,j{-}1)+S_{ij}-\tau;\quad D(i{-}1,j)-\gamma;\quad D(i,j{-}1)-\gamma;\\
-&\,D(i{-}1,j{-}2)+S_{i,\{j-1,j\}}-\tau-\mu;\quad D(i{-}2,j{-}1)+S_{\{i-1,i\},j}-\tau-\mu\Big\}
+&\,D(i{-}1,j{-}2)+S_{i,\{j-1,j\}}-\tau-\mu;\quad D(i{-}2,j{-}1)+S_{\{i-1,i\},j}-\tau-\mu\Big\},
 \end{align*}
-với $\tau$ ngưỡng (điểm âm nếu tương đồng thấp hơn $\tau$ thì thà để trống), $\gamma$ phạt câu không có cặp,
-$\mu=\gamma$ phạt gộp. Điểm gộp $S_{i,\{j-1,j\}}$ có hai cách: \emph{trung bình} hai ô ($c{=}0$) hoặc \emph{văn bản
-ghép} ($c{=}1$): tương đồng giữa câu Hán và \emph{hai câu Việt ghép lại} -- với lexical là Dice trên hợp hai tập âm tiết,
-với LaBSE là cosine với embedding của chuỗi ghép (mã hoá thêm $m{-}1$ cặp câu Việt kề nhau và $n{-}1$ cặp câu Hán kề
-nhau). Truy vết cho các nhóm $1$-$1$, $1$-$0$, $0$-$1$, $1$-$2$, $2$-$1$. Độ phức tạp $O(nm)$; mục dài nhất
-($350\times357$) chạy dưới một giây.
+trong đó $\tau$ là ngưỡng (một cặp có tương đồng thấp hơn $\tau$ sẽ cho điểm âm, tức là thà để trống còn hơn), $\gamma$
+là phạt cho câu không có đối ứng và $\mu=\gamma$ là phạt gộp. Điểm gộp $S_{i,\{j-1,j\}}$ có thể tính theo hai cách:
+lấy trung bình hai ô ($c=0$), hoặc so sánh câu Hán với hai câu Việt đã ghép lại thành một ($c=1$). Với baseline từ
+vựng, cách thứ hai là Dice trên hợp của hai tập âm tiết; với LaBSE, đó là cosine với embedding của chuỗi ghép, nên cần
+mã hoá thêm $m-1$ cặp câu Việt kề nhau và $n-1$ cặp câu Hán kề nhau. Truy vết cho ra các nhóm một-một, một-không,
+không-một, một-hai và hai-một. Độ phức tạp là $O(nm)$; mục dài nhất ($350\times357$) chạy dưới một giây.
 
-\B{Cải tiến 1 -- LaBSE(ckpt)+DP}: lấy \code{model.transformer} (chính bộ LaBSE trong checkpoint \croco{}) mã hoá mọi câu,
-$S=\cos$, giải mã bằng DP trên. Mọi thứ của \croco{} được giữ nguyên trừ bộ giải mã ở Mục~\ref{sec:inference}.
-\B{Cải tiến 2 -- LaBSE+Hán-Việt+DP}: $S = w\cdot\cos_{\text{LaBSE}} + (1-w)\cdot S^{\text{lex}}$, cùng DP.
-Lưới cấu hình: baseline $\tau\in\{0{,}10;0{,}15;0{,}20\}$, $\gamma\in\{0{,}05;0{,}10\}$, $c\in\{0,1\}$ (12 cấu hình);
-LaBSE $w\in\{1;0{,}7;0{,}5;0{,}3\}$, $\tau\in\{0{,}15;0{,}25;0{,}35;0{,}45\}$, cùng $\gamma$, $c$ (64 cấu hình; $w=1$ là
-cải tiến 1). Embedding được cache (\code{data/emb/*.npz}, 4~MB) nên lưới tái sinh được không cần checkpoint.
+Cải tiến thứ nhất, mà chúng tôi gọi là LaBSE(ckpt)+DP, lấy chính bộ LaBSE trong checkpoint \croco{}
+(\code{model.transformer}) để mã hoá mọi câu, đặt $S=\cos$ và giải mã bằng quy hoạch động ở trên. Nói cách khác, mọi
+thứ của \croco{} được giữ nguyên, chỉ có bộ giải mã ở Mục~\ref{sec:inference} bị thay. Cải tiến thứ hai kết hợp thêm
+tín hiệu từ vựng, $S=w\cdot\cos_{\text{LaBSE}}+(1-w)\cdot S^{\text{lex}}$, với cùng bộ giải mã. Lưới cấu hình của
+baseline gồm $\tau\in\{0{,}10;0{,}15;0{,}20\}$, $\gamma\in\{0{,}05;0{,}10\}$ và $c\in\{0,1\}$ (12 cấu hình); của các hệ
+LaBSE gồm thêm $w\in\{1;0{,}7;0{,}5;0{,}3\}$ và $\tau\in\{0{,}15;0{,}25;0{,}35;0{,}45\}$ (64 cấu hình, trong đó $w=1$
+chính là cải tiến thứ nhất). Embedding được lưu lại trong \code{data/emb/*.npz} (4~MB) nên toàn bộ lưới có thể tái sinh
+mà không cần checkpoint.
 
 % =====================================================================
 \section{Kết quả}\label{sec:results}
 
 \begin{table}[h]\centering\small
-\caption{Kết quả trên TEST (gold gán tay, 185 nhóm), trung bình 3 mục. $s$ = strict, $l$ = lax. Cấu hình các hệ DP
-chọn bằng CV (Mục~\ref{sec:cv}); CV chọn $c{=}1$ ở mọi fold của mọi hệ.}\label{tab:main}
+\caption{Kết quả trên TEST (gold gán tay, 185 nhóm), trung bình ba mục; $s$ là strict, $l$ là lax. Cấu hình của các
+hệ DP được chọn bằng CV (Mục~\ref{sec:cv}); CV chọn $c=1$ ở mọi fold của mọi hệ.}\label{tab:main}
 \begin{tabular}{lcccccc}
 \toprule
 \B{Hệ thống} & $P_{s}$ & $R_{s}$ & \B{$F_{1,s}$} & $P_{l}$ & $R_{l}$ & \B{$F_{1,l}$}\\
 \midrule
-\croco{} (gốc: \code{min\_dist} 0,05, ngưỡng 0,5)     & 0,536 & 0,522 & \B{0,529} & 0,648 & 0,642 & \B{0,645}\\
-\croco{} (tuned: 0,15 / 0,20, chọn trên DEV)          & 0,569 & 0,561 & \B{0,565} & 0,669 & 0,669 & \B{0,669}\\
+\croco{} nguyên bản (\code{min\_dist} 0,05, ngưỡng 0,5) & 0,536 & 0,522 & \B{0,529} & 0,648 & 0,642 & \B{0,645}\\
+\croco{} tinh chỉnh (0,15 / 0,20, chọn trên DEV)      & 0,569 & 0,561 & \B{0,565} & 0,669 & 0,669 & \B{0,669}\\
 Gale--Church độ dài + DP                              & 0,869 & 0,890 & \B{0,879} & 0,947 & 0,965 & \B{0,956}\\
 Hán-Việt lexical + DP                                 & 0,930 & 0,939 & \B{0,934} & 0,993 & 1,000 & \B{0,997}\\
 Cải tiến 1: LaBSE(ckpt) + DP                          & 0,914 & 0,922 & \B{0,918} & 0,995 & 0,995 & \B{0,995}\\
-Cải tiến 2: LaBSE + Hán-Việt ($w{=}0{,}3$) + DP       & 0,923 & 0,932 & \B{0,927} & 0,993 & 0,993 & \B{0,993}\\
+Cải tiến 2: LaBSE + Hán-Việt ($w=0{,}3$) + DP         & 0,923 & 0,932 & \B{0,927} & 0,993 & 0,993 & \B{0,993}\\
 \midrule
 \emph{Đối chứng:} cải tiến 1, cấu hình chọn trên DEV silver & 0,834 & 0,854 & 0,844 & 0,957 & 0,972 & 0,965\\
 \bottomrule
@@ -363,13 +411,13 @@ Cải tiến 2: LaBSE + Hán-Việt ($w{=}0{,}3$) + DP       & 0,923 & 0,932 & \
 \end{table}
 
 \begin{table}[h]\centering\small
-\caption{$F_1$ strict / lax theo từng mục TEST, và trên DEV silver (chỉ để tham khảo)}\label{tab:perfile}
+\caption{$F_1$ strict / lax theo từng mục TEST, và trên DEV silver để tham khảo}\label{tab:perfile}
 \begin{tabular}{lcccc}
 \toprule
 \B{Hệ thống} & \B{7 Sĩ Vương} & \B{9 Tiền Lý} & \B{10 Triệu Việt Vương} & \B{DEV silver}\\
 \midrule
-\croco{} (gốc)               & 0,489 / 0,629 & 0,587 / 0,619 & 0,510 / 0,688 & 0,609 / 0,669\\
-\croco{} (tuned)             & 0,565 / 0,648 & 0,619 / 0,651 & 0,510 / 0,708 & 0,646 / 0,717\\
+\croco{} nguyên bản          & 0,489 / 0,629 & 0,587 / 0,619 & 0,510 / 0,688 & 0,609 / 0,669\\
+\croco{} tinh chỉnh          & 0,565 / 0,648 & 0,619 / 0,651 & 0,510 / 0,708 & 0,646 / 0,717\\
 Gale--Church độ dài + DP     & 0,801 / 0,938 & 1,000 / 1,000 & 0,837 / 0,929 & 0,849 / 0,941\\
 Hán-Việt lexical + DP        & 0,910 / 1,000 & 0,984 / 1,000 & 0,908 / 0,990 & 0,882 / 0,961\\
 Cải tiến 1: LaBSE + DP       & 0,882 / 0,986 & 0,984 / 1,000 & 0,888 / 1,000 & 1,000 / 1,000\\
@@ -378,74 +426,87 @@ Cải tiến 2: LaBSE + HV + DP  & 0,910 / 1,000 & 0,984 / 1,000 & 0,888 / 0,980
 \end{tabular}
 \end{table}
 
-Ba nhận xét trực tiếp từ bảng: (i) \croco{} zero-shot chỉ đạt 0,53--0,57 strict trên gold gán tay, thấp hơn nhiều so với
-87,5 mà tác giả báo cáo trên Opus Books -- dữ liệu ở đây ngoài phân phối; (ii) tinh chỉnh chọn trên DEV cho +3,6 điểm
-trên TEST, đúng như +3,7 trên DEV, tức không overfit; (iii) mọi hệ dùng DP đơn điệu vượt \croco{} 31--40 điểm, và
-\emph{cùng bộ mã hoá LaBSE của checkpoint} đi từ 0,529 lên 0,918 chỉ nhờ đổi bộ giải mã.
+Bảng~\ref{tab:main} và \ref{tab:perfile} cho thấy \croco{} chạy zero-shot chỉ đạt $F_1$ strict trong khoảng
+0,53--0,57 trên gold gán tay, thấp hơn rất nhiều so với con số 87,5 mà tác giả báo cáo trên Opus Books; dữ liệu của
+chúng tôi rõ ràng nằm ngoài phân phối mà mô hình được huấn luyện. Việc tinh chỉnh hai siêu tham số suy luận trên DEV
+mang lại thêm 3,6 điểm trên TEST, gần như trùng với mức tăng 3,7 điểm quan sát được trên DEV, nên có thể nói tinh chỉnh
+này không bị overfit. Đáng chú ý hơn cả là mọi hệ dùng quy hoạch động đơn điệu đều vượt \croco{} từ 31 đến 40 điểm, và
+khi giữ nguyên bộ mã hoá LaBSE của checkpoint mà chỉ đổi bộ giải mã, $F_1$ strict đi từ 0,529 lên 0,918.
 
 % =====================================================================
 \section{Phân tích}\label{sec:analysis}
 
-\subsection{Nguồn lỗi của \croco{} là bộ giải mã, không phải encoder}
-Bảng~\ref{tab:errors} liệt kê lỗi điển hình của \croco{} gốc ở mục 7 (33/75 câu Hán sai). Ba kiểu lỗi: \B{bỏ sót} câu
-dài có nội dung rõ ràng (zh\_3, zh\_7, zh\_8) -- xác suất phân loại dưới 0,5 dù cosine LaBSE của cặp đúng cao;
-\B{nhầm sang câu xa} cùng chủ đề (zh\_9 $\to$ vi\_56, cách 46 câu) -- cho thấy quyết định từng cặp độc lập, không có
-ràng buộc ``câu sau phải nằm sau câu trước''; \B{bắt một phần} nhóm $1$-$n$ (zh\_6 chỉ nối vi\_6). Cả ba đều biến mất khi
-giữ nguyên embedding và giải mã bằng DP: ràng buộc đơn điệu loại bỏ ứng viên xa, và điểm cộng dồn theo đường đi bù cho
-những cặp có tương đồng vừa phải. Bản dịch ĐVSKTT theo sát thứ tự bản Hán (không có $n$-$m$ chéo nào trong 185 nhóm gold),
-nên giả thiết đơn điệu đúng gần tuyệt đối -- khác với tài liệu văn học nhiễu mà \croco{} được thiết kế cho.
+\subsection{Vấn đề nằm ở bộ giải mã}
+Bảng~\ref{tab:errors} liệt kê vài lỗi tiêu biểu của \croco{} nguyên bản trên mục 7, nơi 33 trong 75 câu Hán bị dóng
+sai. Có thể nhận ra ba kiểu lỗi. Kiểu thứ nhất là bỏ sót những câu dài có nội dung rõ ràng (zh\_3, zh\_7, zh\_8): xác
+suất mà đầu phân loại đưa ra thấp hơn 0,5 dù cosine LaBSE của cặp đúng khá cao. Kiểu thứ hai là nối nhầm sang một câu
+ở rất xa nhưng cùng chủ đề, như zh\_9 bị nối với vi\_56 cách đó 46 câu; điều này chỉ xảy ra được vì mỗi cặp được quyết
+định độc lập, không có ràng buộc nào buộc câu sau phải nằm sau câu trước. Kiểu thứ ba là chỉ bắt được một phần của
+nhóm một-nhiều (zh\_6 chỉ nối với vi\_6). Cả ba kiểu lỗi đều biến mất khi giữ nguyên embedding nhưng giải mã bằng quy
+hoạch động: ràng buộc đơn điệu loại bỏ các ứng viên ở xa, và việc cộng dồn điểm dọc theo đường đi bù đắp cho những cặp
+có độ tương đồng chỉ ở mức vừa phải. Bản dịch ĐVSKTT bám rất sát thứ tự bản Hán (trong 185 nhóm gold không có nhóm
+nhiều-nhiều chéo nào), nên giả thiết đơn điệu gần như đúng tuyệt đối. Đây là điểm khác căn bản so với những tài liệu văn
+học nhiều nhiễu mà \croco{} được thiết kế để xử lý.
 
 \begin{table}[h]\centering\small
-\caption{Ví dụ lỗi của \croco{} gốc trên mục 7 Sĩ Vương (gold gán tay)}\label{tab:errors}
+\caption{Một số lỗi của \croco{} nguyên bản trên mục 7 Sĩ Vương, đối chiếu với gold gán tay}\label{tab:errors}
 \begin{tabular}{p{5.2cm}p{4.6cm}p{4.6cm}}
 \toprule
 \B{Câu Hán} & \B{Gold} & \B{\croco{} dự đoán}\\
 \midrule
 zh\_5 士王紀 & vi\_4 ``KỶ SĨ VƯƠNG.'' & vi\_5 ``SĨ VƯƠNG.'' (tiêu đề ngắn, nhầm câu kề)\\
-zh\_9 父賜漢桓帝時爲日南太守 & vi\_10 ``Cha là Tứ, thời Hán Hoàn Đế làm Thái thú Nhật Nam.'' & vi\_56 ``(Tân nhận chức năm Kiến An thứ 6 thời Hán).'' -- cách 46 câu\\
+zh\_9 父賜漢桓帝時爲日南太守 & vi\_10 ``Cha là Tứ, thời Hán Hoàn Đế làm Thái thú Nhật Nam.'' & vi\_56 ``(Tân nhận chức năm Kiến An thứ 6 thời Hán).'', cách 46 câu\\
 zh\_7 姓士諱燮字彦威蒼梧廣信人也 & vi\_8 ``Họ Sĩ, tên huý là Nhiếp, tự là Ngạn Uy\ldots'' & $\varnothing$ (bỏ sót)\\
-zh\_6 士王在位四十年壽九十年王寬厚\ldots & vi\_5 + vi\_6 + vi\_7 ($1$-$3$) & vi\_6 (chỉ ``Ở ngôi 40 năm, thọ 90 tuổi.'')\\
+zh\_6 士王在位四十年壽九十年王寬厚\ldots & vi\_5 + vi\_6 + vi\_7 (một-ba) & vi\_6 (chỉ ``Ở ngôi 40 năm, thọ 90 tuổi.'')\\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\subsection{Khi giải mã đúng, tín hiệu tương đồng ít quan trọng}
-Cùng bộ giải mã: độ dài thuần 0,879; Hán-Việt 0,934; LaBSE 0,918; hợp nhất 0,927. Ba hệ đầu bảng chênh nhau $\le 3$
-nhóm trên 185 -- trong sai số của tập test nhỏ. Encoder neural đa ngữ \B{không hơn} tín hiệu từ vựng miễn phí sẵn có ở
-nguồn; hợp nhất ($w=0{,}3$, tức lexical chiếm 70\%) nhỉnh hơn LaBSE thuần nhưng chưa vượt lexical thuần. Với văn ngôn thế
-kỷ XV, cosine LaBSE của cặp đúng chỉ khoảng 0,5--0,7 (ví dụ 按黃帝時建萬國 $\leftrightarrow$ ``Xét: Thời Hoàng Đế dựng
-muôn nước'': 0,52), thấp hơn nhiều so với cặp ngôn ngữ hiện đại.
+\subsection{Tín hiệu tương đồng không còn là yếu tố quyết định}
+Khi đã dùng chung bộ giải mã, khoảng cách giữa các nguồn tín hiệu thu hẹp đáng kể: baseline độ dài đạt 0,879, từ vựng
+Hán-Việt 0,934, LaBSE 0,918 và hợp nhất 0,927. Ba hệ đứng đầu chỉ chênh nhau không quá ba nhóm trên tổng số 185, nằm
+trong sai số của một tập kiểm tra nhỏ. Nói cách khác, trên dữ liệu này bộ mã hoá đa ngữ không tỏ ra hơn tín hiệu từ
+vựng sẵn có ở nguồn. Phiên bản hợp nhất với $w=0{,}3$ (tức là tín hiệu từ vựng chiếm 70\%) có nhỉnh hơn LaBSE thuần
+nhưng vẫn chưa vượt được baseline từ vựng. Một phần nguyên nhân là với văn ngôn thế kỷ XV, cosine LaBSE của những cặp
+đúng thường chỉ vào khoảng 0,5--0,7 (chẳng hạn 按黃帝時建萬國 và ``Xét: Thời Hoàng Đế dựng muôn nước'' có cosine
+0,52), thấp hơn nhiều so với các cặp ngôn ngữ hiện đại.
 
-\subsection{Gộp trên văn bản ghép là chi tiết quan trọng nhất của DP}
-CV chọn $c{=}1$ ở mọi fold của mọi hệ. Với gộp trung bình, nhóm $1$-$2$ có một câu Việt ngắn (``Hữu ty hỏi vì cớ gì?'')
-bị tách thành $1$-$1$ + câu bỏ trống vì ô của câu ngắn kéo trung bình xuống dưới $\tau$; ghép văn bản rồi mới so thì
-tương đồng của cả nhóm được giữ. Riêng Hán-Việt lexical đi từ 0,859 ($c{=}0$) lên 0,934 ($c{=}1$), số nhóm sai từ 24
-xuống 11.
+\subsection{Cách tính điểm gộp}
+Trong tất cả các fold của tất cả các hệ, cross-validation đều chọn $c=1$, tức là tính điểm gộp trên văn bản ghép. Với
+cách lấy trung bình, một nhóm một-hai trong đó có một câu Việt ngắn (``Hữu ty hỏi vì cớ gì?'') thường bị tách thành một
+cặp một-một và một câu bỏ trống, vì ô của câu ngắn kéo trung bình xuống dưới ngưỡng $\tau$. Ghép hai câu lại rồi mới so
+sánh thì độ tương đồng của cả nhóm được bảo toàn. Riêng với baseline Hán-Việt, thay đổi này đưa $F_1$ strict từ 0,859
+lên 0,934 và số nhóm sai từ 24 xuống 11.
 
-\subsection{Silver gold thiên vị cấu trúc -- hai bằng chứng định lượng}
-(i) LaBSE+DP đạt đúng 1,000 trên DEV silver (silver là điểm bất động của nó); chọn cấu hình trên DEV cho 0,844 trên TEST,
-chọn bằng CV cho 0,918 -- chênh 7,4 điểm chỉ do cách chọn. (ii) Trên DEV silver, gộp-trung-bình \emph{thắng}
-gộp-văn-bản-ghép (0,933 so với 0,882); trên gold gán tay thì \emph{ngược lại} (0,859 so với 0,934), vì silver được sinh
-bởi chính DP gộp-trung-bình. Kết luận phương pháp: số liệu chỉ trên silver -- như ở phiên bản đầu của đề tài -- không
-được coi là chân trị, và gold gán tay là bắt buộc khi hệ được chấm và hệ sinh gold cùng gốc.
+\subsection{Gold bạc thiên vị về cấu trúc}
+Có hai bằng chứng cho nhận định này. Thứ nhất, hệ LaBSE+DP đạt đúng 1,000 trên DEV bạc, vì bộ gold đó là điểm bất động
+của chính nó; hệ quả là khi chọn cấu hình trên DEV, kết quả trên TEST chỉ còn 0,844 so với 0,918 khi chọn bằng
+cross-validation, tức là chênh 7,4 điểm chỉ do cách chọn. Thứ hai, trên DEV bạc, cách gộp trung bình cho kết quả cao
+hơn cách gộp văn bản ghép (0,933 so với 0,882), nhưng trên gold gán tay thì ngược lại (0,859 so với 0,934); lý do đơn
+giản là gold bạc được sinh bởi đúng thuật toán gộp trung bình. Từ đó chúng tôi cho rằng những con số chỉ dựa trên gold
+bạc, như ở phiên bản đầu của đề tài, không nên được coi là kết quả thật, và gold gán tay là bắt buộc khi hệ được chấm
+và hệ sinh gold có cùng nguồn gốc.
 
 \subsection{Lỗi còn lại và hạn chế}
-Hệ tốt nhất sai 11/185 nhóm, \emph{toàn bộ} là $1$-$n$ với $n\ge3$ (chú giải dài, lời bình sử thần tách nhiều câu Việt;
-block về bóng nêu ứng với 7 câu Việt) hoặc $2$-$2$ (niên đại + lời tâu cắt lệch) -- ngoài tập bước của DP, không phải
-do tín hiệu. Hạn chế của nghiên cứu: gold 185 nhóm / 3 mục còn nhỏ (3 nhóm $\approx$ 1,6 điểm $F_1$) và do một người
-gán, chưa đo đồng thuận; CV ba fold trên ba mục còn thô; \croco{} tuned vẫn chọn trên DEV silver; chưa thử fine-tune
-bộ mã hoá ngữ cảnh của \croco{} trên cặp Hán cổ -- Việt.
+Hệ tốt nhất còn sai 11 trong 185 nhóm, và tất cả đều là nhóm một-$n$ với $n\ge3$ (các chú giải dài, lời bình của sử
+thần được tách thành nhiều câu Việt; block về bóng nêu ứng với bảy câu Việt) hoặc nhóm hai-hai (niên đại và lời tâu bị
+cắt lệch nhau). Những nhóm này nằm ngoài tập bước của bộ giải mã, nên lỗi không đến từ tín hiệu tương đồng. Về hạn chế
+của nghiên cứu, bộ gold 185 nhóm trên ba mục còn nhỏ (ba nhóm tương đương khoảng 1,6 điểm $F_1$) và do một người gán,
+chưa có số đo đồng thuận; cross-validation ba fold trên ba mục cũng còn thô; \croco{} tinh chỉnh vẫn được chọn cấu hình
+trên DEV bạc; và chúng tôi chưa thử fine-tune bộ mã hoá ngữ cảnh của \croco{} trên cặp Hán cổ -- Việt.
 
 % =====================================================================
 \section{Kết luận}
-Đề tài đã hoàn thành ba yêu cầu: (1) pipeline cào và tiền xử lý 14 mục ĐVSKTT, giải quyết tách câu Hán cổ bằng dấu câu
-của phiên âm; (2) cài đặt và chạy lại \croco{} từ mã nguồn gốc với checkpoint chính thức trên stack hiện đại, không sửa
-mã gốc, chạy được trên cả GPU lẫn CPU; (3) đánh giá bằng gold gán tay độc lập với mô hình, chọn cấu hình bằng CV, có
-baseline đối chứng, và cải tiến. Kết quả chính: \croco{} zero-shot đạt $F_1$ strict 0,529 (tuned 0,565); giữ nguyên
-encoder của nó nhưng giải mã đơn điệu đạt 0,918; baseline thuần từ vựng Hán-Việt đạt 0,934. Bài học: với song ngữ dịch sát,
-\B{ràng buộc thứ tự quan trọng hơn chất lượng embedding}, và \B{silver gold sinh từ mô hình không dùng được để chấm mô
-hình cùng gốc}. Hướng tiếp theo: mở rộng gold và đo đồng thuận, thêm bước DP $1$-$3$/$2$-$2$, fine-tune \croco{} trên
-cặp Hán cổ -- Việt sinh từ chính pipeline này.
+Chúng tôi đã hoàn thành ba yêu cầu của đề tài. Về dữ liệu, pipeline cào và tiền xử lý xử lý được 14 mục ĐVSKTT, trong
+đó bài toán tách câu Hán cổ được giải quyết gọn nhờ dấu câu của phần phiên âm. Về mô hình, \croco{} được cài đặt và
+chạy lại từ mã nguồn gốc với checkpoint chính thức trên stack phần mềm hiện đại, không sửa mã gốc và chạy được trên cả
+GPU lẫn CPU. Về đánh giá, chúng tôi xây dựng gold gán tay độc lập với mô hình, chọn cấu hình bằng cross-validation, so
+sánh với baseline và đề xuất cải tiến. Kết quả chính là \croco{} zero-shot đạt $F_1$ strict 0,529 (0,565 sau tinh
+chỉnh), trong khi giữ nguyên bộ mã hoá của nó nhưng giải mã đơn điệu đạt 0,918, và một baseline thuần từ vựng Hán-Việt
+đạt 0,934. Hai bài học rút ra là với những cặp văn bản dịch sát, ràng buộc thứ tự quan trọng hơn chất lượng embedding,
+và gold sinh từ một mô hình không dùng được để đánh giá các mô hình cùng gốc. Trong thời gian tới, chúng tôi dự định mở
+rộng bộ gold và đo độ đồng thuận giữa người gán, bổ sung các bước một-ba và hai-hai cho bộ giải mã, và thử fine-tune
+\croco{} trên ngữ liệu Hán cổ -- Việt sinh ra từ chính pipeline này.
 
 % =====================================================================
 \begin{thebibliography}{9}\small
