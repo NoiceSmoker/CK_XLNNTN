@@ -14,7 +14,7 @@ Yêu cầu nộp: dataset, source (nhóm viết), model đã huấn luyện / li
 
 Tái lập toàn bộ: xem `report/bao_cao.pdf` Phụ lục A hoặc `RESULTS.md` §5 — tóm tắt:
 ```bash
-git clone --recurse-submodules <repo> && git checkout eval-manual-gold
+git clone --recurse-submodules <repo>
 uv venv --python 3.10 .venv && uv pip install -p .venv/bin/python torch transformers sentence-transformers faiss-cpu jsonlines scikit-learn hydra-core==1.3.2 omegaconf==2.3.0 torchmetrics pytorch-lightning GitPython python-dotenv && uv pip install -p .venv/bin/python --no-deps nn-template-core==0.1.1
 uvx gdown 1DwOAB50loUc0lBe6gImX8TI7RqxD8XCw -O CroCoAlign/checkpoints/crocoalign.ckpt
 PY=.venv/bin/python bash scripts/run_wsl_all.sh        # ~15 phút CPU

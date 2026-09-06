@@ -530,8 +530,8 @@ rộng bộ gold và đo độ đồng thuận giữa người gán, bổ sung c
 \appendix
 \section{Hướng dẫn tái lập}\label{app:repro}
 
-Bảng~\ref{tab:package} liệt kê các thành phần của gói nộp trong kho \code{CK\_XLNNTN} (nhánh
-\code{eval-manual-gold}). Nhóm không huấn luyện mô hình tham số mới: \croco{} được chạy với checkpoint chính thức của
+Bảng~\ref{tab:package} liệt kê các thành phần của gói nộp trong kho \code{CK\_XLNNTN}
+(nhánh \code{main}). Nhóm không huấn luyện mô hình tham số mới: \croco{} được chạy với checkpoint chính thức của
 tác giả, còn các hệ cải tiến và baseline đều là phi tham số, chỉ gồm cấu hình đã chọn.
 
 \begin{table}[h]\centering\small
@@ -556,7 +556,7 @@ Báo cáo & \code{report/bao\_cao.pdf} (nguồn \code{bao\_cao.tex}) & \\
 
 \B{Môi trường} (macOS arm64 hoặc Linux; GPU không bắt buộc):
 \begin{lstlisting}[language=bash]
-git clone --recurse-submodules <repo> && cd CK_XLNNTN && git checkout eval-manual-gold
+git clone --recurse-submodules <repo> && cd CK_XLNNTN
 uv venv --python 3.10 .venv
 uv pip install -p .venv/bin/python torch transformers sentence-transformers faiss-cpu jsonlines \
    scikit-learn hydra-core==1.3.2 omegaconf==2.3.0 torchmetrics pytorch-lightning GitPython python-dotenv
