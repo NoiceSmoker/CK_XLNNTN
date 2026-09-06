@@ -48,19 +48,19 @@
 \begin{titlepage}
 \centering
 \vspace*{0.4cm}
-{\large\B{ĐẠI HỌC QUỐC GIA THÀNH PHỐ HỒ CHÍ MINH}\\[3pt]
+{\large\color{darkblue}\B{ĐẠI HỌC QUỐC GIA THÀNH PHỐ HỒ CHÍ MINH}\\[3pt]
 \B{TRƯỜNG ĐẠI HỌC KHOA HỌC TỰ NHIÊN}\\[3pt]
 \B{KHOA CÔNG NGHỆ THÔNG TIN}\par}
-\vspace{4pt}\rule{0.55\linewidth}{0.6pt}
+\vspace{4pt}{\color{darkblue}\rule{0.55\linewidth}{0.6pt}}
 
 \vspace{\stretch{1.2}}
-{\Large\B{BÁO CÁO CUỐI KỲ}\\[8pt]
+{\Large\color{darkblue}\B{BÁO CÁO CUỐI KỲ}\\[8pt]
  \large\B{MÔN XỬ LÝ NGÔN NGỮ TỰ NHIÊN NÂNG CAO}\par}
 
 \vspace{\stretch{1.2}}
-{\Large\B{ĐỀ TÀI 05}\par}
+{\Large\color{darkblue}\B{ĐỀ TÀI 05}\par}
 \vspace{10pt}
-{\Large\B{``CHINESE--VIETNAMESE SENTENCE ALIGNMENT''}\par}
+{\Large\color{darkblue}\B{``CHINESE--VIETNAMESE SENTENCE ALIGNMENT''}\par}
 \vspace{14pt}
 {\normalsize\itshape Dóng hàng câu Hán -- Việt cho Đại Việt Sử Ký Toàn Thư bằng \croco{}\\[3pt]
 Tái lập, đánh giá trên gold gán tay và cải tiến bằng giải mã đơn điệu\par}
@@ -74,7 +74,7 @@ Tái lập, đánh giá trên gold gán tay và cải tiến bằng giải mã �
 \end{tabular}\par}
 
 \vspace{\stretch{1.4}}
-\rule{0.55\linewidth}{0.6pt}\\[6pt]
+{\color{darkblue}\rule{0.55\linewidth}{0.6pt}}\\[6pt]
 {\large Thành phố Hồ Chí Minh, tháng 9 năm 2026}
 \vspace*{0.4cm}
 \end{titlepage}
@@ -530,13 +530,29 @@ rộng bộ gold và đo độ đồng thuận giữa người gán, bổ sung c
 \appendix
 \section{Hướng dẫn tái lập}\label{app:repro}
 
-\B{Gói nộp} (kho \code{CK\_XLNNTN}, nhánh \code{eval-manual-gold}): \emph{dataset} -- \code{data/raw} (thô theo trang),
-\code{data/processed} (đầu vào \croco{}), \code{data/gold\_manual} + \code{data/annotation} (gold gán tay và phiếu);
-\emph{source} -- \code{scripts/} (toàn bộ do nhóm viết), \code{CroCoAlign/} (submodule mã gốc);
-\emph{model} -- không huấn luyện mô hình mới; dùng checkpoint chính thức của tác giả (Google Drive id
-\code{1DwOAB50loUc0lBe6gImX8TI7RqxD8XCw}, 2,31~GB) và LaBSE trên HuggingFace (\code{sentence-transformers/LaBSE});
-các hệ cải tiến là phi tham số (cấu hình trong \code{data/results/*.json}), embedding cache \code{data/emb/};
-\emph{kết quả} -- \code{data/pred/}, \code{data/results/}, \code{RESULTS.md}.
+Bảng~\ref{tab:package} liệt kê các thành phần của gói nộp trong kho \code{CK\_XLNNTN} (nhánh
+\code{eval-manual-gold}). Nhóm không huấn luyện mô hình tham số mới: \croco{} được chạy với checkpoint chính thức của
+tác giả, còn các hệ cải tiến và baseline đều là phi tham số, chỉ gồm cấu hình đã chọn.
+
+\begin{table}[h]\centering\small
+\caption{Thành phần gói nộp}\label{tab:package}
+\begin{tabular}{>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright\arraybackslash}p{7.3cm}>{\raggedright\arraybackslash}p{5.8cm}}
+\toprule
+\B{Hạng mục} & \B{Vị trí} & \B{Ghi chú}\\
+\midrule
+Dataset & \code{data/raw/} (thô, theo trang) \newline \code{data/processed/} (đầu vào \croco{}) \newline
+  \code{data/gold\_manual/}, \code{data/annotation/} & 14 mục Ngoại kỷ; gold gán tay 185 nhóm kèm phiếu và tiêu chí\\
+Mã nguồn của nhóm & \code{scripts/} & cào, tiền xử lý, wrapper chạy \croco{}, scorer, baseline, gán nhãn, cải tiến, runner\\
+Mã nguồn mô hình & \code{CroCoAlign/} & git submodule, ghim commit \code{2e93992}, không sửa\\
+Mô hình bên ngoài & checkpoint \croco{} 2,31~GB (Google Drive, id \newline {\footnotesize\code{1DwOAB50loUc0lBe6gImX8TI7RqxD8XCw}}) \newline
+  LaBSE (\code{sentence-transformers/LaBSE}) & chỉ nộp liên kết, không nộp tệp\\
+Cấu hình đã chọn & \code{data/results/*.json} & các hệ DP là phi tham số\\
+Embedding cache & \code{data/emb/*.npz} (4~MB) & tái sinh lưới LaBSE không cần checkpoint\\
+Kết quả & \code{data/pred/}, \code{data/results/}, \code{RESULTS.md} & \\
+Báo cáo & \code{report/bao\_cao.pdf} (nguồn \code{bao\_cao.tex}) & \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \B{Môi trường} (macOS arm64 hoặc Linux; GPU không bắt buộc):
 \begin{lstlisting}[language=bash]
