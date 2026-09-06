@@ -34,7 +34,7 @@ Phần cần GPU chạy trên WSL2 (RTX 5050, env `crocoalign`); mọi bước c
 | LaBSE+DP (cải tiến 1) | bộ mã hoá LaBSE *của checkpoint CroCoAlign* → cosine → DP đơn điệu | có |
 | LaBSE+HánViệt+DP (cải tiến 2) | `S = w·cos_LaBSE + (1−w)·lex_HánViệt` → DP; `w` chọn trên DEV | có |
 
-Mọi hệ thống chạy bằng **một lệnh**: `PY=.venv/bin/python bash scripts/run_wsl_all.sh` (đã chạy thực tế trên
+Mọi hệ thống chạy bằng **một lệnh**: `PY=.venv/bin/python bash scripts/run_all.sh` (đã chạy thực tế trên
 macOS arm64, CPU, ~15 phút; trên WSL/GPU dùng `PY` của env `crocoalign`). Lệnh tự chấm điểm và chèn bảng bên dưới.
 Lưới cấu hình: hệ DP baseline `t∈{.10,.15,.20} × g∈{.05,.10} × c∈{0,1}`; hệ LaBSE thêm `w∈{1,.7,.5,.3}`,
 `t∈{.15,.25,.35,.45}`; `c=1` = điểm gộp 1-2/2-1 tính trên văn bản ghép (mã hoá cặp câu ghép).
@@ -114,5 +114,5 @@ uv venv --python 3.10 .venv && uv pip install -p .venv/bin/python torch transfor
     jsonlines scikit-learn hydra-core==1.3.2 omegaconf==2.3.0 torchmetrics pytorch-lightning GitPython python-dotenv \
   && uv pip install -p .venv/bin/python --no-deps nn-template-core==0.1.1
 uvx gdown 1DwOAB50loUc0lBe6gImX8TI7RqxD8XCw -O CroCoAlign/checkpoints/crocoalign.ckpt   # 2.3 GB
-PY=.venv/bin/python bash scripts/run_wsl_all.sh
+PY=.venv/bin/python bash scripts/run_all.sh
 ```

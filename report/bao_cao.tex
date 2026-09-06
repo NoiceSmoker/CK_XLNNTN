@@ -318,8 +318,8 @@ nhất có thể; câu bị cắt ngang ở cùng một chỗ trong hai bản th
 chú giải, niên đại và tiêu đề thuộc về block chứa chúng, nếu bản dịch không có thì để trống; và mỗi câu chỉ xuất hiện
 đúng một lần (điều kiện này được \code{annot2gold.py} kiểm tra tự động). Kết quả là 185 nhóm, gồm 160 nhóm một-một, 10
 nhóm một-hai, 5 nhóm một-ba, 2 nhóm một-sáu hoặc một-bảy, 3 nhóm hai-một, 2 nhóm hai-hai và 3 câu Hán không có đối
-ứng. Mọi quyết định không phải một-một đều được chú thích lý do trong \code{data/annotation/*.align.txt}; tiêu chí và
-quy trình rà soát độc lập được ghi trong \code{data/annotation/README.md}. Bộ gold này không phụ thuộc vào LaBSE hay
+ứng. Mọi quyết định không phải một-một đều được chú thích lý do trong \code{data/annotation/*.align.txt}; tiêu chí gán nhãn
+được ghi trong \code{data/annotation/README.md}. Bộ gold này không phụ thuộc vào LaBSE hay
 \croco{} dưới bất kỳ hình thức nào.
 
 \begin{table}[h]\centering\small
@@ -609,7 +609,7 @@ bash scripts/build_silver_all.sh      # silver DEV (can LaBSE)
 \B{Bước 3 -- chạy toàn bộ hệ thống và chấm điểm} (một lệnh, $\approx$15 phút CPU; trên WSL/GPU đặt \code{PY} tới env
 \code{crocoalign}):
 \begin{lstlisting}[language=bash]
-PY=.venv/bin/python bash scripts/run_wsl_all.sh
+PY=.venv/bin/python bash scripts/run_all.sh
 \end{lstlisting}
 Lệnh này lần lượt: \croco{} gốc và tuned trên TEST (\code{run\_eval.py}, \code{run\_eval\_tuned.py} $\to$
 \path{data/pred/crocoalign_*_test/results_*.tsv}); \code{run\_improved.py} sinh 64 cấu hình LaBSE(+Hán-Việt)+DP cho 14

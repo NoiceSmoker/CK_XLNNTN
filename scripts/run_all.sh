@@ -2,8 +2,8 @@
 # Chạy TOÀN BỘ phần cần torch/GPU (WSL, env `crocoalign`). Mọi bước khác (cào, tiền xử lý,
 # gold gán tay, baseline phi-neural, chấm điểm) đã chạy được trên máy thường.
 #
-#   bash scripts/run_wsl_all.sh
-#   PY=/path/python CKPT=/path/ckpt bash scripts/run_wsl_all.sh
+#   bash scripts/run_all.sh
+#   PY=/path/python CKPT=/path/ckpt bash scripts/run_all.sh
 set -euo pipefail
 cd "$(dirname "$0")/.."
 PY=${PY:-$HOME/miniconda3/envs/crocoalign/bin/python}
