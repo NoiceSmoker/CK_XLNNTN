@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
-# Chạy TOÀN BỘ phần cần torch/GPU (WSL, env `crocoalign`). Mọi bước khác (cào, tiền xử lý,
-# gold gán tay, baseline phi-neural, chấm điểm) đã chạy được trên máy thường.
+# Chạy toàn bộ phần cần torch (CroCoAlign gốc/tuned trên TEST, cải tiến LaBSE+DP trên 14 mục) rồi chấm điểm
+# và chèn bảng vào RESULTS.md. Chạy được trên CPU (macOS/Linux) hoặc GPU; các bước khác (cào, tiền xử lý,
+# gold gán tay, baseline, scorer) thuần Python và đã có sẵn kết quả trong kho.
 #
-#   bash scripts/run_all.sh
+#   PY=.venv/bin/python bash scripts/run_all.sh
 #   PY=/path/python CKPT=/path/ckpt bash scripts/run_all.sh
 set -euo pipefail
 cd "$(dirname "$0")/.."
