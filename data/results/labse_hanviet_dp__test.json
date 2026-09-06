@@ -1,0 +1,47 @@
+{
+  "name": "LaBSE(ckpt)+HánViệt+DP (cải tiến 2)",
+  "config": "CV3: w0.3_t0.15_g0.05_c1; w0.3_t0.15_g0.10_c1; w0.3_t0.15_g0.10_c1",
+  "selection": "cv-loo",
+  "folds": [
+    "10-Ky-Trieu-Viet-Vuong←w0.3_t0.15_g0.05_c1",
+    "7-Ky-Si-Vuong←w0.3_t0.15_g0.10_c1",
+    "9-Ky-tien-Ly←w0.3_t0.15_g0.10_c1"
+  ],
+  "per_file": [
+    {
+      "precision_strict": 0.88,
+      "recall_strict": 0.8958333333333334,
+      "f1_strict": 0.8878460816518067,
+      "precision_lax": 0.98,
+      "recall_lax": 0.9791666666666666,
+      "f1_lax": 0.9795831561037857,
+      "file": "10-Ky-Trieu-Viet-Vuong.jsonl"
+    },
+    {
+      "precision_strict": 0.9054054054054054,
+      "recall_strict": 0.9154929577464789,
+      "f1_strict": 0.91042123967806,
+      "precision_lax": 1.0,
+      "recall_lax": 1.0,
+      "f1_lax": 1.0,
+      "file": "7-Ky-Si-Vuong.jsonl"
+    },
+    {
+      "precision_strict": 0.9841269841269841,
+      "recall_strict": 0.9841269841269841,
+      "f1_strict": 0.9841269841269841,
+      "precision_lax": 1.0,
+      "recall_lax": 1.0,
+      "f1_lax": 1.0,
+      "file": "9-Ky-tien-Ly.jsonl"
+    }
+  ],
+  "average": {
+    "precision_strict": 0.9231774631774631,
+    "recall_strict": 0.9318177584022654,
+    "f1_strict": 0.927464768485617,
+    "precision_lax": 0.9933333333333333,
+    "recall_lax": 0.9930555555555555,
+    "f1_lax": 0.9931943853679286
+  }
+}

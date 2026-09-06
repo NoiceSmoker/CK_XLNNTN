@@ -1,0 +1,47 @@
+{
+  "name": "Gale–Church độ dài + DP",
+  "config": "CV3: t0.10_g0.05_c1; t0.10_g0.05_c1; t0.10_g0.05_c1",
+  "selection": "cv-loo",
+  "folds": [
+    "10-Ky-Trieu-Viet-Vuong←t0.10_g0.05_c1",
+    "7-Ky-Si-Vuong←t0.10_g0.05_c1",
+    "9-Ky-tien-Ly←t0.10_g0.05_c1"
+  ],
+  "per_file": [
+    {
+      "precision_strict": 0.82,
+      "recall_strict": 0.8541666666666666,
+      "f1_strict": 0.836734693877551,
+      "precision_lax": 0.92,
+      "recall_lax": 0.9375,
+      "f1_lax": 0.9286675639300136,
+      "file": "10-Ky-Trieu-Viet-Vuong.jsonl"
+    },
+    {
+      "precision_strict": 0.7866666666666666,
+      "recall_strict": 0.8169014084507042,
+      "f1_strict": 0.8014990045672795,
+      "precision_lax": 0.92,
+      "recall_lax": 0.9577464788732394,
+      "f1_lax": 0.9384938493849384,
+      "file": "7-Ky-Si-Vuong.jsonl"
+    },
+    {
+      "precision_strict": 1.0,
+      "recall_strict": 1.0,
+      "f1_strict": 1.0,
+      "precision_lax": 1.0,
+      "recall_lax": 1.0,
+      "f1_lax": 1.0,
+      "file": "9-Ky-tien-Ly.jsonl"
+    }
+  ],
+  "average": {
+    "precision_strict": 0.8688888888888888,
+    "recall_strict": 0.8903560250391237,
+    "f1_strict": 0.8794112328149435,
+    "precision_lax": 0.9466666666666667,
+    "recall_lax": 0.9650821596244131,
+    "f1_lax": 0.9557204711049839
+  }
+}

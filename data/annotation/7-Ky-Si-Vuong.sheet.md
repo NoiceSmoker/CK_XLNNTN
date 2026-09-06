@@ -1,0 +1,250 @@
+# Phiếu gán nhãn — 7-Ky-Si-Vuong
+
+Hán: 75 câu · Việt: 91 câu
+
+## NGUỒN (Hán + phiên âm)
+
+- **zh_1** 丙寅漢中平三年
+    - _Bính Dần [Hán Trung Bình tam niên]._
+- **zh_2** 黎文休曰觀史至我越無主之時爲北人刺史之無清行者所困
+    - _Lê Văn Hưu viết: "Quan sử chí ngã Việt vô chủ chi thời, vị Bắc nhân Thứ sử chi vô thanh hành giả sở khốn._
+- **zh_3** 北京地遠無所告訴不覺愧感父集翼見精誠如後唐明宗時焚香祝天願天爲我越早生聖人自帝其國以免北人之侵漁者也
+    - _Bắc Kinh địa viễn, vô sở cáo tố, bất giác quý cảm phụ tập, dục kiến tinh thành như hậu Đường Minh Tông thời, phần hương chúc thiên: nguyện thiên vi ngã Việt, tảo sinh thánh nhân, tự đế kì quốc, dĩ miễn Bắc nhân chi xâm ngư giả dã._
+- **zh_4** 右属于漢自癸卯至丙寅凣一百四十四年
+    - _Hữu thuộc vu Hán, Tự Quý Mão chí Bính Dần, phàm nhất bách tứ thập tứ niên._
+- **zh_5** 士王紀
+    - _Sĩ Vương KỶ._
+- **zh_6** 士王在位四十年壽九十年王寬厚謙虚人心愛戴保全越之地以當三國之強既明且智足称賢君
+    - _Sĩ Vương, Tại vị tứ thập niên, Thọ cửu thập niên [Vương khoan hậu khiêm hư, nhân tâm ái đái, bảo toàn Việt chi địa, dĩ đương tam quốc chi cường, ký minh thả trí, túc xưng hiền quân]._
+- **zh_7** 姓士諱燮字彦威蒼梧廣信人也
+    - _Tính Sĩ, huý Nhiếp, tự Ngạn Uy, Thương Ngô Quảng Tín nhân dã._
+- **zh_8** 其先魯國汶陽人也北朝王莽之亂避地于我越六世至王
+    - _Kì tiên Lỗ quốc Vấn Dương nhân dã, Bắc triều Vương Mãng chi loạn, tị địa vu ngã Việt lục thế chí vương._
+- **zh_9** 父賜漢桓帝時爲日南太守
+    - _Phụ Tứ, Hán Hoàn Đế thời vi Nhật Nam Thái thú._
+- **zh_10** 王少游學漢京從穎川劉子奇治左氏春秋爲注解舉孝廉補尙書郎以公事免官父䘮闋音鈌盡也後舉荗才除巫陽令遷交州太守封龍度亭侯都漊漊一作樓
+    - _Vương thiếu du học Hán kinh, tòng Dĩnh Xuyên Lưu Tử Kì trị Tả thị Xuân Thu, vi chú giải, cử Hiếu Liêm, bổ Thượng thư lang, dĩ công sự miễn quan; phụ tang khuyết [Âm khuyết tận dã] hậu cử Mậu tài, trừ vu Dương lệnh thiên Giao Châu Thái thú, phong Long Độ Đình Hầu, đô doanh Lâu [Lâu nhất tác lâu._
+- **zh_11** 即龍編後陳朝追封善感嘉應靈武大王
+    - _tức Long Biên] Hậu Trần triều truy phong Thiện Cảm Gia Ứng Linh Vũ Đại Vương._
+- **zh_12** 丁卯元年漢中平四年王有第三人一鮪武
+    - _Đinh Mão, nguyên niên, [Hán Trung Bình tứ niên] Vương hữu đệ tam nhân Nhất, Vị, Vũ._
+- **zh_13** 時刺史朱
+    - _Thời Thứ sử Chu.._
+- **zh_14** 符爲夷賊所殺州郡擾亂王乃表一領合浦太守鮪領九真太守武領南海太守
+    - _Phù vị Di tặc sở sát, châu quận nhiễu loạn, Vương nãi biểu Nhất lĩnh Hợp Phố Thái thú, Vị lĩnh Cửu Chân Thái thú, Vũ lĩnh Nam Hải Thái thú._
+- **zh_15** 王噐禮寬厚謙虚下士國人愛之皆呼曰王
+    - _Vương khí lễ khoan hậu, khiêm hư hạ sĩ, quốc nhân ái chi, giai hô viết vương._
+- **zh_16** 漢之名士避難往依者以百數
+    - _Hán chi danh sĩ tị nạn vãng y giả dĩ bách sổ._
+- **zh_17** 庚辰十四年漢献帝恊刺史李進上言於漢帝曰率土之濱莫非王臣今建安五年
+    - _Canh Thìn, thập tứ niên, [Hán Hiến Đế hiệt Thứ sử Lí Tiến thượng ngôn ư Hán Đế viết: "Suất thổ chi tân mạc phi vương thần, kim Kiến An ngũ niên]._
+- **zh_18** 登仕朝廷皆中州之士未嘗奬勸遠人
+    - _đăng sĩ triều đình giai Trung Châu chi sĩ, vị thường tưởng khuyến viễn nhân"._
+- **zh_19** 辭意感切多所援引
+    - _Từ ý cảm thiết, đa sở viện dẫn._
+- **zh_20** 漢帝詔我州之有孝廉荗才許除補属州長吏不得任中州
+    - _Hán đế chiếu ngã châu chi hữu Hiếu liêm Mậu tài, hứa trừ bổ thuộc châu trưởng lại, bất đắc nhậm Trung Châu._
+- **zh_21** 進復上疏曰所舉孝廉請與十二州博士以人才專對
+    - _Tiến phục thượng sớ viết: "Sở cử Hiếu liêm thỉnh dữ thập nhị châu bác sĩ, dĩ nhân tài chuyên đối"._
+- **zh_22** 而有司恐遠人虚誕毀折中朝不許
+    - _Nhi hữu ti khủng viễn nhân hư đản, huỷ triết trung triều, bất hứa._
+- **zh_23** 時我越人李琴宿衛在臺遂邀鄕人卜龍等五六人當正元萬國朝會之目俯伏殿庭曰皇恩不均
+    - _Thời ngã Việt nhân Lí Cầm túc vệ tại đài, toại yêu hương nhân Bốc Long đẳng ngũ lục nhân, đương chính nguyên vạn quốc triều hội chi mục, phủ phục điện đình viết: "Hoàng ân bất quân"._
+- **zh_24** 有司問其故琴曰南越遷遠不爲皇天所覆后土所載故甘雨不降凉風不飛
+    - _Hữu ti vấn kì cố? Cầm viết: "Nam Việt thiên viễn bất vi hoàng thiên sở phú, hậu thổ sở tải, cố cam vũ bất giáng lương, phong bất phi"._
+- **zh_25** 辭意懇苦
+    - _Từ ý khẩn khổ._
+- **zh_26** 詔慰勞之以我荗才一人爲夏陽令孝廉一人爲六合令琴交州人後李琴仕至司隷校尉張重爲金城太守
+    - _Chiếu uý lạo chi, dĩ ngã Mậu tài nhất nhân vi Hạ Dương lệnh, Hiếu liêm nhất nhân vi Lục Hợp lệnh [Cầm Giao Châu nhân] Hậu Lí Cầm sĩ chí Tư lệ hiệu uý, Trương Trọng vi Kim Thành thái thú._
+- **zh_27** 則我越人才得與漢人同選者李琴李進有以開之也
+    - _Tắc ngã Việt nhân tài đắc dữ Hán nhân đồng tuyển giả Lí Cầm, Lí Tiến hữu dĩ khai chi dã._
+- **zh_28** 重日南人初入洛正旦大會晋明帝曰日南北視日耶重對曰今郡中有雲者不必有其實至於風氣暄暖日影仰於生民之
+    - _[Trọng Nhật Nam nhân sơ nhập Lạc, chính đán đại hội, Tấn Minh Đế viết: "Nhật Nam bắc thị nhật da?" Trọng đối viết" "Kim quận trung hữu Vân giả bất tất hữu kì thực. Chí ư phong khí huyên noãn, nhật ảnh ngưỡng ư sinh dân chi.._
+- **zh_29** 上則有之矣按宋文帝元嘉中南征林邑五月立表望之日在表北九寸一分交州影在表南三寸三分交州去洛水六七千餘里表取其絃直當下千里唐開元十二年測交州夏至影在表南三寸三分與元嘉所測同王充論衡曰日南郡去洛且萬里爲日南李筌曰安南府至長安七千二百五十里孟琯云以四方揆之安南適當中國表地耳
+    - _thượng tắc hữu chi hĩ". Án Tống Văn Đế Nguyên Gia trung, nam chinh Lâm Ấp, ngũ nguyệt, lập biểu vọng chi nhật tại biểu bắc cửu thốn nhất phân, Giao Châu ảnh tại biểu nam tam thốn tam phân. Giao Châu khứ Lạc thuỷ lục thất thiên dư lí. biểu thủ kì huyền trực đương hạ thiên lí. Đường Khai Nguyên thập nhị niên, trắc Giao Châu hạ chí, ảnh tại biểu nam tam thốn tam phân, dữ Nguyên Gia sở trắc đồng. Vương Sung Luận Hành viết: "Nhật Nam quận khứ Lạc thả vạn lí vi Nhật Nam. Lí Thuyên viết: "An Nam phủ chí Trường An thất thiên nhị bách ngũ thập lí". Mạnh quản vân: "Dĩ tứ phương quỹ chi An Nam thích đương Trung Quốc biểu địa nhĩ"]._
+- **zh_30** 史臣吳士連曰君子於辭不可已也
+    - _Sử thần Ngô Sĩ Liên viết: Quân tử ư từ bất khả dĩ dã._
+- **zh_31** 昔𩱛蔑如無辭則終與草木俱腐矣
+    - _Tích Tông Miệt như vô từ tắc chung dữ thảo mộc cụ hủ hĩ._
+- **zh_32** 李琴苟無辭何以見用於世而我越英特之才北人安得而知之哉辭之不可已也如此夫
+    - _Lí Cầm cẩu vô từ hà dĩ kiến dụng ư thế, nhi ngã Việt anh đặc chi tài, bắc nhân an đắc nhi tri chi tai? Từ chi bất khả dĩ dã như thử phù._
+- **zh_33** 雖然此特爲人才論若顔閔則無是言矣
+    - _Tuy nhiên thử đặc vi nhân tài luận, nhược Nhan, Mẫn tắc vô thị ngôn hĩ._
+- **zh_34** 丁亥二十一年漢建安十二年
+    - _Đinh Hợi, nhị thập nhất niên [Hán Kiến An thập nhị niên]._
+- **zh_35** 漢袁徽遺尙書令荀彧書曰交州士府君既學問優博又達於從政處大亂之中保全一郡二十餘年彊場無事民不失業羈旅之徒皆蒙其慶雖竇融保河西曷以加之
+    - _Hán Viên Huy di thượng thư lệnh Tuân Úc thư viết: "Giao Châu Sĩ phủ quân ký học vấn ưu bác hựu đạt ư tòng chính, xử đại loạn chi trung, bảo toàn nhất quận nhị thập dư niên, cường trường vô sự, dân bất thất nghiệp, ký lữ chi đồ giai mông kì khánh, tuy Đậu Dung bảo Hà Tây hạt dĩ gia chi._
+- **zh_36** 官事少閑輙玩書傳
+    - _Quan sự thiểu nhàn, triếp ngoạn thư truyện._
+- **zh_37** 春秋左氏傳凣簡籍無徵輙以咨問即傳諸疑皆有師説意思詳密
+    - _Xuân Thu, Tả thị truyện, phàm giản tịch vô trưng, triếp dĩ tư vấn tức truyện chư nghi, giai hữu sư thuyết, ý tư tường mật._
+- **zh_38** 又尙書古今大義詳備
+    - _Hựu Thượng Thư cổ kim đại nghĩa tường bị._
+- **zh_39** 兄弟並爲列郡雄長一州偏在萬里威尊無上
+    - _Huynh đệ tịnh vi liệt quận, hùng trưởng nhất châu, thiên tại vạn lí, uy tôn vô thượng._
+- **zh_40** 出入鳴鍾磬備具威儀笳皷箫吹車騎满道胡人夾轂焚香者常有數十妻妾居輜軿子弟從
+    - _Xuất nhập minh chung khánh, bị cụ uy nghi; già cổ tiêu xuy, xa kị mãn đạo, Hồ nhân giáp cốc phần hương giả thường hữu sổ thập; thê thiếp cư truy bỉnh, tử đệ tòng.._
+- **zh_41** 兵騎當時貴重震服百蠻尉佗不能逾也
+    - _binh kị, đương thời quý trọng, chấn phục bách Man, Uý Đà bất năng du dã"._
+- **zh_42** 徽時寓交州
+    - _[Huy thời ngụ Giao Châu]._
+- **zh_43** 及漢帝遣張津爲刺史津守任在漢津建安六年
+    - _Cập Hán Đế khiển Trương Tân vi thứ sử [Tân thú nhiệm tại Hán Tân Kiến An lục niên]._
+- **zh_44** 好鬼神事常著絳鄚頭巾皷琴燒香讀道書云可以助化爲其將區景所殺而荆州牧劉表遣零陵令賴恭代津
+    - _hiếu quỷ thần sự, thường trữ giáng mạc đầu cân, cổ cầm, thiêu hương, độc Đạo thư, vân khả dĩ trợ hoá, vị kì tướng Khu Cảnh sở sát, nhi Kinh Châu mục Lưu Biểu khiển Linh Lăng lệnh Lại Cung đại Tân._
+- **zh_45** 漢帝聞津死賜王玺書曰交州絶域南江海上恩不宣下義壅塞如逆賊劉表又遣賴恭窺看南土今以卿爲綏南中郎將董督七郡領交州太守如故
+    - _Hán đế văn Tân tử, tứ vương tỉ thư viết: "Giao Châu tuyệt vực, nam đái giang hải, thượng ân bất tuyên, hạ nghĩa ung tắc, như nghịch tặc Lưu biểu hựu khiển Lại Cung khuy khán nam thổ, kim dĩ khanh vi Tuy Nam trung lang tướng đổng đốc thất quận, lĩnh Giao Châu Thái thú như cố"._
+- **zh_46** 王遣吏張旻奉貢請漢京都
+    - _Vương khiển lại Trương Mân phụng cống thỉnh Hán kinh đô._
+- **zh_47** 是時天下䘮亂道路斷絶而王不廢職貢
+    - _Thị thời thiên hạ tang loạn, đạo lộ đoạn tuyệt, nhi vương bất phế chức cống._
+- **zh_48** 漢帝復下詔拜安遠
+    - _Hán đế phục hạ chiếu bái An Viễn.._
+- **zh_49** 將軍封龍度亭侯
+    - _tướng quân, phong Long Độ Đình Hầu._
+- **zh_50** 後蒼梧太守吳巨與恭相失舉兵逐之恭走還零陵
+    - _Hậu Thương Ngô Thái thú Ngô Cự dữ Cung tương thất, cử binh trục chi, Cung tẩu hoàn Linh Lăng._
+- **zh_51** 庚寅二十四年漢建安十五年
+    - _Canh Dần, nhị thập tứ niên [Hán Kiến An thập ngũ niên]._
+- **zh_52** 吳王孫權遣步隲爲交州刺史
+    - _Ngô Vương Tôn Quyền khiển Bộ Chất vi Giao Châu thứ sử._
+- **zh_53** 隲到王率兄弟奉承節度
+    - _Chất đáo, vương suất huynh đệ phụng thừa tiết độ._
+- **zh_54** 吳王加王左將軍
+    - _Ngô vương gia vương Tả tướng quân._
+- **zh_55** 後王遣子𢌃魚錦反入質於吳吳王以爲武昌太守
+    - _Hậu vương khiển tử Ngẩm [Ngư cẩm phiên] nhập chất ư Ngô, Ngô Vương dĩ vi Vũ Xương Thái thú._
+- **zh_56** 王諸子在南者皆拜中郎將
+    - _Vương chư tử tại Nam giả giai bái Trung lang tướng._
+- **zh_57** 王又誘導益州豪姓雍闓可亥反等率郡民人使遙東附吳
+    - _Vương hựu dụ đạo Ích Châu hào tính Ung Khải [Khả hợi phiên] đẳng suất quận dân nhân sử dao đông phụ Ngô._
+- **zh_58** 吳王益嘉之遷衛將軍封龍編侯
+    - _Ngô Vương ích gia chi, thiên Vệ tướng quân, phong Long Biên hầu._
+- **zh_59** 王每遣使請吳𦤶雜香細葛輙以千數
+    - _Vương mỗi khiển sứ thỉnh Ngô trí tạp hương, tế cát triếp dĩ thiên sổ._
+- **zh_60** 明珠大貝琉璃翠羽瑇瑁犀象之珍奇
+    - _Minh châu, đại bối, lưu li, thuý vũ, đại mồi, tê, tượng chi chân, kì.._
+- **zh_61** 及異果蕉椰龍眼之属無歲不至又貢馬凣數百匹
+    - _cập dị quả tiêu, da, long nhãn chi thuộc, vô tuế bất chí hựu cống, mã phàm sổ bách sất._
+- **zh_62** 吳王作書後加寵賜以慰答之
+    - _Ngô Vương tác thư hậu gia sủng tứ dĩ uý đáp chi._
+- **zh_63** 黎文休曰士王能有寬厚謙下士得人親愛而致一時之貴盛
+    - _Lê Văn Hưu viết: Sĩ Vương năng hữu khoan hậu khiêm hư hạ sĩ, đắc nhân thân ái nhi trí nhất thời chi quý thịnh._
+- **zh_64** 又能明義識時雖才勇不及趙武帝而屈節事大以保全疆土可謂智矣
+    - _Hựu năng minh nghĩa, thức thời, tuy tài dũng bất cập Triệu Vũ Đế, nhi khuất tiết sự đại dĩ bảo toàn cương thổ, khả vị trí hĩ._
+- **zh_65** 惜其嗣子弗克負荷先業使越土宇既皆全盛而復分裂悲夫丙午四十年漢後主禪建興四年吳孫權黄武五年
+    - _Tích kì tự tử phất khắc phụ hà tiên nghiệp, sử Việt thổ vũ ký giai toàn thịnh nhi phục phân liệt, bi phu! Bính Ngọ, tứ thập niên [Hán Hậu Chúa Thiền Kiến Hưng tứ niên, Ngô Tôn Quyền Hoàng Vũ ngũ niên]._
+- **zh_66** 王薨
+    - _Vương hoăng._
+- **zh_67** 初王嘗病死三日僊人董奉與藥一丸以水含服捧其頭摇
+    - _Sơ vương thường bệnh, tử tam nhật, tiên nhân Đổng Phụng dữ dược nhất hoàn dĩ thuỷ hàm, phục bổng kì đầu dao.._
+- **zh_68** 捎之少頃即開目動手顔色漸平復明日旋能起坐四日復能誤遂復常
+    - _sao chi, thiểu khoảnh tức khai mục động thủ, nhan sắc tiềm bình phục, minh nhật toàn năng khởi toạ, tứ nhật phục năng ngộ, toại phục thường._
+- **zh_69** 奉字昌異侯官人見列仙傳候官縣名在福州
+    - _[Phụng tự Xương Dị Hầu Quan nhân, kiến Liệt tiên truyện. Hầu Quan huyện danh tại Phúc Châu]._
+- **zh_70** 史臣吳士連曰我國通詩書習禮樂爲文献之自士王始其功德𡸈特施於當時而有以遠及於後代𡸈不盛矣哉子之不肖乃子之罪爾
+    - _Sử thần Ngô Sĩ Liên viết: Ngã quốc thông thi thư, tập lễ nhạc, vi văn hiến chi bang, tự Sĩ Vương thuỷ, kì công đức khởi đặc thí ư đương thời nhi hữu dĩ viễn cập ư hậu đại, khởi bất thịnh hĩ tai? Tử chi bất tiếu nãi tử chi tội nhĩ._
+- **zh_71** 世傳王既塟之後至晋末凣百六十餘年林邑人入寇掘發王塚見其體靣如生大惧乃復封瘗土人以爲神立廟事之號士王僊
+    - _Thế truyền vương ký táng chi hậu, chí Tấn mạt phàm bách lục thập dư niên, Lâm Ấp nhân nhập khấu, quật phát vương trủng, kiến kì thể diện như sinh, đại cụ nãi phục phong ế thổ, nhân dĩ vi thần, lập miếu sự chi, hiệu "Sĩ Vương Tiên"._
+- **zh_72** 盖其英氣不朽所以能爲神也
+    - _Cái kì anh khí bất hủ, sở dĩ năng vi thần dã._
+- **zh_73** 神祠在舊城龍編
+    - _[Thần từ tại cựu Thành Long Biên]._
+- **zh_74** 右士王起丁卯終丙午凡四十年
+    - _Hữu Sĩ Vương, khởi Đinh Mão chung Bính Ngọ, phàm tứ thập niên._
+- **zh_75** 大越史記外紀全書卷之三終
+    - _Đại Việt Sử Ký Ngoại Kỷ Toàn Thư quyển chi tam chung._
+
+## ĐÍCH (Việt)
+
+- **vi_1** Bính Dần, , (Hán Trung Bình năm thứ 3) Lê Văn Hưu nói: Xem sử đến thời nước Việt ta không có vua, bị bọn thứ sử người Bắc tham tàn làm khổ.
+- **vi_2** Bắc Kinh đường xa, không biết kêu vào đâu, bất giác xen lẫn cảm thương hổ thẹn, muốn tỏ lòng thành như Minh Tông nhà Hậu Đường, thường thắp hương khấn trời: xin trời vì nước Việt ta sớm sinh thánh nhân, tự làm đế nước nhà, để khỏi bị người phương Bắc cướp vét.
+- **vi_3** Trở lên là thời thuộc Hán, từ năm Quý Mão đến năm Bính Dần, tất cả 144 năm .
+- **vi_4** KỶ SĨ VƯƠNG.
+- **vi_5** SĨ VƯƠNG .
+- **vi_6** Ở ngôi 40 năm, thọ 90 tuổi.
+- **vi_7** Vương là người khoan hậu khiêm tốn, lòng người yêu quý, giữ vẹn đất Việt để đương đầu với sức mạnh của Tam quốc, đã sáng suốt lại mưu trí, đáng gọi là người hiền.
+- **vi_8** Họ Sĩ, tên huý là Nhiếp79, tự là Ngạn Uy, người huyện Quảng Tín, quận Thương Ngô.
+- **vi_9** Tổ tiên người Vấn Dương nước Lỗ, hồi loạn Vương Mãng ở Bắc triều, tránh sang ở đất Việt ta, đến vương là sáu đời.
+- **vi_10** Cha là Tứ, thời Hán Hoàn Đế làm Thái thú Nhật Nam.
+- **vi_11** Khi còn ít tuổi, vương du học ở kinh đô nhà Hán, theo học Lưu Tử Kỳ người Dĩnh Xuyên, chuyên trị sách Tả thị Xuân Thu, có làm chú giải: được cử hiếu liêm, bổ làm Thượng thư lang, vì việc công bị miễn chức;
+- **vi_12** hết tang cha, lại được cử mậu tài, bổ làm Huyện lệnh Vu Dương, đổi làm Thái thú Giao Châu, được tước Long Độ Đình hầu, đóng đô ở Liên Lâu (tức là Long Biên)80 .
+- **vi_13** Sau nhà Trần truy phong làm Thiên Cảm Gia Ứng Vũ Đại Vương.
+- **vi_14** Đinh Mão, năm thứ 1 , (Hán Trung Bình năm thứ 4).
+- **vi_15** Vương có ba em trai tên là Nhất, Vĩ81 và Vũ.
+- **vi_16** Bấy giờ Thứ sử Chu
+- **vi_17** Phù bị giặc Di giết chết, châu quận rối loạn, vương bèn dâng biểu cử Nhất làm Thái thú Hợp Phố, Vĩ làm Thái thú Cửu Chân, Vũ làm Thái thú Nam Hải.
+- **vi_18** Vương độ lượng khoan hậu, khiêm tốn, kính trọng kẻ sĩ, người trong nước yêu mến, đều gọi là vương.
+- **vi_19** Danh sĩ nhà Hán tránh nạn sang nương tựa có hàng trăm người.
+- **vi_20** Canh Thìn, năm thứ 14 , (Hán Hiến Đế Hiệp, Kiến An năm thứ 5).
+- **vi_21** Thứ sử Lý Tiến dâng lời tâu lên vua Hán rằng: "Khắp cả thiên hạ đều là bề tôi của vua, thế mà nay làm quan ở triều đình đều là sĩ phu ở Trung Châu cả, chưa từng khuyến khích người xa".
+- **vi_22** Lời lẽ thiết tha cảm động, lại viện dẫn nhiều bằng chứng.
+- **vi_23** Vua Hán xuống chiếu cho người châu ta ai được cử hiếu liêm mậu tài thì cho phép được bổ trưởng lại trong châu, không được bổ ở Trung châu.
+- **vi_24** Tiến lại dâng sớ nói: "Người được cử làm hiếu liêm xin cho được như bác sĩ ở mười hai châu, căn cứ theo nhân tài mà đối xử".
+- **vi_25** Nhưng hữu ty sợ rằng người phương xa khoác lác mà chê bai bắt bẻ triều đình, nên không chuẩn cho.
+- **vi_26** Bấy giờ người nước Việt ta là Lý Cầm làm túc vệ ở đài, bèn rủ người đồng hương là bọn Bốc Long 5, 6 người, giữa ngày đầu năm các nước triều hội, đến quỳ lạy ở sân điện tâu rằng: "Ơn vua ban không đều".
+- **vi_27** Hữu ty hỏi vì cớ gì?
+- **vi_28** Cầm nói: "Nam Việt ở xa không được trời che, đất chở, cho nên mưa ngọt không xuống, gió mát không đến".
+- **vi_29** Lời ý khẩn thiết đau đớn.
+- **vi_30** Vua Hán xuống chiếu an ủi, lấy một người mậu tài nước ta làm Huyện lệnh Hạ Dương, một người hiếu liêm làm Huyện lệnh Lục Hợp (Cầm là người Giao Châu).
+- **vi_31** Sau Lý Cầm làm quan đến Tư lệ hiệu uý, Trương Trọng làm Thái thú Kim Thành.
+- **vi_32** Như thế nhân tài nước Việt ta được cùng tuyển dụng như người Hán là mở đầu từ Lý Cầm, Lý Tiến vậy.
+- **vi_33** (Trọng người quận Nhật Nam, khi trước đến Lạc Dương, gặp hội lớn tết Nguyên Đán, Tấn Minh Đế 83 hỏi: "Ở quận Nhật Nam hướng về phía bắc để trông mặt trời phải không?" Trọng đáp rằng: "Nay trong các quận, có quận gọi là Vân Trung (trong mây), là Ki
+- **vi_34** thì vẫn có thế".
+- **vi_35** Xét: Khoảng niên hiệu Nguyên Gia đời Tống Văn Đế, đi đánh Lâm Ấp ở phương nam, tháng năm, dựng nêu để đo bóng, thấy mặt trời ở về phía bắc cây nêu 9 tấc 1 phân84 Giao Châu thì bóng ở về phía nam cây nêu 3 tấc 3 phân.
+- **vi_36** Giao Châu cách Lạc Thuỷ hơn 6,7 nghìn dặm.
+- **vi_37** Chỗ dựng nêu tính đường dây thẳng thì nên bớt đi nghìn dặm.
+- **vi_38** Năm Khai Nguyên thứ 12 thời Đường, đo ở Giao Châu vào ngày hạ chí, bóng ở phía nam cây nêu 3 tấc 3 phân, cũng giống số đo năm Nguyên Gia.
+- **vi_39** Sách Luận Hành của Vương Sung nói: "Quận Nhật Nam ở cách Lạc gần vạn dặm về phía nam mặt trời." Lý Thuyên nói: "Từ phủ An Nam đến Trường An cách 7.250 dặm".
+- **vi_40** Mạnh Quán nói: "Lấy bốn phương mà đo thì An Nam đứng vào đất cuối cùng của Trung Quốc").
+- **vi_41** Sử thần Ngô Sĩ Liên nói: Người quân tử đối với lời nói không thể cho qua được.
+- **vi_42** Ngày xưa Tông Miệt85 nếu không có lời nói thì cùng với cỏ cây mục nát mà thôi.
+- **vi_43** Lý Cầm không có lời nói thì sao được dùng ở đời, mà người tài giỏi của nước Việt ta, người phương bắc
+- **vi_44** Đinh Hợi, năm thứ 21 , (Hán Kiến An năm thứ 12).
+- **vi_45** Viên Huy nhà Hán gửi thư cho Thượng thư lệnh là Tuân Úc rằng: "Giao Châu Sĩ phủ quân86 đã học vấn sâu rộng lại thông hiểu chính trị, trong thời buổi đại loạn, giữ vẹn được một quận hơn 20 năm, bờ cõi không xảy ra việc gì, dân không mất nghiệp, những bọn khách xa đến trú chân87 đều được nhờ ơn, dẫu Đậu Dung giữ đất Hà Tây cũng không hơn được.
+- **vi_46** Khi việc quan có chút nhàn rỗi thì chăm xem các sách thư, truyện.
+- **vi_47** Phàm những chỗ biên chép không rõ ràng trong sách Xuân Thu Tả thị truyện, đem hỏi, đều được ông giảng giải cho những chỗ nghi ngờ, đều có kiến giải của bậc thầy, ý tứ rõ ràng, chặt chẽ.
+- **vi_48** Lại như sách Thượng thư, cả cổ văn và kim văn, những ý nghĩa to lớn, ông đều hiểu biết tường tận, đầy đủ.
+- **vi_49** Anh em ông làm quan coi quận, hùng trưởng một châu, ở lánh ngoài muôn dặm, uy tín không ai hơn.
+- **vi_50** Khi ra vào thì đánh chuông khánh, uy nghi đủ hết;
+- **vi_51** kèn sáo thổi vang, xe ngựa đầy đường, người Hồ88 đi sát bánh xe để đốt hương thường có đến mấy mươi người;
+- **vi_52** vợ cả, vợ
+- **vi_53** hầu, người đương thời ai cũng quý trọng, các man di đều sợ phục, dẫu Úy Đà cũng không hơn được".
+- **vi_54** (Huy bấy giờ ngụ ở Giao Châu).
+- **vi_55** Sau vua Hán sai Trương Tân làm Thứ sử.
+- **vi_56** (Tân nhận chức năm Kiến An thứ 6 thời Hán).
+- **vi_57** Tân thích việc quỷ thần, thường đội khăn đỏ, gảy đàn, đốt hương, đọc sách Đạo giáo, nói rằng có thể giúp việc giáo hoá, bị tướng là Khu Cảnh giết, châu mục Kinh Châu là Lưu Biểu sai Huyện lệnh Linh Lăng là Lại Cung thay Tân.
+- **vi_58** Vua Hán nghe tin Tân chết, gửi cho vương bức thư có đóng dấu ấn nói rằng: "Giao Châu ở cõi xa, một dải sông biển ở phía nam, ơn trên không truyền đến, nghĩa dưới bị nghẽn tắc, thế mà nghịch tặc Lưu Biểu lại sai Lại Cung dòm ngó đất Nam89, nay cho khanh làm Tuy Nam trung lang tướng trông coi bảy quận, lĩnh Thái thú Giao Châu như cũ".
+- **vi_59** Vương sai thuộc lại là Trương Mân mang đồ cống sang kinh đô nhà Hán.
+- **vi_60** Bây giờ thiên hạ loạn lạc, đường sá đứt nghẽn, nhưng vương vẫn không bỏ việc nộp cống.
+- **vi_61** Vua Hán lại xuống chiếu cho làm An Viễn
+- **vi_62** tướng quân, phong tước Long Độ Đình hầu.
+- **vi_63** Sau Thái thú Thương Ngô là Ngô Cự bất hoà với Cung, đem binh đánh đuổi, Cung chạy về Linh Lăng.
+- **vi_64** Canh Dần, năm thứ 24 , (Hán Kiến An năm thứ 15).
+- **vi_65** Ngô Vương là Tôn Quyền sai Bộ Chất làm Thứ sử Giao Châu.
+- **vi_66** Khi Chất đến, vương đem anh em đến vâng theo mệnh lệnh.
+- **vi_67** Ngô Vương cho vương làm Tả tướng quân.
+- **vi_68** Sau vương sai con là Ngẩm90 làm con tin ở nước Ngô, Ngô Vương cho làm Thái thú Vũ Xương.
+- **vi_69** Các con của vương ở Nam đều cho làm Trung lang tướng.
+- **vi_70** Vương lại dỗ bảo thổ hào ở Ích Châu là bọn Ung Khải đem dân chúng trong quận phụ thuộc xa với nước Ngô ở miền đông.
+- **vi_71** Ngô Vương càng khen, thăng làm Vệ tướng quân, tước Long Biên hầu.
+- **vi_72** Vương thường sai sứ sang nước Ngô dâng các thứ hương liệu, vải mịn, kể số hàng nghìn.
+- **vi_73** Các thứ quý lạ như ngọc trai, ốc lớn, lưu ly, lông trả, đồi mồi, sừng tê, ngà voi
+- **vi_74** cùng các thứ quả lạ như chuối, dừa, long nhãn, không năm nào không tiến, lại cống ngựa hàng mấy trăm con.
+- **vi_75** Ngô Vương viết thư ban cho rất hậu để yên ủi và đáp lại.
+- **vi_76** Lê Văn Hưu nói: Sĩ Vương biết lấy khoan hậu khiêm tốn để kính trọng kẻ sĩ, được người thân yêu mà đạt đến quý thịnh một thời.
+- **vi_77** Lại hiểu nghĩa, thức thời, tuy tài và dũng không bằng Triệu Vũ Đế, nhưng chịu nhún mình thờ nước lớn, để giữ vẹn bờ cõi, có thể gọi là người trí.
+- **vi_78** Tiếc rằng con nối không gánh vác nổi cơ nghiệp của cha, để cho bờ cõi nước Việt đã toàn thịnh mà lại bị chia cắt, đáng buồn thay!
+- **vi_79** Bính Ngọ, năm thứ 40 , (Hán Hậu Chúa Thiện, Kiến Hưng năm thứ 4;
+- **vi_80** Ngô Tôn Quyền, Hoàng Vũ năm thứ 5).
+- **vi_81** Vương mất.
+- **vi_82** Trước vương ốm, đã chết đi 3 ngày, người tiên là Đổng Phụng cho một viên thuốc hoà vào nước ngậm, rồi đỡ lấy đầu mà lay
+- **vi_83** động, mộc chốc lát mở mắt động tay, sắc mặt bình phục dần dần, ngày hôm sau ngồi dậy được, 4 ngày lại nói được, rồi trở lại bình thường.
+- **vi_84** (Phụng tên tự là Xương Dị, người huyện Hầu Quan, sự tích có chép trong Liệt tiên truyện.
+- **vi_85** Hầu Quan là tên huyện, thuộc Phúc Châu).
+- **vi_86** Sử thần Ngô Sĩ Liên nói: Nước ta thông thi thư, học lễ nhạc, làm một nước văn hiến, là bắt đầu từ Sĩ Vương, công đức ấy không những chỉ ở đương thời mà còn truyền mãi đời sau, há chẳng lớn sao?
+- **vi_87** Con không hiền là tội của con thôi.
+- **vi_88** Tục truyền rằng sau khi vương chết đã chôn, đến cuối thời nhà Tấn đã hơn 160 năm, người Lâm Ấp vào cướp, đào mộ của vương, thấy mình mặt vẫn như sống, cả sợ lại đắp lại, người địa phương cho là thần, làm miếu để thờ gọi là "Tiên Sĩ Vương".
+- **vi_89** Có lẽ là khí tinh anh không nát, cho nên thành thần vậy.
+- **vi_90** (Đền thờ tại thành cũ Long Biên91)
+- **vi_91** Trở lên là Sĩ Vương, từ năm Đinh Mão đến năm Bính Ngọ, tất cả 40 năm .

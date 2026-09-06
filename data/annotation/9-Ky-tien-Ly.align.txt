@@ -1,0 +1,26 @@
+# Gold gán tay — 9-Ky-tien-Ly
+zh_1-zh_40 -> vi_1-vi_40   # 40 cặp 1-1 tuần tự (zh_10/vi_10 cùng cắt "quốc | hiệu")
+# REVIEW: giữ zh_12->vi_12, zh_13->vi_13 — "Đại Đồng" (niên hiệu) nằm đầu zh_13 nhưng bản dịch đặt ở vi_12; lệch 2 chữ, coi là cắt song song
+zh_41 zh_42 -> vi_41       # lời Bá Tiên + "Rồi Bá Tiên đem quân đi trước" gộp 1 câu Việt
+zh_43 -> vi_42
+zh_44 -> vi_43
+zh_45 -> vi_44
+zh_46 -> vi_45
+zh_47 -> vi_46
+zh_48 -> vi_47
+zh_49 -> vi_48
+zh_50 -> vi_49
+zh_51 -> vi_50 vi_51       # Việt tách 2 câu
+zh_52 -> vi_52
+zh_53 -> vi_53
+zh_54 -> vi_54
+zh_55 -> vi_55
+zh_56 -> vi_56
+zh_57 -> vi_57             # "bất vi | bị" ~ "không | phòng bị" cắt song song
+zh_58 -> vi_58
+zh_59 -> vi_59
+zh_60 -> vi_60
+zh_61 -> vi_61
+zh_62 -> vi_62 vi_63       # mô tả Dạ Trạch tách 2 câu Việt
+zh_63 -> vi_64
+zh_64 -> vi_65

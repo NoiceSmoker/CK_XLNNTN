@@ -1,0 +1,202 @@
+# Phiếu gán nhãn — 9-Ky-tien-Ly
+
+Hán: 64 câu · Việt: 65 câu
+
+## NGUỒN (Hán + phiên âm)
+
+- **zh_1** 右属于吳晋宋齊梁起丁未終庚申共三百十四年
+    - _Hữu thuộc vu Ngô, Tấn, Tống, Tề, Lương, khởi Đinh Mùi, chung Canh Thân, Cộng tam bách thập tứ niên._
+- **zh_2** 前李紀
+    - _Tiền Lí KỶ._
+- **zh_3** 前李南帝
+    - _Tiền Lí Nam Đế._
+- **zh_4** 在位七年
+    - _Tại vị thất niên._
+- **zh_5** 帝志在滅賊救民不幸遭陳霸先侵伐飲恨而没
+    - _[Đế chí tại diệt tặc cứu dân, bất hạnh tao Trần Bá Tiên xâm phạt, ẩm hận nhi một._
+- **zh_6** 惜夫
+    - _Tích phu!]._
+- **zh_7** 帝姓李諱賁龍興太平人也
+    - _Đế tính Lí, huý Bí, Long Hưng, Thái Bình nhân dã._
+- **zh_8** 其先北人西漢末苦於征伐避居土七世遂爲南人
+    - _Kì tiên Bắc nhân, Tây hán mạt, khổ ư chinh phạt, tị cư Nam thổ, thất thế toại vi Nam nhân._
+- **zh_9** 有文武才初仕梁遭亂歸太平
+    - _Hữu văn vũ tài, sơ sĩ Lương, tao loạn quy Thái Bình._
+- **zh_10** 時守令暴刻林邑寇邊帝起兵攻逐之稱爲南帝國
+    - _Thời thú lệnh bạo khắc, Lâm Ấp khấu biên, Đế khởi binh công trục chi, xưng vi Nam Đế, quốc.._
+- **zh_11** 號萬春都龍邊
+    - _hiệu Vạn Xuân, đô Long Biên._
+- **zh_12** 辛酉元年梁七年
+    - _Tân Dậu, nguyên niên [Lương thất niên]._
+- **zh_13** 大同交州刺史武林侯蕭諮以刻暴失眾心
+    - _Đại Đồng Giao Châu Thứ sử Vũ Lâm hầu Tiêu Tư, dĩ khắc bạo thất chúng tâm._
+- **zh_14** 帝世家豪右天資奇才仕不得志
+    - _Đế thế gia hào, hữu thiên tư kì tài, sĩ bất đắc chí._
+- **zh_15** 又有并韶者富於詞藻詣繏求官
+    - _Hựu hữu Tinh Thiều giả phú ư từ tảo, nghệ tuyển cầu quan._
+- **zh_16** 梁吏部尙書蔡樽以并姓無前賢除廣陽門郎
+    - _Lương Lại bộ Thượng thư Sái Tôn dĩ Tinh tính vô tiền hiền, trừ Quảng Dương môn lang._
+- **zh_17** 韶耻之還鄕里從帝謀起兵
+    - _Thiều sỉ chi, hoàn hương lí, tòng đế mưu khởi binh._
+- **zh_18** 帝時監九德州因連結數州豪傑惧響應
+    - _Đế thời giám Cửu Đức châu, nhân liên kết sổ châu hào kiệt, cụ hưởng ứng._
+- **zh_19** 有朱鳶酋長趙肅者服帝才德首率眾歸焉
+    - _Hữu Chu Diên tù trưởng Triệu Túc giả, phục đế tài đức, thủ suất chúng quy yên._
+- **zh_20** 諮覺之賄輸于帝奔還廣州
+    - _Tư giác chi, hối thâu vu đế, bôn hoàn Quảng Châu._
+- **zh_21** 帝出據州城即龍編也
+    - _Đế xuất cứ châu thành [Tức Long Biên dã]._
+- **zh_22** 壬戌二年梁大同八年
+    - _Nhâm Tuất, nhị niên, [Lương Đại Đồng bát niên]._
+- **zh_23** 冬十二月梁帝命孫冋盧子䧺
+    - _Đông, thập nhị nguyệt, Lương đế mệnh Tôn Quýnh, Lư Tử Hùng.._
+- **zh_24** 來侵
+    - _lai xâm._
+- **zh_25** 冏以春瘴方起請待秋時
+    - _Quýnh dĩ xuân chướng phương khởi, thỉnh đãi thu thời._
+- **zh_26** 廣州刺史新喻侯瑍不許武林侯諮趣之
+    - _Quảng Châu Thứ sử Tân Dụ hầu Hoán bất hứa, Vũ Lâm hầu tư thú chi._
+- **zh_27** 子䧺等到合浦死者十六七眾潰而歸
+    - _Tử Hùng đẳng đáo Hợp Phố, tử giả thập lục thất, chúng hội nhi quy._
+- **zh_28** 諮誣奏冏及子䧺追遛皆賜死
+    - _Tư vu tấu Quýnh cập Tử Hùng truy lưu, giai tứ tử._
+- **zh_29** 癸亥三年梁大同九年
+    - _Quý Hợi, tam niên, [Lương Đại Đồng cửu niên]._
+- **zh_30** 夏四月林邑王寇日南帝命其將范脩擊破之于九德
+    - _Hạ, tứ nguyệt, Lâm Ấp vương khấu Nhật Nam, Đế mệnh kì tướng Phạm Tu kích phá chi vu Cửu Đức._
+- **zh_31** 甲子天德元年梁大同十年
+    - _Giáp Tí, Thiên Đức nguyên niên, [Lương Đại Đồng thập niên]._
+- **zh_32** 春正月帝因勝敵自稱南越帝即位建元置百官建國號曰萬春望社稷至萬世也
+    - _Xuân, chính nguyệt, Đế nhân thắng địch tự xưng Nam Việt Đế, tức vị, kiến nguyên, trí bách quan, kiến quốc hiệu viết: Vạn Xuân, vọng xã tắc chí vạn thế dã._
+- **zh_33** 起萬壽殿以爲朝會之所
+    - _Khởi Vạn Thọ điện dĩ vi triều hội chi sở._
+- **zh_34** 以趙肅爲太傅并韶范脩等並拜將相官
+    - _Dĩ Triệu Túc vi Thái Phó, Tịnh Thiều, Phạm Tu đẳng tịnh bái tướng tướng quan._
+- **zh_35** 乙丑二年梁大同十一年
+    - _Ất Sửu, nhị niên [Lương Đại Đồng thập nhất niên]._
+- **zh_36** 夏六月梁以楊㬓純招反又七妙反爲交州刺史陳霸先爲司馬將兵來侵命定州刺史蕭勃會㬓於江西
+    - _Hạ, lục nguyệt, Lương dĩ Dương Thiêu [Thuần chiêu phiên hựu thất diệu phiên], vi Giao Châu Thứ sử, Trần Bá Tiên vi Tư mã, tương binh lai xâm, mệnh Định Châu Thứ sử Tiêu Bột hội Thiêu ư Giang Tây._
+- **zh_37** 勃知士卒憚遠役因詭説留㬓
+    - _Bột tri sĩ tốt đạn viễn dịch, nhân nguỵ thuyết lưu Thiêu._
+- **zh_38** 㬓集諸將問計
+    - _Thiêu tập chư tướng vấn kế._
+- **zh_39** 覇先曰交州叛换罪由宗室遂使溷亂數州逋誅累歲
+    - _Bá Tiên viết: "Giao Châu phản hoán, tội do tông thất, toại sử hỗn loạn sổ châu, bô tru luỹ tuế._
+- **zh_40** 定州欲偷安目前不顧𡐡計
+    - _Định châu dục thâu an mục tiền, bất cố đại kế._
+- **zh_41** 節下奉辞伐罪當死生以之𡸈可逗瀏不進長寇沮眾乎
+    - _Tiết hạ phụng từ phạt tội, đương tử sinh dĩ chi khởi, khả đậu lưu bất tiến trường khấu tự chúng hồ?"._
+- **zh_42** 遂勒眾先發𭛁以覇先爲前鋒
+    - _Toại lặc chúng tiên phát, phát dĩ Bá Tiên vi tiền phong._
+- **zh_43** 至州帝率眾三萬拒之敗於朱鳶又敗於蘇歷江口帝奔嘉寧城
+    - _Chí châu, đế suất chúng tam vạn cự chi, bại ư Chu Diên, hựu bại ư Tô Lịch giang khẩu, Đế bôn Gia Ninh thành._
+- **zh_44** 梁兵追圍之
+    - _Lương binh truy vi chi._
+- **zh_45** 丙寅三年梁中大同元年
+    - _Bính Dần tam niên, [Lương Trung Đại Đồng nguyên niên]._
+- **zh_46** 春正月覇先等克嘉寧城
+    - _Xuân, chính nguyệt, Bá Tiên đẳng khắc Gia Ninh thành._
+- **zh_47** 帝入新昌獠中
+    - _Đế nhập Tân Xương Lạo trung._
+- **zh_48** 梁兵遂屯嘉寧江口
+    - _Lương binh toại đồn Gia Ninh giang khẩu._
+- **zh_49** 秋八月帝復率二萬自獠中率屯典澈湖大造舟艦充塞湖中
+    - _Thu, bát nguyệt, Đế phục suất nhị vạn tự Lạo trung xuất đồn Điển Triệt hồ, đại tạo chu hạm sung tắc hồ trung._
+- **zh_50** 梁兵憚之頓湖口不敢進
+    - _Lương binh đạn chi đồn hồ khẩu, bất cảm tiến._
+- **zh_51** 覇先謂諸將曰我師已老將士疲勞且孤軍無援入人心腹若一戰不利𡸈望生全
+    - _Bá Tiên vị chư tướng viết: "Ngã sư dĩ lão, tướng sĩ bì lao, thả cô quân vô viện, nhập nhân tâm phúc, nhược nhất chiến bất lợi, khởi vọng sinh toàn._
+- **zh_52** 今藉其屢敗人情未固夷獠烏合易爲摧殄正當共出百死决力取之無故停留時事去矣
+    - _Kim tịch kì lũ bại, nhân tình vị cố, Di Lạo ô hợp, dị vi thôi điển, chính đương cộng xuất bách tử quyết lực thủ chi, vô cố đình lưu thời sự khứ hĩ"._
+- **zh_53** 諸將皆默然莫應
+    - _Chư tướng giai mặc nhiên mạc ứng._
+- **zh_54** 是夜江水暴漲七尺注湖中
+    - _Thị dạ, giang thuỷ bạo trướng thất xích, chú hồ trung._
+- **zh_55** 覇先勒所部兵隨流水先進
+    - _Bá Tiên lặc sở bộ binh tuỳ lưu thuỷ tiên tiến._
+- **zh_56** 梁眾皷譟而前
+    - _Lương chúng cổ táo nhi tiền._
+- **zh_57** 帝素不爲
+    - _Đế tố bất vi.._
+- **zh_58** 備因大潰退保屈獠洞中治兵欲復戰委大將趙光復守國調兵擊覇先
+    - _bị, nhân đại hội, thoái bảo Khuất Lạo động trung, trị binh dục phục chiến, uỷ đại tướng Triệu Quang Phục thủ quốc, điều binh kích Bá Tiên._
+- **zh_59** 丁卯四年梁太清元年
+    - _Đinh Mão tứ niên [Lương Thái Thanh nguyên niên]._
+- **zh_60** 春正月朔日食
+    - _Xuân, chính nguyệt, sóc, nhật thực._
+- **zh_61** 趙光復與陳覇先將持未决勝負
+    - _Triệu Quang Phục dữ Trần Bá Tiên tương trì, vị quyết thắng phụ._
+- **zh_62** 而覇先軍甚盛光復度不能之乃退保夜澤其澤在朱鳶周廻不知里數草木榛莽叢薄交蔽中有基地可居四靣泥淖沮洳人馬難行惟用獨木小舟篙行於水草之上乃可到
+    - _Nhi Bá Tiên quân thậm thịnh, Quang Phục độ bất năng chi, nãi thoái bảo Dạ Trạch, kì Trạch tại Chu Diên, chu hồi bất tri lí sổ, thảo mộc trăn mãng, tùng bạc giao tế, trung hữu cơ địa khả cư, tứ diện nê náo, tự như nhân mã nan hành, duy dụng độc mộc tiểu chu, sào hành ư thuỷ thảo chi thượng nãi khả đáo._
+- **zh_63** 然非諳識岐路則迷不知處誤墮水中爲虫蛇所傷死
+    - _Nhiên phi am thức kì lộ, tắc mê bất tri xứ, ngộ đoạ thuỷ trung vi trùng xà sở thương tử._
+- **zh_64** 光復諳得脉絡率二萬餘人屯澤中址晝則泯
+    - _Quang Phục am đắc mạch lạc, suất nhị vạn dư nhân đồn trạch trung chỉ, trú tắc dẫn.._
+
+## ĐÍCH (Việt)
+
+- **vi_1** Trở lên thuộc Ngô, Tấn, Tống, Tề, Lương, từ năm Đinh Mùi đến năm Canh Thân, cộng 314 năm .
+- **vi_2** KỶ NHÀ TIỀN LÝ.
+- **vi_3** TIỀN LÝ NAM ĐẾ.
+- **vi_4** Ở ngôi 7 năm .
+- **vi_5** Vua có chí diệt giặc cứu dân, không may bị Trần Bá Tiên sang đánh chiếm, nuốt hận mà chết.
+- **vi_6** Tiếc thay!
+- **vi_7** Vua họ Lý, tên huý là Bí {135, người Thái Bình Long Hưng {136.
+- **vi_8** Tổ tiên là người Bắc, cuối thời Tây Hán khổ về việc đánh dẹp, mới tránh sang ở đất phương Nam, được 7 đời thì thành người Nam.
+- **vi_9** Vua có tài văn võ, trước làm quan với nhà Lương, gặp loạn, trở về Thái Bình.
+- **vi_10** Bấy giờ bọn thú lệnh tàn bạo hà khắc, Lâm Ấp cướp phá ngoài biên, vua dấy binh đánh đuổi được, xưng là Nam Đế, đặt quốc
+- **vi_11** hiệu là Vạn Xuân, đóng đô ở Long Biên {137}.
+- **vi_12** Tân Dậu, năm thứ 1 , (Lương Đại Đồng năm thứ 7).
+- **vi_13** Thứ sử Giao Châu là Vũ Lâm hầu Tiêu Tư, vì hà khắc tàn bạo, mất lòng người.
+- **vi_14** Vua vốn con nhà hào trưởng, thiên tư lỗi lạc, làm quan không được vừa ý.
+- **vi_15** Lại có người là Tinh Thiều giỏi từ chương từng đến xin được chọn làm quan.
+- **vi_16** Thượng thư bộ Lại nhà Lương là Sái Tôn cho rằng họ Tinh trước không có ai hiển đạt, nên chỉ bổ cho chức Quảng Dương môn lang.
+- **vi_17** Thiều lấy làm nhục, trở về làng, theo vua mưu việc dấy binh.
+- **vi_18** Vua bấy giờ làm chức Giám quân ở châu Cửu Đức {138, nhân liên kết với hào kiệt mấy châu, đều hưởng ứng.
+- **vi_19** Có Triệu Túc tù trưởng ở Chu Diên {139 phục tài đức của vua, bèn dẫn đầu đem quân theo về.
+- **vi_20** Tiêu Tư biết việc, đem của đến hối lộ cho vua, rồi chạy về Quảng Châu.
+- **vi_21** Vua ra chiếm giữ châu thành (tức là Long Biên).
+- **vi_22** Nhâm Tuất, năm thứ 2 , (Lương Đại Đồng năm thứ 8).
+- **vi_23** Mùa đông, tháng 12, vua Lương sai Tôn Quýnh, Lư Tử Hùng
+- **vi_24** sang xâm chiếm.
+- **vi_25** Quýnh lấy cớ là chướng khí mùa xuân đương bốc, xin đợi đến mùa thu.
+- **vi_26** Bấy giờ Thứ sử Quảng Châu là Tân Dụ hầu Hoán {140 không cho, Vũ Lâm hầu cũng thúc giục.
+- **vi_27** Bọn Tử Hùng đi đến Hợp Phố, 10 phần chết đến 6, 7 phần, quân tan rã mà về.
+- **vi_28** Tiêu Tư tâu vu rằng Quýnh và Tử Hùng dùng dằng không chịu đi, đều bị buộc phải tự tử.
+- **vi_29** Quý Hợi, năm thứ 3 , (Lương Đại Đồng năm thứ 9).
+- **vi_30** Mùa hạ, tháng 4, vua Lâm Ấp cướp quận Nhật Nam, vua sai tướng là Phạm Tu đánh tan ở Cửu Đức.
+- **vi_31** Giáp Tý năm thứ 1 , (Lương Đại Đồng năm thứ 10).
+- **vi_32** Mùa xuân, tháng giêng, vua nhân thắng giặc, tự xưng là Nam Việt Đế, lên ngôi, đặt niên hiệu, lập trăm quan, dựng quốc hiệu là Vạn Xuân, ý mong cho xã tắc truyền đến muôn đời vậy.
+- **vi_33** Dựng điện Vạn Thọ làm nơi triều hội.
+- **vi_34** Lấy Triệu Túc làm Thái Phó, bọn Tinh Thiều, Phạm Tu đều làm tướng văn, tướng võ.
+- **vi_35** Ất Sửu năm thứ 2 , (Lương Đại Đồng năm thứ 11).
+- **vi_36** Mùa hạ, tháng 6, nhà Lương cho Dương Thiêu {141 làm Thứ sử Giao Châu, Trần Bá Tiên làm Tư mã, đem quân sang xâm, sai Thứ sử Định Châu là Tiêu Bột hội với bọn Thiêu ở Giang Tây {142.
+- **vi_37** Bột biết các quân lính sợ đi đánh xa, nhân đó nói dối để giữ Thiêu ở lại.
+- **vi_38** Thiêu học các tướng để hỏi kế.
+- **vi_39** Bá Tiên nói: "Giao Châu làm phản, tội do người tông thất {143 để mấy châu hỗn loạn, trốn tội đã nhiều năm nay.
+- **vi_40** Định Châu chỉ muốn trộm yên trước mắt, không nghĩ đến kế lớn.
+- **vi_41** Tiết hạ {144 vâng chiếu đi đánh kẻ có tội, phải nên liều sống chết, há nên dùng dằng không tiến để nuôi cho thế giặc thêm mạnh mà làm ngăn trở quân mình hay sao?" Rồi Bá Tiên đem quân đi trước, Thiêu cho Bá Tiên làm tiên phong.
+- **vi_42** Khi đến Giao Châu, vua đem 3 vạn quân ra chống cự, bị thua ở Chu Diên, lại thua ở cửa sông Tô Lịch, vua chạy về thành Gia Ninh {145.
+- **vi_43** Quân Lương đuổi theo vây đánh.
+- **vi_44** Bính Dần năm thứ 3 , (Lương Đại Đồng năm thứ 1).
+- **vi_45** Mùa xuân, tháng giêng, bọn Bá Tiên đánh lấy được thành Gia Ninh.
+- **vi_46** Vua chạy vào đất người Lạo ở Tân Xương.
+- **vi_47** Quân Lương đóng ở cửa sông Gia Ninh.
+- **vi_48** Mùa thu, tháng 8, vua lại đem 2 vạn quân từ trong đất Lạo ra đóng ở hồ Điển Triệt {146, đóng nhiều thuyền đậu chật cả mặt hồ.
+- **vi_49** Quân Lương sợ, cứ đóng lại ở cửa hồ không dám tiến vào.
+- **vi_50** Trần Bá Tiên bảo các tướng rằng: "Quân ta ở đây đã lâu, tướng sĩ mỏi mệt, vả lại thế cô không có tiếp viện.
+- **vi_51** Tiến sâu vào trong lòng người, nếu một đánh mà không thắng, thì đừng mong sống sót.
+- **vi_52** Nay nhân lúc bọ họ vừa thua luôn mấy trận, lòng người chưa vững, mà người Di Lạo ô hợp, dễ đánh giết, chính nên cùng ra tay liều chết, cố sức đánh lấy, không có cớ gì mà dừng lại thì lỡ mất thời cơ".
+- **vi_53** Các tướng đều im lặng, không ai hưởng ứng.
+- **vi_54** Đêm hôm ấy nước sông lên mạnh, dâng cao 7 thước, tràn đổ vào hồ.
+- **vi_55** Bá Tiên đem quân bản bộ theo dòng nước tiến trước vào.
+- **vi_56** Quân Lương đánh trống reo hò mà tiến.
+- **vi_57** Vua vốn không
+- **vi_58** phòng bị, vì thế quân vỡ, phải lui giữ ở trong động Khuất Lạo {147 để sửa binh đánh lại, uỷ cho đại tướng là Triệu Quang Phục giữ việc nước, điều quân đi đánh Bá Tiên.
+- **vi_59** Đinh Mão năm thứ 4 , (Lương Thái Thanh năm thứ 1).
+- **vi_60** Mùa xuân, tháng giêng, ngày mồng 1, nhật thực.
+- **vi_61** Triệu Quang Phục cầm cự với Trần Bá Tiên, chưa phân thắng bại.
+- **vi_62** Nhưng quân của Bá Tiên rất đông, Quang Phục liệu thế không chống nổi bèn lui về giữ đầm Dạ Trạch {148.
+- **vi_63** Đầm này ở huyện Chu Diên, chu vi không biết bao nhiêu dặm, cỏ cây um tùm, bụi rậm che kín, ở giữa có nền đất cao có thể ở được, bốn mặt bùn lầy, người ngựa khó đi, chỉ có thể dùng thuyền độc mộc nhỏ chống sào đi lướt trên cỏ nước mới có thể đến được.
+- **vi_64** Nhưng nếu không quen biết đường lối thì lạc không biết là đâu, lỡ rơi xuống nước liền bị rắn độc cắn chết.
+- **vi_65** Quang Phục thuộc rõ đường đi lối lại, đem hơn 2 vạn người vào đóng ở nền đất trong đầm, ban ngày

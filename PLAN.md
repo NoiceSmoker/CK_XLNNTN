@@ -24,7 +24,15 @@ dùng mô hình **CroCoAlign** (EACL 2024, Babelscape).
   Baseline: **F1 strict 0.609, lax 0.669**.
 - ✅ **Pha 4 xong**: tinh chỉnh `min_dist`+ngưỡng (`run_eval_tuned.py`), tốt nhất (0.15, 0.20):
   **F1 strict 0.646 (+3.7), lax 0.717 (+4.8)**. Chi tiết & phân tích: `RESULTS.md`.
-- ⏭️ **Mở rộng (tuỳ chọn)**: cào thêm mục; gold gán tay; pivot phiên âm / fine-tune LaBSE.
+- ✅ **Pha 5 — sửa phương pháp đánh giá** (2026-09-06): submodule `CroCoAlign` có `.gitmodules`; scraper chạy
+  thuần stdlib, cào đủ **14 mục** (1 703 câu Hán); **gold gán tay** 3 mục TEST (7, 9, 10; 185 nhóm) trong
+  `data/gold_manual/` + `data/annotation/`; **tách DEV (1–3, silver) / TEST (gán tay)**; scorer độc lập
+  `score.py` (khớp evaluate.py 3 chữ số); baseline phi-neural (`baseline_hanviet.py`) tune trên DEV.
+  TEST: độ dài 0.813, Hán-Việt 0.859, Hán-Việt+gộp văn bản ghép **0.934** F1 strict.
+- ✅ **Pha 6 — chạy toàn bộ phần torch** (2026-09-06, trên macOS CPU qua `.venv`, không cần WSL): CroCoAlign gốc
+  **0.529** / tuned **0.565** trên gold gán tay; cải tiến LaBSE(ckpt)+DP **0.918**, +Hán-Việt **0.927**; baseline
+  Hán-Việt **0.934**. Phát hiện DEV silver suy biến (LaBSE+DP = 1.000) → chọn cấu hình bằng CV leave-one-section-out.
+- ⏭️ Tuỳ chọn: mở rộng gold gán tay, thêm bước DP 1-3/2-2, fine-tune LaBSE.
 
 ## Ràng buộc kỹ thuật quan trọng
 - RTX 5050 = kiến trúc **Blackwell (sm_120)** → **KHÔNG** chạy được `torch==1.11.0` mà repo ghim.

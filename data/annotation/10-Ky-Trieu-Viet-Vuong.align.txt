@@ -1,0 +1,50 @@
+# Gold gán tay — 10-Ky-Trieu-Viet-Vuong
+zh_1 -> vi_1
+zh_2 -> vi_2
+zh_3 -> vi_3
+zh_4 -> vi_4 vi_5 vi_6 vi_7 vi_8 vi_9   # truyền thuyết Chử Đồng Tử: 1 block Hán, 6 câu Việt
+zh_5 -> vi_10
+zh_6 -> vi_11              # "KỶ TRIỆU V" cụt ở nguồn
+zh_7 ->                    # chú "Án cựu sử..." không có trong bản dịch
+zh_8 -> vi_12
+zh_9 zh_10 -> vi_13 vi_14  # vi_13 = "Phụ: Đào Lang Vương" (đầu zh_10) + "Ở ngôi 23 năm" (zh_9); vi_14 = phần bình trong zh_10
+zh_11 -> vi_15
+zh_12 -> vi_16
+zh_13 -> vi_17
+zh_14 -> vi_18
+zh_15 -> vi_19
+zh_16 -> vi_20
+zh_17 -> vi_21 vi_22 vi_23 # "da? | chăng?" cắt song song; Việt tách 3
+zh_18 -> vi_24 vi_25 vi_26
+zh_19 -> vi_27
+zh_20 -> vi_28
+zh_21 -> vi_29
+zh_22 zh_23 -> vi_30       # câu chính + chú "tục truyền" gộp 1 câu Việt
+zh_24 -> vi_31
+zh_25 -> vi_32
+zh_26 -> vi_33             # REVIEW: giữ — chữ "hội" (會 = "Gặp lúc") cuối zh_26 thực ra mở đầu zh_27/vi_34; lệch 1 chữ, coi là cắt song song
+zh_27 -> vi_34
+zh_28 -> vi_35
+zh_29 -> vi_36
+zh_30 -> vi_37
+zh_31 -> vi_38
+zh_32 -> vi_39
+zh_33 -> vi_40
+zh_34 -> vi_41
+zh_35 -> vi_42
+zh_36 -> vi_43
+zh_37 -> vi_44
+zh_38 -> vi_45
+zh_39 -> vi_46
+zh_40 -> vi_47             # vi_47 "năm thứ 1)." là phần còn sót của niên đại
+zh_41 -> vi_48
+zh_42 -> vi_49             # REVIEW: giữ — "cư quốc chi | Tây" ~ "cho ở phía | tây của nước": "của nước" lệch sang vi_50; lệch 2 chữ, coi là cắt song song
+zh_43 -> vi_50
+zh_44 -> vi_51
+zh_45 -> vi_52
+zh_46 -> vi_53
+zh_47 -> vi_54
+zh_48 -> vi_55 vi_56
+zh_49 -> vi_57
+zh_50 -> vi_58
+zh_51 -> vi_59

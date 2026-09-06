@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+# lưới cấu hình tái sinh được trong vài phút (grid_baseline.py / run_improved.py + data/emb)
+data/pred/grid_*/
+data/pred/labse_dp/
+report/*.log
+report/*.synctex.gz
+report/*.aux
+report/*.xdv
