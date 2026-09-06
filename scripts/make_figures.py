@@ -4,7 +4,6 @@ Vẽ các hình cho báo cáo (report/fig_*.pdf) từ dữ liệu trong data/.
 Cần matplotlib + numpy (env .venv):  .venv/bin/python scripts/make_figures.py
 """
 import json, os, sys
-from collections import Counter
 import numpy as np
 import matplotlib
 matplotlib.use("Agg")
@@ -64,41 +63,6 @@ def fig_heatmap(s="7-Ky-Si-Vuong"):
     fig.tight_layout(); fig.savefig(f"{OUT}/fig_heatmap.pdf"); plt.close(fig)
 
 
-def fig_data():
-    secs = ["1-Ky-Hong-Bang-thi", "2-Ky-nha-Thuc", "3-Ky-nha-Trieu", "4-Ky-thuoc-Tay-Han", "5-Ky-Trung-Nu-Vuong",
-            "6-Ky-thuoc-Dong-Han", "7-Ky-Si-Vuong", "8-Ky-thuoc-Ngo-Tan-Tong-Te", "9-Ky-tien-Ly",
-            "10-Ky-Trieu-Viet-Vuong", "11-Ky-hau-Ly", "12-Ky-thuoc-Tuy-Duong", "13-Ky-Nam-Bac-phan-tranh", "14-Ky-nha-Ngo"]
-    zh = [sum(1 for _ in open(f"data/processed/{t}.zh.jsonl")) for t in secs]
-    vi = [sum(1 for _ in open(f"data/processed/{t}.vi.jsonl")) for t in secs]
-    role = {1: "DEV", 2: "DEV", 3: "DEV", 7: "TEST", 9: "TEST", 10: "TEST"}
-    fig, (a1, a2) = plt.subplots(1, 2, figsize=(6.6, 2.8), gridspec_kw={"width_ratios": [2.4, 1]})
-    x = np.arange(14)
-    from matplotlib.patches import Patch
-    for i in range(14):  # nền đánh dấu DEV / TEST
-        if role.get(i + 1) == "DEV":
-            a1.axvspan(i - 0.5, i + 0.5, color="#dfe9f5", zorder=0)
-        elif role.get(i + 1) == "TEST":
-            a1.axvspan(i - 0.5, i + 0.5, color="#fbe3c9", zorder=0)
-    a1.bar(x - 0.2, zh, 0.4, color=C_DARK, label="câu Hán", zorder=2)
-    a1.bar(x + 0.2, vi, 0.4, color=C_LIGHT, label="câu Việt", zorder=2)
-    a1.set_xticks(x); a1.set_xticklabels([str(i + 1) for i in range(14)], fontsize=7.5)
-    a1.set_xlabel("mục"); a1.set_ylabel("số câu"); a1.set_ylim(0, 420)
-    h, l = a1.get_legend_handles_labels()
-    a1.legend(h + [Patch(color="#dfe9f5"), Patch(color="#fbe3c9")], l + ["DEV", "TEST"],
-              frameon=False, fontsize=7.5, ncol=4, loc="upper left")
-    kinds = Counter()
-    for t in TEST:
-        for a, b in sc.load_groups(f"data/gold_manual/{t}.jsonl"):
-            kinds[f"{len(a)}-{len(b)}"] += 1
-    order = ["1-1", "1-2", "1-3", "1-6", "1-7", "2-1", "2-2", "1-0"]; vals = [kinds[k] for k in order]
-    a2.barh(range(len(order)), vals, color=C_MID); a2.set_yticks(range(len(order))); a2.set_yticklabels(order, fontsize=8)
-    a2.invert_yaxis()
-    for i, v in enumerate(vals):
-        a2.text(v + 2, i, str(v), va="center", fontsize=7.5)
-    a2.set_xlim(0, 185); a2.set_xlabel("số nhóm gold (185)"); a2.set_title("Loại liên kết Hán–Việt", fontsize=9)
-    fig.tight_layout(); fig.savefig(f"{OUT}/fig_data.pdf"); plt.close(fig)
-
-
 def fig_cosine():
     gc, allc = [], []
     for t in TEST:
@@ -116,5 +80,5 @@ def fig_cosine():
 
 
 if __name__ == "__main__":
-    fig_results(); fig_heatmap(); fig_data(); fig_cosine()
-    print("-> report/fig_results.pdf fig_heatmap.pdf fig_data.pdf fig_cosine.pdf")
+    fig_results(); fig_heatmap(); fig_cosine()
+    print("-> report/fig_results.pdf fig_heatmap.pdf fig_cosine.pdf")

@@ -7,7 +7,7 @@ zh_6 -> vi_5 vi_6 vi_7     # tiêu đề + tại vị/thọ + lời bình tách 
 zh_7 -> vi_8
 zh_8 -> vi_9
 zh_9 -> vi_10
-zh_10 -> vi_11 vi_12       # "(tức là Long Biên)" nằm ở vi_12 nhưng là chú ở đầu zh_11  # REVIEW: giữ — phần lệch chỉ là chú giải 3 chữ, ưu tiên quy tắc 2 (nhóm nhỏ nhất); xem REVIEW_REPORT.md
+zh_10 -> vi_11 vi_12       # "(tức là Long Biên)" nằm ở vi_12 nhưng là chú ở đầu zh_11
 zh_11 -> vi_13
 zh_12 -> vi_14 vi_15
 zh_13 -> vi_16             # "Thời Thứ sử Chu" bị cắt ngang trang ở cả hai bản

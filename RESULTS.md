@@ -1,6 +1,6 @@
 # Kết quả — Dóng hàng câu Hán ↔ Việt (Đại Việt Sử Ký Toàn Thư)
 
-Đề tài 05. Quy trình & quyết định: `PLAN.md`; báo cáo tổng hợp: `BAO_CAO.md`.
+Đề tài 05. Báo cáo đầy đủ: `report/bao_cao.pdf`; gói nộp: `SUBMISSION.md`.
 Phần cần GPU chạy trên WSL2 (RTX 5050, env `crocoalign`); mọi bước còn lại thuần Python.
 
 ## 1. Thiết kế đánh giá

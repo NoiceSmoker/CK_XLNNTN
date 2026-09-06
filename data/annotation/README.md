@@ -50,4 +50,4 @@ PY=.venv/bin/python bash scripts/run_wsl_all.sh
 ## Kết quả mong đợi
 - Danh sách các dòng đã sửa (nếu có) và lý do.
 - Ước lượng mức đồng thuận: số nhóm sửa / 185. Dưới ~5% là gold ổn định; trên mức đó nên xem lại tiêu chí.
-- Ghi vào `BAO_CAO.md` §5 ai gán, ai rà, và tỉ lệ đồng thuận.
+- Ghi vào báo cáo (mục Gold gán tay) ai gán, ai rà, và tỉ lệ đồng thuận.

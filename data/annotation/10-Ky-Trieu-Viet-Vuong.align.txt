@@ -22,7 +22,7 @@ zh_21 -> vi_29
 zh_22 zh_23 -> vi_30       # câu chính + chú "tục truyền" gộp 1 câu Việt
 zh_24 -> vi_31
 zh_25 -> vi_32
-zh_26 -> vi_33             # REVIEW: giữ — chữ "hội" (會 = "Gặp lúc") cuối zh_26 thực ra mở đầu zh_27/vi_34; lệch 1 chữ, coi là cắt song song
+zh_26 -> vi_33
 zh_27 -> vi_34
 zh_28 -> vi_35
 zh_29 -> vi_36
@@ -38,7 +38,7 @@ zh_38 -> vi_45
 zh_39 -> vi_46
 zh_40 -> vi_47             # vi_47 "năm thứ 1)." là phần còn sót của niên đại
 zh_41 -> vi_48
-zh_42 -> vi_49             # REVIEW: giữ — "cư quốc chi | Tây" ~ "cho ở phía | tây của nước": "của nước" lệch sang vi_50; lệch 2 chữ, coi là cắt song song
+zh_42 -> vi_49
 zh_43 -> vi_50
 zh_44 -> vi_51
 zh_45 -> vi_52

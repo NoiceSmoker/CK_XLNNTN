@@ -10,7 +10,7 @@ Yêu cầu nộp: dataset, source (nhóm viết), model đã huấn luyện / li
 | **Mã nguồn mô hình bên ngoài** | `CroCoAlign/` — git submodule, ghim commit `2e93992` của https://github.com/Babelscape/CroCoAlign | không sửa mã gốc |
 | **Model bên ngoài (link, không nộp file)** | Checkpoint chính thức CroCoAlign (2,31 GB): https://drive.google.com/file/d/1DwOAB50loUc0lBe6gImX8TI7RqxD8XCw/view · LaBSE: https://huggingface.co/sentence-transformers/LaBSE | tải bằng `uvx gdown 1DwOAB50loUc0lBe6gImX8TI7RqxD8XCw -O CroCoAlign/checkpoints/crocoalign.ckpt` |
 | **Model của nhóm** | Không huấn luyện mô hình tham số mới. Các hệ cải tiến (LaBSE+DP, LaBSE+Hán-Việt+DP) và baseline là **phi tham số**: cấu hình đã chọn nằm trong `data/results/*.json`; embedding cache `data/emb/*.npz` (4 MB) cho phép tái sinh mọi dự đoán không cần checkpoint | |
-| **Kết quả** | `data/results/*.json`, `data/pred/crocoalign_*_test/`, `RESULTS.md` (bảng tự sinh), `BAO_CAO.md` (bản Markdown) | |
+| **Kết quả** | `data/results/*.json`, `data/pred/crocoalign_*_test/`, `RESULTS.md` (bảng tự sinh) | |
 
 Tái lập toàn bộ: xem `report/bao_cao.pdf` Phụ lục A hoặc `RESULTS.md` §5 — tóm tắt:
 ```bash
