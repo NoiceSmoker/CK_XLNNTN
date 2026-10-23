@@ -10,6 +10,7 @@ tái lập mô hình, đánh giá trên gold gán tay và cải tiến bằng gi
 - **Mã nguồn:** `scripts/` (của nhóm), `CroCoAlign/` (submodule mã gốc, không sửa)
 - **Bản đồ mã nguồn (tác vụ → file, dòng):** `CODE_MAP.md`
 - **Demo terminal:** `python3 scripts/demo.py` (thuần Python, không cần GPU/checkpoint)
+- **Kịch bản trình bày từng slide:** `KICH_BAN_TRINH_BAY.md`
 
 Tài liệu trình bày (claude.ai, cần quyền truy cập):
 - Slide: https://claude.ai/artifact/MSpxFCuiRjTzybaxUjCMu9
